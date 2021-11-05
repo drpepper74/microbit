@@ -10,7 +10,7 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "chiffres_de_md.ts"
+        "afficher_chiffres_des.md"
     ],
     "testFiles": [
         "test.ts"

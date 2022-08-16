@@ -33,7 +33,9 @@
         "tuto_18.md",
         "tuto_19.md",
         "tuto_4_a.md",
-        "tuto_4_b.md"
+        "tuto_4_b.md",
+        "tuto_21.md",
+        "tuto_22.md"
     ],
     "testFiles": [
         "test.ts"

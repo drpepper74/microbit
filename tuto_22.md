@@ -4,7 +4,7 @@
 
 ## @showdialog
 
-Crée un circuit électrique et numérique.
+Crée un circuit électrique et numérique à l'aide du capteur d'intensité lumineuse et d'une lumière LED.
 
 ## Étape 1 
 

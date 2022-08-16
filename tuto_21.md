@@ -4,9 +4,9 @@
 
 ## @showdialog
 
-Crée un circuit électrique et numérique.
+Crée un circuit électrique et numérique à l'aide d'une lumière LED.
 
-## Étape 2 
+## Étape 1
 
 Ajoute le bloc ``|| pins: écrire sur la broche  ||`` dans le bloc ``||input:lorsque le bouton A est pressé||``. 
  
@@ -21,7 +21,7 @@ input.onButtonPressed(Button.A, function () {
 
 ``` 
 
-## Étape 3 
+## Étape 2 
  
 Ajoute le bloc ``|| pins: écrire sur la broche  ||`` dans le bloc ``||input:lorsque le bouton B est pressé||``. 
  

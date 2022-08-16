@@ -4,7 +4,7 @@
 
 ## @showdialog
 
-Afficher ton prénom sur le micro:bit.
+Affiche ton prénom sur le micro:bit.
 
 ## Étape 1
 

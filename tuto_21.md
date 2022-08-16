@@ -6,10 +6,6 @@
 
 Crée un circuit électrique et numérique.
 
-## Étape 1 
-
-Supprime les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``.
-
 ## Étape 2 
 
 Ajoute le bloc ``|| pins: écrire sur la broche  ||`` dans le bloc ``||input:lorsque le bouton A est pressé||``. 

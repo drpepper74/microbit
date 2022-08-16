@@ -10,13 +10,13 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "afficher_chiffres_des.md"
+        "tuto_1.md"
     ],
     "testFiles": [
         "test.ts"
     ],
     "targetVersions": {
-        "target": "4.0.16",
+        "target": "5.0.12",
         "targetId": "microbit"
     },
     "supportedTargets": [

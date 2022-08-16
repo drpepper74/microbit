@@ -4,7 +4,7 @@
 
 ## @showdialog
 
-Affiche ton prénom sur le micro:bit.
+Programme le micro:bit pour qu'il affiche ton prénom.
 
 ## Étape 1
 

@@ -4,7 +4,7 @@
 
 ## @showdialog
 
-Affiche une image sur le micro:bit.
+Programme le micro:bit pour qu'il affiche une image.
 
 ## Étape 1
 

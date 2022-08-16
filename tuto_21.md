@@ -8,7 +8,7 @@ Crée un circuit électrique et numérique.
 
 ## Étape 1 
 
-Supprime le bloc ``|| basic:au démarrage ||``.
+Supprime les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``.
 
 ## Étape 2 
 

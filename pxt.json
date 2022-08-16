@@ -13,7 +13,8 @@
         "README.md",
         "tuto_1.md",
         "tuto_2.md",
-        "tuto_3.md"
+        "tuto_3.md",
+        "tuto_4.md"
     ],
     "testFiles": [
         "test.ts"

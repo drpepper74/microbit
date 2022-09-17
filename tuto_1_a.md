@@ -23,7 +23,7 @@ Regarde l'indice.
 input.onButtonPressed(Button.A, function () {
     basic.showLeds(`
         # . . . #
-        # # . # .
+        # # . # #
         . # # # .
         . . # . .
         . . . . .
@@ -46,7 +46,7 @@ Regarde l'indice.
 input.onButtonPressed(Button.A, function () {
     basic.showLeds(`
         # . . . #
-        # # . # .
+        # # . # # 
         . # # # .
         . . # . .
         . . . . .
@@ -76,7 +76,7 @@ Regarde l'indice.
 input.onButtonPressed(Button.A, function () {
     basic.showLeds(`
         # . . . #
-        # # . # .
+        # # . # #
         . # # # .
         . . # . .
         . . . . .

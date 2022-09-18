@@ -1,6 +1,6 @@
 # Circuits électriques
 
-# Tutoriel 1
+# Tutoriel 2
 
 ## @showdialog
 
@@ -27,14 +27,14 @@ input.onButtonPressed(Button.A, function () {
 
 Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
+Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
 
 Remplace la valeur ``|| pins: 0 ||`` par ``|| pins: 1 ||``.
 
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
-    pins.digitalWritePin(DigitalPin.P2, 1)
+    pins.digitalWritePin(DigitalPin.P1, 1)
 })
 
 ```
@@ -56,12 +56,12 @@ input.onButtonPressed(Button.B, function () {
 
 Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
+Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
 
 ```blocks
 
 input.onButtonPressed(Button.B, function () {
-    pins.digitalWritePin(DigitalPin.P2, 0)
+    pins.digitalWritePin(DigitalPin.P1, 0)
 })
 
 ```

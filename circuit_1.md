@@ -48,6 +48,6 @@ La couleur des fils n'a pas d'importance!
 
 ## @showdialog 
 
-Félicitations! Tu as terminé ton premier circuit électrique avec une lumière LED.
+Félicitations! Tu as terminé de programmer un circuit électrique avec une lumière LED.
 
-Pour tester ton circuit électrique, télécharge la programmation dans le micro:bit.
+Pour tester le circuit électrique, télécharge la programmation dans le micro:bit.

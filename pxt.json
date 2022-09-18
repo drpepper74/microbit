@@ -43,7 +43,8 @@
         "circuit_2.md",
         "circuit_3.md",
         "circuit_4.md",
-        "circuit_5.md"
+        "circuit_5.md",
+        "circuit_6.md"
     ],
     "testFiles": [
         "test.ts"

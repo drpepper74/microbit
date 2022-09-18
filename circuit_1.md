@@ -44,7 +44,7 @@ Réalise le branchement ci-dessous.
 
 La couleur des fils n'a pas d'importance!
 
-![CSSBF](https://github.com/sbergeroncp/micro-seb/blob/master/1.png?raw=true)
+![MicroSeb](https://github.com/sbergeroncp/micro-seb/blob/master/1.png?raw=true)
 
 ## @showdialog 
 

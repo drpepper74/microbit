@@ -2,7 +2,7 @@
 
 ## @showdialog
 
-Programme le micro:bit pour qu'une lumière LED s'allume l'intensité lumineuse de la pièce est base.
+Programme le micro:bit pour qu'une lumière LED s'allume lorsque l'intensité lumineuse de la pièce est base.
 
 ## Étape 1
 
@@ -65,6 +65,8 @@ basic.forever(function () {
 ## Étape 5 
  
 Ajoute le bloc ``|| pins: écrire sur la broche   ||`` sous la condition ``|| logic: si alors ||``. 
+
+Remplace la valeur ``|| pins: 0 ||`` par ``|| pins: 1 ||``.
 
 Regarde l'indice au besoin.
  

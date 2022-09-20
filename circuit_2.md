@@ -6,12 +6,11 @@ Transforme le micro:bit en interrupteur pour activer et/ou éteindre une lumièr
 
 ## Étape 1
 
-Supprime les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``.
+Supprime les blocs ``|| basic: au démarrage ||`` et ``||basic:toujours||``.
 
 ## Étape 2
 
 Ajoute le bloc ``|| pins: écrire sur la broche ||`` dans le bloc ``|| input: lorsque le bouton A est pressé ||``.
-
 
 ```blocks
 

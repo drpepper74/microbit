@@ -6,10 +6,6 @@ Programme le micro:bit pour qu'il allume une lumière LED.
 
 ## Étape 1
 
-Supprime le bloc ``||basic:au démarrage||``.
-
-## Étape 2
-
 Ajoute le bloc ``|| pins: écrire sur la broche ||`` dans le bloc ``||basic: toujours||``.
 
 
@@ -21,7 +17,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 3
+## Étape 2
 
 Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
 

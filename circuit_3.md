@@ -6,10 +6,6 @@ Programme le micro:bit pour qu'une lumière LED s'allume s'il est secoué.
 
 ## Étape 1
 
-Supprime les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``.
-
-## Étape 2
-
 Ajoute le bloc ``|| pins: écrire sur la broche ||`` dans le bloc ``|| input: lorsque secouer ||``.
 
 
@@ -21,7 +17,7 @@ input.onGesture(Gesture.Shake, function () {
 
 ```
 
-## Étape 3
+## Étape 2
 
 Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
 
@@ -37,7 +33,7 @@ input.onGesture(Gesture.Shake, function () {
 
 ```
 
-## Étape 4
+## Étape 3
 
 Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
 
@@ -54,7 +50,7 @@ input.onGesture(Gesture.Shake, function () {
 
 ```
 
-## Étape 5
+## Étape 4
 
 Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| basic: pause (ms) ||``.
 
@@ -75,6 +71,25 @@ input.onGesture(Gesture.Shake, function () {
 
 ```
 
+## Étape 5
+
+Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
+
+Modifie la valeur du bloc ``|| basic: pause (ms) ||``.
+
+Remplace la valeur ``|| basic: 100 ||`` par ``|| basic: 500 ||``.
+
+```blocks
+
+input.onGesture(Gesture.Shake, function () {
+    pins.digitalWritePin(DigitalPin.P2, 1)
+    basic.pause(500)
+    pins.digitalWritePin(DigitalPin.P2, 0)
+    basic.pause(500)
+})
+
+```
+
 ## Étape 6
 
 Ajoute le bloc ``|| loops: répéter ||`` dans le bloc ``|| input: lorsque secouer ||``.
@@ -90,6 +105,7 @@ input.onGesture(Gesture.Shake, function () {
         pins.digitalWritePin(DigitalPin.P2, 1)
         basic.pause(500)
         pins.digitalWritePin(DigitalPin.P2, 0)
+        basic.pause(500)
     }
 })
 

@@ -6,10 +6,6 @@ Transforme le micro:bit en interrupteur pour activer et/ou éteindre plusieurs l
 
 ## Étape 1
 
-Supprime les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``.
-
-## Étape 2
-
 Ajoute trois blocs ``|| pins: écrire sur la broche ||`` dans le bloc ``|| input: lorsque le bouton A est pressé ||``.
 
 
@@ -23,7 +19,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 3
+## Étape 2
 
 Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
 
@@ -41,7 +37,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 4
+## Étape 3
 
 Ajoute trois blocs ``|| pins: écrire sur la broche ||`` dans le bloc ``|| input: lorsque le bouton B est pressé ||``.
 
@@ -56,7 +52,7 @@ input.onButtonPressed(Button.B, function () {
 
 ```
 
-## Étape 5
+## Étape 4
 
 Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
 

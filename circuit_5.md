@@ -4,7 +4,6 @@
 
 Transforme le micro:bit en système de sécurité.
 
-
 ## Étape 1 
 
 Supprime le bloc  ``|| basic:au démarrage ||``. 
@@ -15,7 +14,7 @@ Ajoute le bloc ``|| logic: si vrai alors sinon ||`` sous le bloc ``||basic:toujo
 
 Remplace la valeur ``|| logic: vrai ||`` du bloc ``|| logic: si alors sinon ||`` par le bloc ``|| logic: ou ||``. 
 
-Ajoute les blocs ``|| logic: 0 > 0 ||`` et ``|| logic: 0 <  0 ||`` dans le bloc ``|| logic: ou ||``
+Ajoute les blocs ``|| logic: 0 > 0 ||`` et ``|| logic: 0 <  0 ||`` dans le bloc ``|| logic: ou ||``.
  
 
 Regarde l'indice pour connaître les valeurs à changer.

@@ -74,6 +74,6 @@ input.onButtonPressed(Button.B, function () {
 
 Félicitations! Tu as terminé de programmer un circuit électrique avec plusieurs lumières LED.
 
-Essaie de brancher l'ensemble des composantes du circuit.
+Essaie de brancher l'ensemble des composantes du circuit sans indice.
 
 Pour tester le circuit électrique, télécharge la programmation dans le micro:bit.

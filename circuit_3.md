@@ -54,7 +54,6 @@ input.onGesture(Gesture.Shake, function () {
 
 Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| basic: pause (ms) ||``.
 
-
 Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
 
 Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
@@ -93,6 +92,8 @@ input.onGesture(Gesture.Shake, function () {
 ## Étape 6
 
 Ajoute le bloc ``|| loops: répéter ||`` dans le bloc ``|| input: lorsque secouer ||``.
+
+Insère la séquence de programmation dans celui-ci.
 
 Modifie la valeur du bloc ``|| loops: répéter ||``.
 

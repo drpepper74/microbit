@@ -1,10 +1,16 @@
-# Circuits électriques - Tutoriel 1
+# Circuits électriques
+
+# Tutoriel 1
 
 ## @showdialog
 
 Programme le micro:bit pour qu'il allume une lumière LED.
 
 ## Étape 1
+
+Supprime le bloc ``||basic:au démarrage||``.
+
+## Étape 2
 
 Ajoute le bloc ``|| pins: écrire sur la broche ||`` dans le bloc ``||basic: toujours||``.
 
@@ -17,7 +23,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 2
+## Étape 3
 
 Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
 

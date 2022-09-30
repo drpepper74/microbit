@@ -20,7 +20,7 @@ pins.digitalWritePin(DigitalPin.P0, 0)
 
 Modifie la valeur ``|| pins: P0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: P2 ||``.
 
-La valeur  ``|| pins: 0 ||`` demeure la même.
+La valeur  ``|| pins: 0 ||`` du bloc ``|| pins: écrire sur la broche ||`` demeure la même.
 
 ```blocks
 
@@ -30,7 +30,7 @@ pins.digitalWritePin(DigitalPin.P2, 0)
 
 ## Étape 4
 
-Ajoute le bloc ``|| input: lorsque le bouton A est pressé. ||``.
+Ajoute le bloc ``|| input: lorsque le bouton A est pressé. ||`` dans la zone de programmation.
 
 Ajoute le bloc ``|| basic: montrer nombre ||`` dans le bloc ``|| input: lorsque le bouton A est pressé. ||``.
 
@@ -155,39 +155,33 @@ input.onButtonPressed(Button.B, function () {
 
 Ajoute le bloc ``|| loops: chaque (ms) ||`` dans la zone de programmation.
 
-Ajoute le bloc ``|| logic: si vrai alors sinon ||`` dans le bloc ``|| loops: chaque (ms) ||``.
+Modifie la valeur ``|| loops: 500 ||`` du bloc ``|| loops: chaque (ms) ||`` par ``|| loops: 60000 ||``.
 
 ```blocks
 
-loops.everyInterval(500, function () {
-    if (true) {
-    	
-    } else {
-    	
-    }
+loops.everyInterval(60000, function () {
+	
 })
 
 ```
 
 ## Étape 14
 
-Modifie la valeur ``|| logic: 500 ||`` du bloc ``|| loops: chaque (ms) ||`` par ``|| logic: 60000 ||``.
+Ajoute le bloc ``|| logic: si vrai alors sinon ||`` dans le bloc ``|| loops: chaque (ms) ||``.
 
 ```blocks
 
 loops.everyInterval(60000, function () {
-    if (true) {
-    	
-    } else {
-    	
-    }
+	
 })
 
 ```
 
 ## Étape 15
 
-Remplace la valeur ``|| logic: vrai ||`` du bloc ``|| logic: si vrai alors ||`` par le bloc ``|| logic: 0 > 0 ||``.
+Remplace la valeur ``|| logic: vrai ||`` du bloc ``|| logic: si vrai alors ||`` par le bloc ``|| logic: 0 < 0 ||``.
+
+Remplace la valeur ``||logic: < ||`` du bloc ``|| logic: 0 < 0 ||`` par la valeur ``|| logic: > ||``.
 
 ```blocks
 
@@ -251,7 +245,7 @@ loops.everyInterval(60000, function () {
 
 ## Étape 18
 
-Modifie la valeur ``|| logic: 0 ||``  du bloc ``|| logic: si vrai alors ||`` par ``|| logic: 600 ||``.
+Modifie la valeur ``|| logic: 0 ||`` de droite du bloc ``|| logic: si vrai alors ||`` par ``|| logic: 600 ||``.
 
 ```blocks
 
@@ -360,6 +354,8 @@ loops.everyInterval(60000, function () {
 ## Étape 24
 
 Ajoute le bloc ``|| basic: montrer l'cône ||`` dans le bloc ``|| logic: sinon. ||``.
+
+Regarde l'indice! :)
 
 ```blocks
 

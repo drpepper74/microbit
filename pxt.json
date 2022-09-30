@@ -44,7 +44,8 @@
         "circuit_3.md",
         "circuit_4.md",
         "circuit_5.md",
-        "circuit_6.md"
+        "circuit_6.md",
+        "arrosage_c.md"
     ],
     "testFiles": [
         "test.ts"

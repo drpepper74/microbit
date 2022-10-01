@@ -181,12 +181,12 @@ loops.everyInterval(60000, function () {
 
 Remplace la valeur ``|| logic: vrai ||`` du bloc ``|| logic: si vrai alors ||`` par le bloc ``|| logic: 0 < 0 ||``.
 
-Remplace la valeur ``||logic: < ||`` du bloc ``|| logic: 0 < 0 ||`` par la valeur ``|| logic: > ||``.
+Remplace la valeur ``||logic: < ||`` du bloc ``|| logic: 0 < 0 ||`` par la valeur ``|| logic: < ||``.
 
 ```blocks
 
 loops.everyInterval(60000, function () {
-    if (0 > 0) {
+    if (0 < 0) {
     	
     } else {
     	
@@ -197,12 +197,12 @@ loops.everyInterval(60000, function () {
 
 ## Étape 16
 
-Remplace la valeur ``|| logic: 0 ||`` de gauche du bloc ``|| logic: 0 > 0 ||`` par le bloc ``|| math: arrondi ||``.
+Remplace la valeur ``|| logic: 0 ||`` de gauche du bloc ``|| logic: 0 < 0 ||`` par le bloc ``|| math: arrondi ||``.
 
 ```blocks
 
 loops.everyInterval(60000, function () {
-    if (Math.round(0) > 0) {
+    if (Math.round(0) < 0) {
     	
     } else {
     	
@@ -218,23 +218,7 @@ Remplace la valeur ``|| math: 0 ||``  du bloc ``|| math: arrondi ||`` par le blo
 ```blocks
 
 loops.everyInterval(60000, function () {
-    if (Math.round(pins.analogReadPin(AnalogPin.P0)) > 0) {
-    	
-    } else {
-    	
-    }
-})
-
-```
-
-## Étape 17
-
-Modifie la valeur ``|| pins: P0 ||``  du bloc ``|| pins: lire la broche ||`` par ``|| pins: P1 ||``.
-
-```blocks
-
-loops.everyInterval(60000, function () {
-    if (Math.round(pins.analogReadPin(AnalogPin.P1)) > 0) {
+    if (Math.round(pins.analogReadPin(AnalogPin.P0)) < 0) {
     	
     } else {
     	
@@ -245,12 +229,12 @@ loops.everyInterval(60000, function () {
 
 ## Étape 18
 
-Modifie la valeur ``|| logic: 0 ||`` de droite du bloc ``|| logic: si vrai alors ||`` par ``|| logic: 600 ||``.
+Modifie la valeur ``|| pins: P0 ||``  du bloc ``|| pins: lire la broche ||`` par ``|| pins: P1 ||``.
 
 ```blocks
 
 loops.everyInterval(60000, function () {
-    if (Math.round(pins.analogReadPin(AnalogPin.P1)) > 600) {
+    if (Math.round(pins.analogReadPin(AnalogPin.P1)) < 0) {
     	
     } else {
     	
@@ -261,13 +245,13 @@ loops.everyInterval(60000, function () {
 
 ## Étape 19
 
-Ajoute le bloc ``|| pins: écrire sur la broche ||`` dans le le bloc ``|| logic: si vrai alors ||``.
+Modifie la valeur ``|| logic: 0 ||`` de droite du bloc ``|| logic: si vrai alors ||`` par ``|| logic: 600 ||``.
 
 ```blocks
 
 loops.everyInterval(60000, function () {
-    if (Math.round(pins.analogReadPin(AnalogPin.P1)) > 600) {
-        pins.digitalWritePin(DigitalPin.P0, 0)
+    if (Math.round(pins.analogReadPin(AnalogPin.P1)) < 600) {
+    	
     } else {
     	
     }
@@ -277,15 +261,13 @@ loops.everyInterval(60000, function () {
 
 ## Étape 20
 
-Modifie la valeur ``|| pins: P0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: P2 ||``.
-
-Modifie la valeur ``|| pins: 0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: 1 ||``.
+Ajoute le bloc ``|| pins: écrire sur la broche ||`` dans le le bloc ``|| logic: si vrai alors ||``.
 
 ```blocks
 
 loops.everyInterval(60000, function () {
-    if (Math.round(pins.analogReadPin(AnalogPin.P1)) > 600) {
-        pins.digitalWritePin(DigitalPin.P2, 1)
+    if (Math.round(pins.analogReadPin(AnalogPin.P1)) < 600) {
+        pins.digitalWritePin(DigitalPin.P0, 0)
     } else {
     	
     }
@@ -295,16 +277,15 @@ loops.everyInterval(60000, function () {
 
 ## Étape 21
 
-Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
+Modifie la valeur ``|| pins: P0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: P2 ||``.
 
-Modifie la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par ``|| basic: 30000 ||``.
+Modifie la valeur ``|| pins: 0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: 1 ||``.
 
 ```blocks
 
 loops.everyInterval(60000, function () {
-    if (Math.round(pins.analogReadPin(AnalogPin.P1)) > 600) {
+    if (Math.round(pins.analogReadPin(AnalogPin.P1)) < 600) {
         pins.digitalWritePin(DigitalPin.P2, 1)
-        basic.pause(30000)
     } else {
     	
     }
@@ -314,12 +295,31 @@ loops.everyInterval(60000, function () {
 
 ## Étape 22
 
+Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
+
+Modifie la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par ``|| basic: 30000 ||``.
+
+```blocks
+
+loops.everyInterval(60000, function () {
+    if (Math.round(pins.analogReadPin(AnalogPin.P1)) < 600) {
+        pins.digitalWritePin(DigitalPin.P2, 1)
+        basic.pause(30000)
+    } else {
+    	
+    }
+})
+
+```
+
+## Étape 23
+
 Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| basic: pause (ms) 30000. ||``.
 
 ```blocks
 
 loops.everyInterval(60000, function () {
-    if (Math.round(pins.analogReadPin(AnalogPin.P1)) > 600) {
+    if (Math.round(pins.analogReadPin(AnalogPin.P1)) < 600) {
         pins.digitalWritePin(DigitalPin.P2, 1)
         basic.pause(30000)
         pins.digitalWritePin(DigitalPin.P0, 0)
@@ -330,7 +330,7 @@ loops.everyInterval(60000, function () {
 
 ```
 
-## Étape 23
+## Étape 24
 
 Modifie la valeur ``|| pins: P0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: P2 ||``.
 
@@ -339,7 +339,7 @@ La valeur ``|| pins: 0 ||`` du bloc ``|| pins: écrire sur la broche ||`` demeur
 ```blocks
 
 loops.everyInterval(60000, function () {
-    if (Math.round(pins.analogReadPin(AnalogPin.P1)) > 600) {
+    if (Math.round(pins.analogReadPin(AnalogPin.P1)) < 600) {
         pins.digitalWritePin(DigitalPin.P2, 1)
         basic.pause(30000)
         pins.digitalWritePin(DigitalPin.P2, 0)
@@ -351,7 +351,7 @@ loops.everyInterval(60000, function () {
 
 ```
 
-## Étape 24
+## Étape 25
 
 Ajoute le bloc ``|| basic: montrer l'cône ||`` dans le bloc ``|| logic: sinon. ||``.
 
@@ -360,7 +360,7 @@ Regarde l'indice! :)
 ```blocks
 
 loops.everyInterval(60000, function () {
-    if (Math.round(pins.analogReadPin(AnalogPin.P1)) > 600) {
+    if (Math.round(pins.analogReadPin(AnalogPin.P1)) < 600) {
         pins.digitalWritePin(DigitalPin.P2, 1)
         basic.pause(30000)
         pins.digitalWritePin(DigitalPin.P2, 0)

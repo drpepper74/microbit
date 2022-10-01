@@ -181,7 +181,7 @@ loops.everyInterval(60000, function () {
 
 Remplace la valeur ``|| logic: vrai ||`` du bloc ``|| logic: si vrai alors ||`` par le bloc ``|| logic: 0 < 0 ||``.
 
-Remplace la valeur ``||logic: < ||`` du bloc ``|| logic: 0 < 0 ||`` par la valeur ``|| logic: < ||``.
+La valeur ``||logic: < ||`` du bloc ``|| logic: 0 < 0 ||`` demeure la même.
 
 ```blocks
 

@@ -23,7 +23,7 @@ basic.forever(function () {
 
 ## Étape 3
 
-Ajoute le bloc ``||pxt-smarthome:value of soil moisture||`` dans le bloc ``||basic:afficher nombre||``.
+Ajoute le bloc ``||smarthome:value of soil moisture||`` dans le bloc ``||basic:afficher nombre||``.
 
 ```package
 

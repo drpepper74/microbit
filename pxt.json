@@ -34,18 +34,15 @@
         "tuto_19.md",
         "tuto_4_a.md",
         "tuto_4_b.md",
-        "tuto_21.md",
-        "tuto_22.md",
-        "tuto_23.md",
-        "tuto_24.md",
-        "tuto_25.md",
         "circuit_1.md",
         "circuit_2.md",
         "circuit_3.md",
         "circuit_4.md",
         "circuit_5.md",
         "circuit_6.md",
-        "arrosage_c.md"
+        "arrosage_c.md",
+        "home_1.md",
+        "home_2.md"
     ],
     "testFiles": [
         "test.ts"

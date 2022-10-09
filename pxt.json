@@ -41,7 +41,8 @@
         "circuit_5.md",
         "circuit_6.md",
         "arrosage_c.md",
-        "home_1.md"
+        "home_1.md",
+        "tuto_1_d.md"
     ],
     "testFiles": [
         "test.ts"

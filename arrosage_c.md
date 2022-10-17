@@ -1,7 +1,7 @@
 # Système d'arrosage automatisé
 
 ## @showdialog
-Programme les différentes composants du système d'arrosage automatisé.
+Programme les différentes composantes du système d'arrosage automatisé.
 
 ## Étape 1
 

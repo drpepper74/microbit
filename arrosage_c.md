@@ -5,10 +5,6 @@ Programme les différentes composants du système d'arrosage automatisé.
 
 ## Étape 1
 
-Supprime le bloc ``||basic:toujours||``.
-
-## Étape 2
-
 Ajoute le bloc ``|| pins: écrire sur la broche ||`` dans le bloc ``||basic: au démarrage||``.
 
 ```blocks
@@ -16,7 +12,7 @@ Ajoute le bloc ``|| pins: écrire sur la broche ||`` dans le bloc ``||basic: au 
 pins.digitalWritePin(DigitalPin.P0, 0)
 
 ```
-## Étape 3
+## Étape 2
 
 Modifie la valeur ``|| pins: P0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: P2 ||``.
 
@@ -28,7 +24,7 @@ pins.digitalWritePin(DigitalPin.P2, 0)
 
 ```
 
-## Étape 4
+## Étape 3
 
 Ajoute le bloc ``|| input: lorsque le bouton A est pressé. ||`` dans la zone de programmation.
 
@@ -42,9 +38,9 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 5
+## Étape 4
 
-Modifie la valeur ``|| basic: 0 ||`` du bloc ``|| basic: montrer nombre ||`` par le bloc ``|| math: arrondi ||``
+Remplace la valeur ``|| basic: 0 ||`` du bloc ``|| basic: montrer nombre ||`` par le bloc ``|| math: arrondi ||``
 
 ```blocks
 
@@ -54,9 +50,9 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 6
+## Étape 5
 
-Modifie la valeur ``|| math: 0 ||`` du bloc ``|| math: arrondi ||`` par le bloc ``|| pins: lire la broche analogique ||``
+Remplace la valeur ``|| math: 0 ||`` du bloc ``|| math: arrondi ||`` par le bloc ``|| pins: lire la broche analogique ||``
 
 ```blocks
 
@@ -66,7 +62,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 7
+## Étape 6
 
 Modifie la valeur ``|| pins: P0 ||`` du bloc ``|| pins: lire la broche analogique ||`` par ``|| pins: P1 ||``.
 
@@ -78,7 +74,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 8
+## Étape 7
 
 Ajoute le bloc ``|| input: lorsque le bouton B est pressé. ||``.
 
@@ -92,7 +88,7 @@ input.onButtonPressed(Button.B, function () {
 
 ```
 
-## Étape 9
+## Étape 8
 
 Modifie la valeur ``|| pins: P0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: P2 ||``.
 
@@ -106,11 +102,13 @@ input.onButtonPressed(Button.B, function () {
 
 ```
 
-## Étape 10
+## Étape 9
 
 Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
 
 Modifie la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par ``|| basic: 30000 ||``.
+
+Si ``|| basic: 1 seconde ||`` = ``|| basic: 1 000 ms ||`` donc ``|| basic: 30 secondes ||`` = ``|| basic: 30 000 ms ||``
 
 ```blocks
 
@@ -121,7 +119,7 @@ input.onButtonPressed(Button.B, function () {
 
 ```
 
-## Étape 11
+## Étape 10
 
 Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| basic: pause (ms) 30000. ||``.
 
@@ -135,7 +133,7 @@ input.onButtonPressed(Button.B, function () {
 
 ```
 
-## Étape 12
+## Étape 11
 
 Modifie la valeur ``|| pins: P0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: P2 ||``.
 
@@ -151,42 +149,67 @@ input.onButtonPressed(Button.B, function () {
 
 ```
 
-## Étape 13
 
-Ajoute le bloc ``|| loops: chaque (ms) ||`` dans la zone de programmation.
+## Étape 12
 
-Modifie la valeur ``|| loops: 500 ||`` du bloc ``|| loops: chaque (ms) ||`` par ``|| loops: 60000 ||``.
+Ajoute le bloc ``|| logic: si vrai alors sinon ||`` dans le bloc ``|| basic: toujours ||``.
 
 ```blocks
 
-loops.everyInterval(60000, function () {
-	
+basic.forever(function () {
+    if (true) {
+    	
+    } else {
+    	
+    }
 })
+
+```
+
+## Étape 13
+
+Remplace la valeur ``|| logic: vrai ||`` du bloc ``|| logic: si vrai alors ||`` par le bloc ``|| logic: 0 < 0 ||``.
+
+Modifie la valeur ``||logic: < ||`` du bloc ``|| logic: 0 < 0 ||`` par la valeur ``||logic: > ||``.
+
+```blocks
+
+basic.forever(function () {
+    if (0 > 0) {
+    	
+    } else {
+    	
+    }
+})
+
 
 ```
 
 ## Étape 14
 
-Ajoute le bloc ``|| logic: si vrai alors sinon ||`` dans le bloc ``|| loops: chaque (ms) ||``.
+Remplace la valeur ``|| logic: 0 ||`` de gauche du bloc ``|| logic: 0 < 0 ||`` par le bloc ``|| math: arrondi ||``.
 
 ```blocks
 
-loops.everyInterval(60000, function () {
-	
+basic.forever(function () {
+    if (Math.round(0) > 0) {
+    	
+    } else {
+    	
+    }
 })
+
 
 ```
 
 ## Étape 15
 
-Remplace la valeur ``|| logic: vrai ||`` du bloc ``|| logic: si vrai alors ||`` par le bloc ``|| logic: 0 < 0 ||``.
-
-La valeur ``||logic: < ||`` du bloc ``|| logic: 0 < 0 ||`` demeure la même.
+Remplace la valeur ``|| math: 0 ||``  du bloc ``|| math: arrondi ||`` par le bloc ``|| pins: lire la broche analogique ||``.
 
 ```blocks
 
-loops.everyInterval(60000, function () {
-    if (0 < 0) {
+basic.forever(function () {
+    if (Math.round(pins.analogReadPin(AnalogPin.P0)) > 0) {
     	
     } else {
     	
@@ -197,12 +220,12 @@ loops.everyInterval(60000, function () {
 
 ## Étape 16
 
-Remplace la valeur ``|| logic: 0 ||`` de gauche du bloc ``|| logic: 0 < 0 ||`` par le bloc ``|| math: arrondi ||``.
+Modifie la valeur ``|| pins: P0 ||``  du bloc ``|| pins: lire la broche ||`` par ``|| pins: P1 ||``.
 
 ```blocks
 
-loops.everyInterval(60000, function () {
-    if (Math.round(0) < 0) {
+basic.forever(function () {
+    if (Math.round(pins.analogReadPin(AnalogPin.P1)) > 0) {
     	
     } else {
     	
@@ -213,12 +236,12 @@ loops.everyInterval(60000, function () {
 
 ## Étape 17
 
-Remplace la valeur ``|| math: 0 ||``  du bloc ``|| math: arrondi ||`` par le bloc ``|| pins: lire la broche analogique ||``.
+Modifie la valeur ``|| logic: 0 ||`` de droite du bloc ``|| logic: si vrai alors ||`` par ``|| logic: 550 ||``.
 
 ```blocks
 
-loops.everyInterval(60000, function () {
-    if (Math.round(pins.analogReadPin(AnalogPin.P0)) < 0) {
+basic.forever(function () {
+    if (Math.round(pins.analogReadPin(AnalogPin.P0)) > 550) {
     	
     } else {
     	
@@ -229,13 +252,13 @@ loops.everyInterval(60000, function () {
 
 ## Étape 18
 
-Modifie la valeur ``|| pins: P0 ||``  du bloc ``|| pins: lire la broche ||`` par ``|| pins: P1 ||``.
+Ajoute le bloc ``|| basic: montrer nombre ||`` dans le bloc ``|| logic: si alors ||``.
 
 ```blocks
 
-loops.everyInterval(60000, function () {
-    if (Math.round(pins.analogReadPin(AnalogPin.P1)) < 0) {
-    	
+basic.forever(function () {
+    if (Math.round(pins.analogReadPin(AnalogPin.P0)) > 0) {
+        basic.showNumber(0)
     } else {
     	
     }
@@ -245,29 +268,30 @@ loops.everyInterval(60000, function () {
 
 ## Étape 19
 
-Modifie la valeur ``|| logic: 0 ||`` de droite du bloc ``|| logic: si vrai alors ||`` par ``|| logic: 600 ||``.
+Remplace la valeur ``|| basic: 0 ||`` du bloc ``|| basic: montrer nombre ||`` par le bloc ``|| pins: lire la broche analogique ||``.
 
 ```blocks
 
-loops.everyInterval(60000, function () {
-    if (Math.round(pins.analogReadPin(AnalogPin.P1)) < 600) {
-    	
+basic.forever(function () {
+    if (Math.round(pins.analogReadPin(AnalogPin.P0)) > 0) {
+        basic.showNumber(pins.analogReadPin(AnalogPin.P))
     } else {
     	
     }
 })
 
+
 ```
 
 ## Étape 20
 
-Ajoute le bloc ``|| pins: écrire sur la broche ||`` dans le le bloc ``|| logic: si vrai alors ||``.
+Modifie la valeur ``|| pins: P0 ||`` du bloc ``|| pins: lire la broche analogique ||`` par ``|| pins: P1 ||``.
 
 ```blocks
 
-loops.everyInterval(60000, function () {
-    if (Math.round(pins.analogReadPin(AnalogPin.P1)) < 600) {
-        pins.digitalWritePin(DigitalPin.P0, 0)
+basic.forever(function () {
+    if (Math.round(pins.analogReadPin(AnalogPin.P0)) > 0) {
+        basic.showNumber(pins.analogReadPin(AnalogPin.P1))
     } else {
     	
     }
@@ -277,15 +301,16 @@ loops.everyInterval(60000, function () {
 
 ## Étape 21
 
-Modifie la valeur ``|| pins: P0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: P2 ||``.
+Ajoute le bloc ``|| basic: montrer l'icône ||`` sous le bloc ``|| basic: montrer nombre ||``.
 
-Modifie la valeur ``|| pins: 0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: 1 ||``.
+Choisis un visage triste.
 
 ```blocks
 
-loops.everyInterval(60000, function () {
-    if (Math.round(pins.analogReadPin(AnalogPin.P1)) < 600) {
-        pins.digitalWritePin(DigitalPin.P2, 1)
+basic.forever(function () {
+    if (Math.round(pins.analogReadPin(AnalogPin.P0)) > 0) {
+        basic.showNumber(pins.analogReadPin(AnalogPin.P1))
+        basic.showIcon(IconNames.Sad)
     } else {
     	
     }
@@ -295,16 +320,15 @@ loops.everyInterval(60000, function () {
 
 ## Étape 22
 
-Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
-
-Modifie la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par ``|| basic: 30000 ||``.
+Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| basic: montrer l'icône ||``.
 
 ```blocks
 
-loops.everyInterval(60000, function () {
-    if (Math.round(pins.analogReadPin(AnalogPin.P1)) < 600) {
-        pins.digitalWritePin(DigitalPin.P2, 1)
-        basic.pause(30000)
+basic.forever(function () {
+    if (Math.round(pins.analogReadPin(AnalogPin.P0)) > 0) {
+        basic.showNumber(pins.analogReadPin(AnalogPin.P1))
+        basic.showIcon(IconNames.Sad)
+        pins.digitalWritePin(DigitalPin.P0, 0)
     } else {
     	
     }
@@ -314,15 +338,17 @@ loops.everyInterval(60000, function () {
 
 ## Étape 23
 
-Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| basic: pause (ms) 30000. ||``.
+Modifie la valeur ``|| pins: P0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: P2 ||``.
+
+Modifie la valeur ``|| pins: 0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: 1 ||``.
 
 ```blocks
 
-loops.everyInterval(60000, function () {
-    if (Math.round(pins.analogReadPin(AnalogPin.P1)) < 600) {
+basic.forever(function () {
+    if (Math.round(pins.analogReadPin(AnalogPin.P0)) > 0) {
+        basic.showNumber(pins.analogReadPin(AnalogPin.P1))
+        basic.showIcon(IconNames.Sad)
         pins.digitalWritePin(DigitalPin.P2, 1)
-        basic.pause(30000)
-        pins.digitalWritePin(DigitalPin.P0, 0)
     } else {
     	
     }
@@ -332,40 +358,118 @@ loops.everyInterval(60000, function () {
 
 ## Étape 24
 
-Modifie la valeur ``|| pins: P0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: P2 ||``.
-
-La valeur ``|| pins: 0 ||`` du bloc ``|| pins: écrire sur la broche ||`` demeure la même.
+Ajoute le bloc ``|| basic: montrer nombre ||`` dans le bloc ``|| logic: sinon ||``.
 
 ```blocks
 
-loops.everyInterval(60000, function () {
-    if (Math.round(pins.analogReadPin(AnalogPin.P1)) < 600) {
+basic.forever(function () {
+    if (Math.round(pins.analogReadPin(AnalogPin.P0)) > 0) {
+        basic.showNumber(pins.analogReadPin(AnalogPin.P1))
+        basic.showIcon(IconNames.Sad)
         pins.digitalWritePin(DigitalPin.P2, 1)
-        basic.pause(30000)
-        pins.digitalWritePin(DigitalPin.P2, 0)
     } else {
-    	
+        basic.showNumber(0)
+    }
+})
+
+```
+
+## Étape 25
+
+Remplace la valeur ``|| basic: 0 ||`` du bloc ``|| basic: montrer nombre ||`` par le bloc ``|| pins: lire la broche analogique ||``.
+
+```blocks
+
+basic.forever(function () {
+    if (Math.round(pins.analogReadPin(AnalogPin.P0)) > 0) {
+        basic.showNumber(pins.analogReadPin(AnalogPin.P1))
+        basic.showIcon(IconNames.Sad)
+        pins.digitalWritePin(DigitalPin.P2, 1)
+    } else {
+        basic.showNumber(pins.analogReadPin(AnalogPin.P0))
     }
 })
 
 
 ```
 
-## Étape 25
+## Étape 26
 
-Ajoute le bloc ``|| basic: montrer l'cône ||`` dans le bloc ``|| logic: sinon. ||``.
-
-Regarde l'indice! :)
+Modifie la valeur ``|| pins: P0 ||`` du bloc ``|| pins: lire la broche analogique ||`` par ``|| pins: P1 ||``.
 
 ```blocks
 
-loops.everyInterval(60000, function () {
-    if (Math.round(pins.analogReadPin(AnalogPin.P1)) < 600) {
+basic.forever(function () {
+    if (Math.round(pins.analogReadPin(AnalogPin.P0)) > 0) {
+        basic.showNumber(pins.analogReadPin(AnalogPin.P1))
+        basic.showIcon(IconNames.Sad)
         pins.digitalWritePin(DigitalPin.P2, 1)
-        basic.pause(30000)
-        pins.digitalWritePin(DigitalPin.P2, 0)
     } else {
-        basic.showIcon(IconNames.Heart)
+        basic.showNumber(pins.analogReadPin(AnalogPin.P1))
+    }
+})
+
+```
+
+
+## Étape 27
+
+Ajoute le bloc ``|| basic: montrer l'icône ||`` sous le bloc ``|| basic: montrer nombre ||``.
+
+Choisis un visage souriant.
+
+```blocks
+
+basic.forever(function () {
+    if (Math.round(pins.analogReadPin(AnalogPin.P0)) > 0) {
+        basic.showNumber(pins.analogReadPin(AnalogPin.P1))
+        basic.showIcon(IconNames.Sad)
+        pins.digitalWritePin(DigitalPin.P2, 1)
+    } else {
+        basic.showNumber(pins.analogReadPin(AnalogPin.P0))
+        basic.showIcon(IconNames.Happy)
+    }
+})
+
+```
+
+## Étape 28
+
+Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| basic: montrer l'icône ||``.
+
+```blocks
+
+basic.forever(function () {
+    if (Math.round(pins.analogReadPin(AnalogPin.P0)) > 0) {
+        basic.showNumber(pins.analogReadPin(AnalogPin.P1))
+        basic.showIcon(IconNames.Sad)
+        pins.digitalWritePin(DigitalPin.P2, 1)
+    } else {
+        basic.showNumber(pins.analogReadPin(AnalogPin.P0))
+        basic.showIcon(IconNames.Happy)
+        pins.digitalWritePin(DigitalPin.P0, 0)
+    }
+})
+
+```
+
+## Étape 29
+
+Modifie la valeur ``|| pins: P0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: P2 ||``.
+
+La valeur ``|| pins: 0 ||`` du bloc ``|| pins: écrire sur la broche ||`` demeure la même.
+
+```blocks
+
+basic.forever(function () {
+    if (Math.round(pins.analogReadPin(AnalogPin.P0)) > 0) {
+        basic.showNumber(pins.analogReadPin(AnalogPin.P1))
+        basic.showIcon(IconNames.Sad)
+        pins.digitalWritePin(DigitalPin.P2, 1)
+    } else {
+        basic.showNumber(pins.analogReadPin(AnalogPin.P0))
+        basic.showIcon(IconNames.Happy)
+        pins.digitalWritePin(DigitalPin.P2, 0)
     }
 })
 

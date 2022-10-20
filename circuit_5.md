@@ -64,7 +64,7 @@ basic.forever(function () {
 
 Remplace la valeur ``|| logic: 0 ||`` de gauche du bloc ``|| logic: 0 > 0 ||`` par le bloc ``|| input: accélération (mg) x||``.
 
-Remplace la valeur ``|| logic: 0 ||`` de droite du bloc ``|| logic: 0 < 0 ||`` par le bloc ``|| input: accélération (mg) x||``.
+Remplace la valeur ``|| logic: 0 ||`` de gauche du bloc ``|| logic: 0 < 0 ||`` par le bloc ``|| input: accélération (mg) x||``.
 
 Regarde l'indice pour connaître les valeurs à changer.
 
@@ -185,9 +185,7 @@ basic.forever(function () {
 
 Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``||basic:montrer l'icône||``.
 
-Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
-
-La valeur ``|| pins: 0 ||`` demeure la même.
+Les valeurs ``|| pins: P0 ||`` et ``|| pins: 0 ||`` demeurent les inchangées.
 
 ```blocks 
 

@@ -2,7 +2,7 @@
 
 ## @showdialog
 
-Transforme le micro:bit en système de sécurité.
+Transforme le micro:bit en thermomètre.
 
 ## Étape 1 
 
@@ -10,12 +10,41 @@ Supprime le bloc  ``|| basic:au démarrage ||``.
 
 ## Étape 2 
 
-Ajoute le bloc ``|| logic: si vrai alors sinon ||`` dans le bloc ``||basic:toujours||``.
+Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Température||``.
 
+Ajoute le bloc ``||variables: définir Température||`` dans le bloc ``||basic: toujours||``.
 
-```blocks 
+```blocks
 
+let Température = 0
 basic.forever(function () {
+    Température = 0
+})
+
+```
+
+## Étape 3
+
+Remplace la valeur  ``||variables: 0||`` du bloc ``||variables: définir Température||`` par le bloc ``||input: température||``.
+
+```blocks
+
+let Température = 0
+basic.forever(function () {
+    Température = input.temperature()
+})
+
+```
+
+## Étape 4
+
+Ajoute le bloc  ``||logic: si vrai alors sinon||`` sous le bloc ``||variables: définir Température||``.
+
+```blocks
+
+let Température = 0
+basic.forever(function () {
+    Température = input.temperature()
     if (true) {
     	
     } else {
@@ -25,278 +54,92 @@ basic.forever(function () {
 
 ```
 
-## Étape 3 
+## Étape 5
 
-Remplace la valeur ``|| logic: vrai ||`` du bloc ``|| logic: si alors sinon ||`` par le bloc ``|| logic: ou ||``. 
+Modifie le bloc ``||logic: si vrai alors sinon||``.
 
-
-```blocks 
-
-basic.forever(function () {
-    if (false || false) {
-    	
-    } else {
-    	
-    }
-})
-
-```
-
-## Étape 4 
-
-Ajoute les blocs ``|| logic: 0 > 0 ||`` et ``|| logic: 0 <  0 ||`` dans le bloc ``|| logic: ou ||``.
-
-
-```blocks 
-
-basic.forever(function () {
-    if (0 > 0 || 0 < 0) {
-    	
-    } else {
-    	
-    }
-})
-
-```
-
-
-## Étape 5 
-
-Remplace la valeur ``|| logic: 0 ||`` de gauche du bloc ``|| logic: 0 > 0 ||`` par le bloc ``|| input: accélération (mg) x||``.
-
-Remplace la valeur ``|| logic: 0 ||`` de gauche du bloc ``|| logic: 0 < 0 ||`` par le bloc ``|| input: accélération (mg) x||``.
-
-Regarde l'indice pour connaître les valeurs à changer.
-
-```blocks 
-
-basic.forever(function () {
-    if (input.acceleration(Dimension.X) > 0 || input.acceleration(Dimension.X) < 0) {
-    	
-    } else {
-    	
-    }
-})
-
-```
-
-## Étape 6 
-
-Remplace la valeur ``|| logic: 0 ||`` de gauche par la valeur ``|| logic: 500 ||``.
-
-Remplace la valeur ``|| logic: 0 ||`` de droite par la valeur ``|| logic: -500 ||``.
-
-Regarde l'indice pour connaître les valeurs à changer.
-
-```blocks 
-
-basic.forever(function () {
-    if (input.acceleration(Dimension.X) > 500 || input.acceleration(Dimension.X) < -500) {
-    	
-    } else {
-    	
-    }
-})
-
-```
-
-## Étape 7 
-
-Ajoute le bloc ``|| basic: montrer l'icone ||`` dans le bloc ``|| logic: si alors ||``.
-
-Choisis le grand carré comme image.
-
-```blocks 
-
-basic.forever(function () {
-    if (input.acceleration(Dimension.X) > 500 || input.acceleration(Dimension.X) < -500) {
-        basic.showIcon(IconNames.Square)
-    } else {
-    	
-    }
-})
-
-```
-
-## Étape 8 
-
-Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``||basic:montrer l'icône||``.
-
-Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
-
-Remplace la valeur ``|| pins: 0 ||`` par ``|| pins: 1 ||``.
-
-```blocks 
-
-basic.forever(function () {
-    if (input.acceleration(Dimension.X) > 500 || input.acceleration(Dimension.X) < -500) {
-        basic.showIcon(IconNames.Square)
-        pins.digitalWritePin(DigitalPin.P0, 1)
-    } else {
-    	
-    }
-})
-
-
-```
-
-## Étape 9 
-
-Ajoute le bloc ``|| basic: pause (ms) 100 ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
-
-Remplace la valeur ``|| basic: 100 ||`` du bloc  ``|| basic: pause (ms) 100 ||`` par ``|| basic: 200 ||``.
-
-```blocks 
-
-basic.forever(function () {
-    if (input.acceleration(Dimension.X) > 500 || input.acceleration(Dimension.X) < -500) {
-        basic.showIcon(IconNames.Square)
-        pins.digitalWritePin(DigitalPin.P0, 1)
-        basic.pause(200)
-    } else {
-    	
-    }
-})
-
-```
-
-## Étape 10 
-
-Ajoute le bloc ``|| basic: montrer l'icone ||`` sous le bloc ``|| basic: pause (ms) 200 ||``.
-
-Choisis le petit carré comme image.
-
-```blocks 
-
-basic.forever(function () {
-    if (input.acceleration(Dimension.X) > 500 || input.acceleration(Dimension.X) < -500) {
-        basic.showIcon(IconNames.Square)
-        pins.digitalWritePin(DigitalPin.P0, 1)
-        basic.pause(200)
-        basic.showIcon(IconNames.SmallSquare)
-    } else {
-    	
-    }
-})
-
-```
-
-## Étape 11 
-
-Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``||basic:montrer l'icône||``.
-
-Les valeurs ``|| pins: P0 ||`` et ``|| pins: 0 ||`` demeurent les inchangées.
-
-```blocks 
-
-basic.forever(function () {
-    if (input.acceleration(Dimension.X) > 500 || input.acceleration(Dimension.X) < -500) {
-        basic.showIcon(IconNames.Square)
-        pins.digitalWritePin(DigitalPin.P0, 1)
-        basic.pause(200)
-        basic.showIcon(IconNames.SmallSquare)
-        pins.digitalWritePin(DigitalPin.P0, 0)
-    } else {
-    	
-    }
-})
-```
-
-## Étape 12 
-
-Ajoute le bloc ``|| basic: pause (ms) 100 ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
-
-Remplace la valeur ``|| basic: 100 ||`` du bloc  ``|| basic: pause (ms) 100 ||`` par ``|| basic: 200 ||``.
-
-```blocks 
-
-basic.forever(function () {
-    if (input.acceleration(Dimension.X) > 500 || input.acceleration(Dimension.X) < -500) {
-        basic.showIcon(IconNames.Square)
-        pins.digitalWritePin(DigitalPin.P0, 1)
-        basic.pause(200)
-        basic.showIcon(IconNames.SmallSquare)
-        pins.digitalWritePin(DigitalPin.P0, 0)
-        basic.pause(200)
-    } else {
-    	
-    }
-})
-
-```
-
-## Étape 13
-
-Ajoute le bloc ``|| loops: répéter 4 fois ||`` dans le bloc ``|| logic: si alors ||``.
-
-Ajouter les autres blocs dans la boucle.
-
-Regarde l'indice au besoin.
-
-```blocks 
-
-basic.forever(function () {
-    if (input.acceleration(Dimension.X) > 500 || input.acceleration(Dimension.X) < -500) {
-        for (let index = 0; index < 4; index++) {
-            basic.showIcon(IconNames.Square)
-            pins.digitalWritePin(DigitalPin.P0, 1)
-            basic.pause(200)
-            basic.showIcon(IconNames.SmallSquare)
-            pins.digitalWritePin(DigitalPin.P0, 0)
-            basic.pause(200)
-        }
-    } else {
-    	
-    }
-})
-
-```
-
-## Étape 14 
-
-Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| logic: sinon ||``.
-
-La valeur ``|| pins: 0 ||`` demeure la même.
-
-```blocks 
-
-basic.forever(function () {
-    if (input.acceleration(Dimension.X) > 500 || input.acceleration(Dimension.X) < 500) {
-        for (let index = 0; index < 4; index++) {
-            basic.showIcon(IconNames.Square)
-            pins.digitalWritePin(DigitalPin.P0, 1)
-            basic.pause(200)
-            basic.showIcon(IconNames.SmallSquare)
-            pins.digitalWritePin(DigitalPin.P0, 0)
-            basic.pause(200)
-        }
-    } else {
-        pins.digitalWritePin(DigitalPin.P0, 0)
-            }
-})
-
-
-```
-
-## Étape 15 
-
-Ajoute le bloc ``|| basic: effacer l'écran ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
+Remplace la valeur ``||logic: vrai||`` par le bloc ``||logic: 0 > 0||``.
 
 ```blocks
 
+let Température = 0
 basic.forever(function () {
-    if (input.acceleration(Dimension.X) > 500 || input.acceleration(Dimension.X) < -500) {
-        for (let index = 0; index < 4; index++) {
-            basic.showIcon(IconNames.Square)
-            pins.digitalWritePin(DigitalPin.P0, 1)
-            basic.pause(200)
-            basic.showIcon(IconNames.SmallSquare)
-            pins.digitalWritePin(DigitalPin.P0, 0)
-            basic.pause(200)
-        }
+    Température = input.temperature()
+    if (0 > 0) {
+    	
     } else {
-        pins.digitalWritePin(DigitalPin.P0, 0)
-        basic.clearScreen()
+    	
+    }
+})
+
+```
+
+## Étape 6
+
+Modifie le bloc ``||logic: 0 > 0||``.
+
+Remplace la valeur ``||logic: 0||`` de gauche par le bloc ``||variables: Température||``.
+
+Remplace la valeur ``||logic: 0||`` de droite par la valeur ``||logic: 25||``.
+
+
+```blocks
+
+let Température = 0
+basic.forever(function () {
+    Température = input.temperature()
+    if (Température > 22) {
+    	
+    } else {
+    	
+    }
+})
+
+```
+
+## Étape 7
+
+Ajoute le bloc ``|| pins: écrire sur la broche   ||`` sous la condition ``|| logic: si alors ||``. 
+
+Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
+
+Remplace la valeur ``|| pins: 0 ||`` par ``|| pins: 1 ||``.
+
+Regarde l'indice au besoin.
+
+```blocks
+
+let Température = 0
+basic.forever(function () {
+    Température = input.temperature()
+    if (Température > 22) {
+        pins.digitalWritePin(DigitalPin.P1, 1)
+    } else {
+    	
+    }
+})
+
+```
+
+## Étape 8
+
+Ajoute le bloc ``|| pins: écrire sur la broche   ||`` sous la condition ``|| logic: sinon ||``. 
+
+Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
+
+La valeur ``|| pins: 0 ||`` demeure la même.
+
+Regarde l'indice au besoin.
+
+```blocks
+
+let Température = 0
+basic.forever(function () {
+    Température = input.temperature()
+    if (Température > 22) {
+        pins.digitalWritePin(DigitalPin.P1, 1)
+    } else {
+        pins.digitalWritePin(DigitalPin.P1, 0)
     }
 })
 

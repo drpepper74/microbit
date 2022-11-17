@@ -80,7 +80,7 @@ Modifie le bloc ``||logic: 0 > 0||``.
 
 Remplace la valeur ``||logic: 0||`` de gauche par le bloc ``||variables: Température||``.
 
-Remplace la valeur ``||logic: 0||`` de droite par la valeur ``||logic: 25||``.
+Remplace la valeur ``||logic: 0||`` de droite par la valeur ``||logic: 22||``.
 
 
 ```blocks

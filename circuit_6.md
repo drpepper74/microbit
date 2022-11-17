@@ -56,7 +56,7 @@ input.onButtonPressed(Button.B, function () {
 
 Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
 
-Chaque lumière LED doit s'allumer lorsque le bouton A est pressé.
+Chaque lumière LED doit s'éteindre lorsque le bouton B est pressé.
 Remplace les valeurs pour paramétrer trois broches.
 Regarde l'indice au besoin.
 

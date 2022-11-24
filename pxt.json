@@ -44,7 +44,9 @@
         "home_1.md",
         "tuto_1_d.md",
         "tuto_2_c.md",
-        "tuto_2_d.md"
+        "tuto_2_d.md",
+        "servo_1.md",
+        "servo_2.md"
     ],
     "testFiles": [
         "test.ts"

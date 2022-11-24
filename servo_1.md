@@ -8,7 +8,7 @@ Programme le micro:bit pour qu'il active le servomoteur lorsqu'un bouton est pre
 
 ## Étape 1
 
-Conserver les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``
+Conserve les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``
 
 ## Étape 2
 

@@ -10,108 +10,115 @@ De plus, affiche un dessin lorsqu'il réalise un angle.
 
 ## Étape 1
 
-Conserver les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``
+Conserve les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``
 
 ## Étape 2
 
-Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``||input: lorsque le bouton A est pressé||``.
+Crée une ``||variables: variable||`` et donne lui le nom ``||variables: Angle||``.
 
+Ajoute le bloc ``||variables: définir Angle||`` dans le bloc ``||input: lorsque le bouton A est appuyé||``.
 
 ```blocks
 
+let Angle = 0
 input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P0, 180)
+    Angle = 0
 })
 
 ```
 
 ## Étape 3
 
-Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
-
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
-
-Remplace la valeur ``|| pins: 180 ||`` par ``|| pins: 45 ||``.
+Remplace la valeur ``||variables: 0||`` du bloc ``||variables: définir Angle ||`` par le bloc ``||math: choisir au hasard de 0 à 10||``. 
 
 ```blocks
 
+let Angle = 0
 input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P1, 45)
+    Angle = randint(0, 10)
 })
 
 ```
 
 ## Étape 4
 
-Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``||input: lorsque le bouton B est pressé||``.
+Remplace la valeur ``||math: 0||`` du bloc ``||math: choisir au hasard de 0 à 10 ||`` par la valeur ``||math: 1||``.
 
+Remplace la valeur ``||math: 10||`` du bloc ``||math: choisir au hasard de 0 à 10 ||`` par la valeur ``||math: 180||``. 
 
 ```blocks
 
-input.onButtonPressed(Button.B, function () {
-    pins.servoWritePin(AnalogPin.P0, 180)
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    Angle = randint(1, 180)
 })
 
 ```
 
 ## Étape 5
 
-Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
+Ajoute le bloc ``|| pins: régler position servo ||`` sous le bloc ``||variables: définir Angle ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
-
-Remplace la valeur ``|| pins: 180 ||`` par ``|| pins: 90 ||``.
 
 ```blocks
 
-input.onButtonPressed(Button.B, function () {
-    pins.servoWritePin(AnalogPin.P1, 90)
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    Angle = randint(1, 180)
+    pins.servoWritePin(AnalogPin.P0, 180)
 })
-
 
 ```
 
 ## Étape 6
 
-Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``||input: lorsque le bouton A+B est pressé||``.
+Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
+Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
+
+Remplace la valeur ``|| pins: 180 ||`` par le bloc ``||variables:  Angle ||``.
 
 ```blocks
 
-input.onButtonPressed(Button.AB, function () {
-    pins.servoWritePin(AnalogPin.P0, 180)
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    Angle = randint(1, 180)
+    pins.servoWritePin(AnalogPin.P2, Angle)
 })
 
 ```
 
 ## Étape 7
 
-Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
+Ajoute le bloc ``|| basic: pause (ms) 100 ||`` sous le bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
-
-Remplace la valeur ``|| pins: 180 ||`` par ``|| pins: 180 ||``.
+Remplace la valeur ``|| basic: 100 ||`` du ``|| basic: pause (ms) ||`` par la valeur ``|| basic: 1000 ||``.
 
 ```blocks
 
-input.onButtonPressed(Button.AB, function () {
-    pins.servoWritePin(AnalogPin.P1, 180)
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    Angle = randint(1, 180)
+    pins.servoWritePin(AnalogPin.P2, Angle)
+    basic.pause(1000)
 })
-
 
 ```
 
 ## Étape 8
 
-Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``||input: lorsque secouer||``.
+Ajoute le bloc ``|| pins: régler position servo ||`` sous le bloc ``||basic: pause (ms) 1000 ||``.
 
 
 ```blocks
 
-input.onGesture(Gesture.Shake, function () {
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    Angle = randint(1, 180)
+    pins.servoWritePin(AnalogPin.P2, Angle)
+    basic.pause(1000)
     pins.servoWritePin(AnalogPin.P0, 180)
 })
-
 
 ```
 
@@ -119,14 +126,18 @@ input.onGesture(Gesture.Shake, function () {
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
+Remplace la valeur ``|| pins: P0 ||`` par la valeur ``|| pins: P2 ||``.
 
-Remplace la valeur ``|| pins: 180 ||`` par ``|| pins: 0 ||``.
+Remplace la valeur ``|| pins: 180 ||`` par la valeur ``|| pins: 0 ||``.
 
 ```blocks
 
-input.onGesture(Gesture.Shake, function () {
-    pins.servoWritePin(AnalogPin.P1, 0)
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    Angle = randint(1, 180)
+    pins.servoWritePin(AnalogPin.P2, Angle)
+    basic.pause(1000)
+    pins.servoWritePin(AnalogPin.P2, 0)
 })
 
 ```

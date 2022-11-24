@@ -14,7 +14,7 @@ Supprime le bloc ``||basic:au démarrage||``.
 
 Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Temperature||``.
 
-Ajoute le bloc ``||variables: définir Temperature à "0"||`` dans le bloc ``||basic: toujours||``.
+Ajoute le bloc ``||variables: définir Temperature ||`` dans le bloc ``||basic: toujours||``.
 
 ```blocks
 
@@ -27,7 +27,7 @@ basic.forever(function () {
 
 ## Étape 3
 
-Remplace la valeur ``||variables: 0||`` du bloc ``||variables: définir Temperature à||`` par le bloc ``||input: température||``. 
+Remplace la valeur ``||variables: 0||`` du bloc ``||variables: définir Temperature ||`` par le bloc ``||input: température||``. 
 
 ```blocks
 
@@ -40,7 +40,7 @@ basic.forever(function () {
 
 ## Étape 4
 
-Ajoute le bloc ``|| basic: montrer nombre "0" ||`` sous le bloc ``|| variables: définir Temperature ||``.
+Ajoute le bloc ``|| basic: montrer nombre ||`` sous le bloc ``|| variables: définir Temperature ||``.
 
 ```blocks
 
@@ -54,7 +54,7 @@ basic.forever(function () {
 
 ## Étape 5
 
-Remplace la valeur ``|| basic: 0||`` du bloc ``|| basic: montrer nombre "0"||`` par le bloc ``|| variables: Temperature||``. 
+Remplace la valeur ``|| basic: 0||`` du bloc ``|| basic: montrer nombre ||`` par le bloc ``|| variables: Temperature||``. 
 
 ```blocks
 

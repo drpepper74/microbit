@@ -206,6 +206,73 @@ input.onButtonPressed(Button.AB, function () {
 
 ```
 
+## Étape 14
+
+Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``||input: lorsque secouer||``.
+
+
+```blocks
+
+input.onGesture(Gesture.Shake, function () {
+    pins.servoWritePin(AnalogPin.P0, 180)
+})
+
+```
+
+## Étape 15
+
+Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
+
+Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
+
+Remplace la valeur ``|| pins: 180 ||`` par ``|| pins: 0 ||``.
+
+```blocks
+
+input.onGesture(Gesture.Shake, function () {
+    pins.servoWritePin(AnalogPin.P1, 0)
+})
+
+```
+
+## Étape 16
+
+Ajoute trois blocs ``|| pins: écrire sur la broche ||`` sous le bloc ``|| pins: régler position servo ||``.
+
+```blocks
+
+input.onGesture(Gesture.Shake, function () {
+    pins.servoWritePin(AnalogPin.P1, 0)
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    pins.digitalWritePin(DigitalPin.P0, 0)
+})
+
+
+```
+
+## Étape 17
+
+Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
+
+Remplace les valeurs ``|| pins: P0 ||`` par ``|| pins: P12 ||``, ``|| pins: P13 ||`` et ``|| pins: P14 ||``.
+
+Les valeurs ``|| pins: 0 ||`` demeurent les mêmes.
+
+Regarde l'indice!
+
+```blocks
+
+input.onGesture(Gesture.Shake, function () {
+    pins.servoWritePin(AnalogPin.P1, 0)
+    pins.digitalWritePin(DigitalPin.P12, 0)
+    pins.digitalWritePin(DigitalPin.P13, 0)
+    pins.digitalWritePin(DigitalPin.P14, 0)
+})
+
+
+```
+
 ## @showdialog 
 
 Félicitations! Tu as terminé de programmer un circuit électrique avec un servomoteur.

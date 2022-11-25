@@ -34,6 +34,39 @@ pins.servoWritePin(AnalogPin.P1, 0)
 
 ## Étape 3
 
+Ajoute trois blocs ``|| pins: écrire sur la broche ||`` sous le bloc ``|| pins: régler position servo ||``.
+
+```blocks
+
+pins.servoWritePin(AnalogPin.P1, 0)
+pins.digitalWritePin(DigitalPin.P0, 0)
+pins.digitalWritePin(DigitalPin.P0, 0)
+pins.digitalWritePin(DigitalPin.P0, 0)
+
+```
+
+## Étape 4
+
+Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
+
+Remplace les valeurs ``|| pins: P0 ||`` par ``|| pins: P12 ||``, ``|| pins: P13 ||`` et ``|| pins: P14 ||``.
+
+Remplace les valeurs ``|| pins: 0 ||`` par ``|| pins: 0 ||``, ``|| pins: 0 ||`` et ``|| pins: 0 ||``.
+
+Regarde l'indice!
+
+```blocks
+
+pins.servoWritePin(AnalogPin.P1, 0)
+pins.digitalWritePin(DigitalPin.P12, 0)
+pins.digitalWritePin(DigitalPin.P13, 0)
+pins.digitalWritePin(DigitalPin.P14, 0)
+
+
+```
+
+## Étape 5
+
 Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Température||``.
 
 Ajoute le bloc ``||variables: définir Température ||`` sous le bloc ``|| pins: régler position servo ||``.
@@ -41,23 +74,28 @@ Ajoute le bloc ``||variables: définir Température ||`` sous le bloc ``|| pins:
 ```blocks
 
 pins.servoWritePin(AnalogPin.P1, 0)
+pins.digitalWritePin(DigitalPin.P12, 0)
+pins.digitalWritePin(DigitalPin.P13, 0)
+pins.digitalWritePin(DigitalPin.P14, 0)
 let Température = 0
 
 ```
 
-## Étape 4
+## Étape 6
 
 Remplace la valeur ``||variables: 0||`` du bloc ``||variables: définir Temperature ||`` par le bloc ``||input: température||``. 
 
 ```blocks
 
 pins.servoWritePin(AnalogPin.P1, 0)
+pins.digitalWritePin(DigitalPin.P12, 0)
+pins.digitalWritePin(DigitalPin.P13, 0)
+pins.digitalWritePin(DigitalPin.P14, 0)
 let Température = input.temperature()
-
 
 ```
 
-## Étape 5
+## Étape 7
 
 Ajoute le bloc ``|| basic: montrer nombre ||`` dans le bloc ``||basic: toujours||``.
 
@@ -69,7 +107,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 6
+## Étape 8
 
 Modifie le bloc ``|| basic: montrer nombre ||``.
 
@@ -84,7 +122,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 7
+## Étape 9
 
 Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| basic: montrer nombre ||``.
 
@@ -98,7 +136,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 8
+## Étape 10
 
 Modifie le bloc ``|| basic: pause (ms) 100 ||``.
 
@@ -114,7 +152,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 9
+## Étape 11
 
 Ajoute le bloc ``|| logic: si vrai alors ||`` sous le bloc ``|| basic: pause (ms) ||``.
 
@@ -131,7 +169,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 10
+## Étape 12
 
 Modifie le bloc ``|| logic: si vrai alors ||``.
 
@@ -150,7 +188,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 11
+## Étape 13
 
 Modifie le bloc ``|| logic: 0 <= 0 ||``.
 
@@ -171,7 +209,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 12
+## Étape 14
 
 Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``|| logic: si vrai alors ||``.
 
@@ -188,7 +226,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 13
+## Étape 15
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
@@ -209,7 +247,8 @@ basic.forever(function () {
 
 ```
 
-## Étape 14
+## Étape 16
+
 Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| pins: régler position servo ||``.
 
 ```blocks
@@ -226,7 +265,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 15
+## Étape 17
 
 Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
 
@@ -248,7 +287,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 16
+## Étape 18
 
 Ajoute le bloc ``|| logic: si vrai alors ||`` sous le bloc ``|| logic: si vrai alors ||``.
 
@@ -269,7 +308,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 17
+## Étape 19
 
 Modifie le bloc ``|| logic: si vrai alors ||``.
 
@@ -292,7 +331,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 18
+## Étape 20
 
 Modifie le bloc ``|| logic: et ||``.
 
@@ -317,7 +356,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 19
+## Étape 21
 
 Modifie le bloc ``|| logic: 0 >= 0 ||``.
 
@@ -342,7 +381,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 20
+## Étape 22
 
 Modifie le bloc ``|| logic: 0 <= 0 ||``.
 
@@ -367,7 +406,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 21
+## Étape 23
 
 Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``|| logic: si vrai alors ||``.
 
@@ -388,7 +427,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 22
+## Étape 24
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
@@ -413,7 +452,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 23
+## Étape 25
 
 Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| pins: régler position servo ||``.
 
@@ -435,7 +474,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 24
+## Étape 26
 
 Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
 
@@ -461,7 +500,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 25
+## Étape 27
 
 Ajoute le bloc ``|| logic: si vrai alors ||`` sous le bloc ``|| logic: si vrai alors ||``.
 
@@ -487,7 +526,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 26
+## Étape 28
 
 Modifie le bloc ``|| logic: si vrai alors ||``.
 
@@ -514,7 +553,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 27
+## Étape 29
 
 Modifie le bloc ``|| logic: 0 >= 0 ||``.
 
@@ -544,7 +583,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 28
+## Étape 30
 
 Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``|| logic: si vrai alors ||``.
 
@@ -569,7 +608,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 29
+## Étape 31
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
@@ -599,7 +638,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 30
+## Étape 32
 
 Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| pins: régler position servo ||``.
 
@@ -626,7 +665,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 31
+## Étape 33
 
 Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``|| logic: si et alors ||``.
 
@@ -652,7 +691,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 32
+## Étape 34
 
 Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
 
@@ -682,7 +721,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 33
+## Étape 35
 
 Remplace le bloc ``||basic: toujours ||`` par le bloc ``||loops: chaque 500 (ms)||``.
 

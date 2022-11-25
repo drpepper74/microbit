@@ -4,13 +4,13 @@
 
 ## @showdialog
 
-Programme le micro:bit pour qu'il active le servomoteur lorsqu'un bouton est pressé.
+Programme le micro:bit pour qu'il active le servomoteur à un angle aléatoire lorsqu'un bouton est pressé.
 
-De plus, affiche un dessin lorsqu'il réalise un angle.
+De plus, affiche l'angle réalisé par le servomoteur.
 
 ## Étape 1
 
-Conserve les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``
+Conserve les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``.
 
 ## Étape 2
 
@@ -90,9 +90,9 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 7
 
-Ajoute le bloc ``|| basic: pause (ms) 100 ||`` sous le bloc ``|| pins: régler position servo ||``.
+Ajoute le bloc ``|| basic: montre nombre ||`` sous le bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| basic: 100 ||`` du ``|| basic: pause (ms) ||`` par la valeur ``|| basic: 1000 ||``.
+Remplace la valeur ``|| basic: 0 ||`` du bloc ``|| basic: montrer nombre ||`` par le bloc ``|| variables: Angle ||``.
 
 ```blocks
 
@@ -100,14 +100,33 @@ let Angle = 0
 input.onButtonPressed(Button.A, function () {
     Angle = randint(1, 180)
     pins.servoWritePin(AnalogPin.P2, Angle)
-    basic.pause(1000)
+    basic.showNumber(Angle)
 })
 
 ```
 
 ## Étape 8
 
-Ajoute le bloc ``|| pins: régler position servo ||`` sous le bloc ``||basic: pause (ms) 1000 ||``.
+Ajoute le bloc ``|| basic: pause (ms) 100 ||`` sous le bloc ``|| basic: montrer nombre ||``.
+
+Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par la valeur ``|| basic: 2000 ||``.
+
+```blocks
+
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    Angle = randint(1, 180)
+    pins.servoWritePin(AnalogPin.P2, Angle)
+    basic.showNumber(Angle)
+    basic.pause(2000)
+})
+
+
+```
+
+## Étape 9
+
+Ajoute le bloc ``|| pins: régler position servo ||`` sous le bloc ``||basic: pause (ms) 2000 ||``.
 
 
 ```blocks
@@ -116,13 +135,14 @@ let Angle = 0
 input.onButtonPressed(Button.A, function () {
     Angle = randint(1, 180)
     pins.servoWritePin(AnalogPin.P2, Angle)
-    basic.pause(1000)
+    basic.showNumber(Angle)
+    basic.pause(2000)
     pins.servoWritePin(AnalogPin.P0, 180)
 })
 
 ```
 
-## Étape 9
+## Étape 10
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
@@ -136,7 +156,8 @@ let Angle = 0
 input.onButtonPressed(Button.A, function () {
     Angle = randint(1, 180)
     pins.servoWritePin(AnalogPin.P2, Angle)
-    basic.pause(1000)
+    basic.showNumber(Angle)
+    basic.pause(2000)
     pins.servoWritePin(AnalogPin.P2, 0)
 })
 

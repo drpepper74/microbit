@@ -6,8 +6,6 @@
 
 Programme le micro:bit pour qu'il active le servomoteur à un angle précis en fonction de l'intensité lumineuse.
 
-De plus, le micro:bit doit actvité une lumière.
-
 ## Étape 1
 
 Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``||basic: au démarrage||``.

@@ -12,7 +12,7 @@ Supprime le bloc ``||basic:au démarrage||``.
 
 ## Étape 2
 
-Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Lumiere||``. (sans accent sur le "è")
+Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Lumière||``.
 
 Ajoute le bloc ``||variables: définir Lumiere à "0"||`` dans le bloc ``||basic: toujours||``.
 

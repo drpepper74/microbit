@@ -12,9 +12,9 @@ Supprime le bloc ``||basic:au démarrage||``.
 
 ## Étape 2
 
-Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Temperature||``.
+Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Température||``.
 
-Ajoute le bloc ``||variables: définir Temperature ||`` dans le bloc ``||basic: toujours||``.
+Ajoute le bloc ``||variables: définir Température ||`` dans le bloc ``||basic: toujours||``.
 
 ```blocks
 

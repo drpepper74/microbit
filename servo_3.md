@@ -10,7 +10,7 @@ De plus, le micro:bit doit actvité une lumière.
 
 ## Étape 1
 
-Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``||basic: toujours||``.
+Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``||basic: au démarrage||``.
 
 ```blocks
 
@@ -217,30 +217,11 @@ basic.forever(function () {
 
 ## Étape 14
 
-Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``|| logic: si vrai alors ||``.
+Modifie le bloc ``|| logic: 0 >= 0 ||``.
 
-```blocks
+Remplace la valeur ``|| logic: 0 ||`` de gauche par le bloc ``|| input: niveau d'intensité lumineuse ||``.
 
-basic.forever(function () {
-    basic.showNumber(input.lightLevel())
-    basic.pause(1000)
-    if (input.lightLevel() <= 40 40) {
-        pins.servoWritePin(AnalogPin.P3, 100)
-    }
-    if (input.lightLevel() >= 41) {
-        pins.servoWritePin(AnalogPin.P0, 180)
-    }
-})
-
-```
-
-## Étape 15
-
-Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
-
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P3 ||``.
-
-Remplace la valeur ``|| pins: 180 ||`` par ``|| pins: 45 ||``.
+Remplace la valeur ``|| logic: 0 ||`` de droite par la valeur ``|| logic: 41 ||``.
 
 ```blocks
 
@@ -251,7 +232,50 @@ basic.forever(function () {
         pins.servoWritePin(AnalogPin.P3, 100)
     }
     if (input.lightLevel() >= 41) {
-        pins.servoWritePin(AnalogPin.P3, 45)
+    	
+    }
+})
+
+```
+
+## Étape 15
+
+Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``|| logic: si vrai alors ||``.
+
+```blocks
+
+basic.forever(function () {
+    basic.showNumber(input.lightLevel())
+    basic.pause(1000)
+    if (input.lightLevel() <= 40) {
+        pins.servoWritePin(AnalogPin.P3, 100)
+    }
+    if (input.lightLevel() >= 41) {
+        pins.servoWritePin(AnalogPin.P0, 180)
+    }
+})
+
+
+```
+
+## Étape 16
+
+Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
+
+Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P3 ||``.
+
+Remplace la valeur ``|| pins: 180 ||`` par ``|| pins: 50 ||``.
+
+```blocks
+
+basic.forever(function () {
+    basic.showNumber(input.lightLevel())
+    basic.pause(1000)
+    if (input.lightLevel() <= 40) {
+        pins.servoWritePin(AnalogPin.P3, 100)
+    }
+    if (input.lightLevel() >= 41) {
+        pins.servoWritePin(AnalogPin.P3, 50)
     }
 })
 

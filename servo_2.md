@@ -1,6 +1,6 @@
 # Circuits électriques et servomoteur
 
-# Tutoriel 1
+# Tutoriel 2
 
 ## @showdialog
 
@@ -11,6 +11,14 @@ De plus, affiche l'angle réalisé par le servomoteur.
 ## Étape 1
 
 Conserve les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``.
+
+```blocks
+
+basic.forever(function () {
+	
+})
+
+```
 
 ## Étape 2
 

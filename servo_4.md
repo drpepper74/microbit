@@ -1,6 +1,6 @@
 # Circuits électriques et servomoteur
 
-# Tutoriel 1
+# Tutoriel 4
 
 ## @showdialog
 
@@ -9,6 +9,14 @@ Programme le micro:bit pour qu'il active le servomoteur lorsqu'un bouton est pre
 ## Étape 1
 
 Conserve les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``.
+
+```blocks
+
+basic.forever(function () {
+	
+})
+
+```
 
 ## Étape 2
 

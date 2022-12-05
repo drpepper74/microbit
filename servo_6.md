@@ -4,11 +4,22 @@
 
 ## @showdialog
 
-Programme le micro:bit pour qu'il active le servomoteur à un angle précis en fonction de la température.
+Transforme le circuit électrique afin de créer une barrière et des feux de circulation. 
 
-De plus, le micro:bit doit actvité une lumière.
 
 ## Étape 1
+
+Conserve les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``.
+
+```blocks
+
+basic.forever(function () {
+	
+})
+
+```
+
+## Étape 2
 
 Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``||basic: au démarrage||``.
 
@@ -18,7 +29,7 @@ pins.servoWritePin(AnalogPin.P0, 180)
 
 ```
 
-## Étape 2
+## Étape 3
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
@@ -32,7 +43,7 @@ pins.servoWritePin(AnalogPin.P2, 0)
 
 ```
 
-## Étape 3
+## Étape 4
 
 Ajoute trois blocs ``|| pins: écrire sur la broche ||`` sous le bloc ``|| pins: régler position servo ||``.
 
@@ -47,7 +58,7 @@ pins.digitalWritePin(DigitalPin.P0, 0)
 
 ```
 
-## Étape 4
+## Étape 5
 
 Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
 
@@ -65,7 +76,7 @@ pins.digitalWritePin(DigitalPin.P14, 1)
 
 ```
 
-## Étape 5
+## Étape 6
 
 Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``||input: lorsque le bouton A est pressé||``.
 
@@ -77,7 +88,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 6
+## Étape 7
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
@@ -93,7 +104,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 7
+## Étape 8
 
 Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| pins: régler position servo ||``.
 
@@ -108,7 +119,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 8
+## Étape 9
 
 Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
 
@@ -127,7 +138,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 9
+## Étape 10
 
 Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
 
@@ -143,7 +154,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 10
+## Étape 11
 
 Ajoute le bloc ``|| basic: montrer l'icône  ||`` sous le bloc ``|| basic: pause (ms) ||``.
 
@@ -160,7 +171,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 11
+## Étape 12
 
 Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| basic: montrer l'icône ||``.
 
@@ -176,7 +187,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 12
+## Étape 13
 
 Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
 
@@ -193,26 +204,6 @@ input.onButtonPressed(Button.A, function () {
     basic.pause(500)
     basic.showIcon(IconNames.No)
     pins.digitalWritePin(DigitalPin.P14, 0)
-})
-
-
-```
-
-## Étape 13
-
-Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
-
-La valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` demeure la même.
-
-```blocks
-
-input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    basic.pause(500)
-    basic.showIcon(IconNames.No)
-    pins.digitalWritePin(DigitalPin.P14, 0)
-    basic.pause(100)
 })
 
 
@@ -220,111 +211,6 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 14
 
-Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| pins: régler position servo ||``.
-
-P12 = Vert - P12 = Jaune - P14 = Rouge
-
-```blocks
-
-input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P0, 0)
-    })
-
-```
-
-## Étape 15
-
-Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
-
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P14 ||``.
-
-Remplace la valeur ``|| pins: 0 ||`` par ``|| pins: 1 ||``.
-
-Regarde l'indice!
-
-```blocks
-
-input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 1)
-})
-
-```
-
-## Étape 16
-
-Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
-
-Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par la valeur ``|| basic: 500 ||``.
-
-```blocks
-
-input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    basic.pause(500)
-})
-
-```
-
-## Étape 17
-
-Ajoute le bloc ``|| basic: montrer l'icône  ||`` sous le bloc ``|| basic: pause (ms) ||``.
-
-Regarde l'indice.
-
-```blocks
-
-input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    basic.pause(500)
-    basic.showIcon(IconNames.No)
-})
-
-```
-
-## Étape 18
-
-Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| basic: montrer l'icône ||``.
-
-```blocks
-
-input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    basic.pause(500)
-    basic.showIcon(IconNames.No)
-    pins.digitalWritePin(DigitalPin.P0, 0)
-})
-
-```
-
-## Étape 19
-
-Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
-
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P14 ||``.
-
-La valeur ``|| pins: 0 ||`` demeure la même.
-
-
-```blocks
-
-input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    basic.pause(500)
-    basic.showIcon(IconNames.No)
-    pins.digitalWritePin(DigitalPin.P14, 0)
-})
-
-
-```
-
-## Étape 20
-
 Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
 
 La valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` demeure la même.
@@ -340,9 +226,10 @@ input.onButtonPressed(Button.A, function () {
     basic.pause(100)
 })
 
+
 ```
 
-## Étape 21
+## Étape 15
 
 Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| basic: pause (ms) ||``.
 
@@ -360,7 +247,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 22
+## Étape 16
 
 Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
 
@@ -382,7 +269,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 23
+## Étape 17
 
 Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
 
@@ -403,7 +290,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 24
+## Étape 18
 
 Ajoute le bloc ``|| basic: montrer LEDs ||`` sous le bloc ``|| basic: pause (ms) ||``.
 
@@ -431,7 +318,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 25
+## Étape 19
 
 Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| basic: montrer LEDs ||``.
 
@@ -458,7 +345,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 26
+## Étape 20
 
 Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
 
@@ -489,7 +376,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 27
+## Étape 21
 
 Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
 
@@ -519,7 +406,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 28
+## Étape 22
 
 Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| basic: pause (ms) ||``.
 
@@ -550,7 +437,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 29
+## Étape 23
 
 Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
 
@@ -586,7 +473,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 30
+## Étape 24
 
 Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
 
@@ -619,7 +506,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 31
+## Étape 25
 
 Ajoute le bloc ``|| basic: montrer l'icône  ||`` sous le bloc ``|| basic: pause (ms) ||``.
 
@@ -653,7 +540,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 32
+## Étape 26
 
 Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| basic: montrer l'icône ||``.
 
@@ -686,7 +573,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 33
+## Étape 27
 
 Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
 
@@ -721,3 +608,9 @@ input.onButtonPressed(Button.A, function () {
 })
 
 ```
+
+## @showdialog 
+
+Félicitations! Tu as terminé de programmer une barrière.
+
+Pour tester le circuit, réalise les branchements et télécharge la programmation dans le micro:bit.

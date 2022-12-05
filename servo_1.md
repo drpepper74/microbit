@@ -10,6 +10,14 @@ Programme le micro:bit pour qu'il active le servomoteur lorsqu'un bouton est pre
 
 Conserve les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``.
 
+```blocks
+
+basic.forever(function () {
+	
+})
+
+```
+
 ## Étape 2
 
 Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``||input: lorsque le bouton A est pressé||``.

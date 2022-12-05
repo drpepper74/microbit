@@ -50,7 +50,9 @@
         "servo_3.md",
         "servo_4.md",
         "servo_5.md",
-        "servo_6.md"
+        "servo_6.md",
+        "servo_7a.md",
+        "servo_7b.md"
     ],
     "testFiles": [
         "test.ts"

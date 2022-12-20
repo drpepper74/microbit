@@ -82,15 +82,16 @@ pins.digitalWritePin(DigitalPin.P14, 0)
 
 Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Température||``.
 
-Ajoute le bloc ``||variables: définir Température ||`` sous le bloc ``|| pins: régler position servo ||``.
+Ajoute le bloc ``||variables: définir Température ||`` dans le bloc ``|| basic: au démarrage ||``.
 
 ```blocks
 
+let Température = 0
 pins.servoWritePin(AnalogPin.P1, 0)
 pins.digitalWritePin(DigitalPin.P12, 0)
 pins.digitalWritePin(DigitalPin.P13, 0)
 pins.digitalWritePin(DigitalPin.P14, 0)
-let Température = 0
+
 
 ```
 
@@ -100,11 +101,11 @@ Remplace la valeur ``||variables: 0||`` du bloc ``||variables: définir Temperat
 
 ```blocks
 
+let Température = input.temperature()
 pins.servoWritePin(AnalogPin.P1, 0)
 pins.digitalWritePin(DigitalPin.P12, 0)
 pins.digitalWritePin(DigitalPin.P13, 0)
 pins.digitalWritePin(DigitalPin.P14, 0)
-let Température = input.temperature()
 
 ```
 
@@ -680,32 +681,6 @@ basic.forever(function () {
 
 ## Étape 34
 
-Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``|| logic: si et alors ||``.
-
-```blocks
-
-basic.forever(function () {
-    let Température = 0
-    basic.showNumber(Température)
-    basic.pause(1000)
-    if (Température <= 21) {
-        pins.servoWritePin(AnalogPin.P1, 45)
-        pins.digitalWritePin(DigitalPin.P12, 1)
-    }
-    if (Température >= 22 && Température <= 27) {
-        pins.servoWritePin(AnalogPin.P1, 90)
-        pins.digitalWritePin(DigitalPin.P13, 1)
-    }
-    if (Température >= 28) {
-        pins.servoWritePin(AnalogPin.P1, 180)
-        pins.digitalWritePin(DigitalPin.P0, 0)
-    }
-})
-
-```
-
-## Étape 35
-
 Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
 
 Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P14 ||``.
@@ -715,34 +690,6 @@ Remplace la valeur ``|| pins: 0 ||`` par ``|| pins: 1 ||``.
 ```blocks
 
 basic.forever(function () {
-    let Température = 0
-    basic.showNumber(Température)
-    basic.pause(1000)
-    if (Température <= 21) {
-        pins.servoWritePin(AnalogPin.P1, 45)
-        pins.digitalWritePin(DigitalPin.P12, 1)
-    }
-    if (Température >= 22 && Température <= 27) {
-        pins.servoWritePin(AnalogPin.P1, 90)
-        pins.digitalWritePin(DigitalPin.P13, 1)
-    }
-    if (Température >= 28) {
-        pins.servoWritePin(AnalogPin.P1, 180)
-        pins.digitalWritePin(DigitalPin.P14, 1)
-    }
-})
-
-```
-
-## Étape 36
-
-Remplace le bloc ``||basic: toujours ||`` par le bloc ``||loops: chaque 500 (ms)||``.
-
-Modifier la valeur ``||loops: 500||`` par ``||loops: 5000||``.
-
-```blocks
-
-loops.everyInterval(5000, function () {
     let Température = 0
     basic.showNumber(Température)
     basic.pause(1000)

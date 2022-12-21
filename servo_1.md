@@ -96,7 +96,7 @@ Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
 Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
 
-Remplace la valeur ``|| pins: 180 ||`` par ``|| pins: 180 ||``.
+La valeur ``|| pins: 180 ||`` demeure la même.
 
 ```blocks
 

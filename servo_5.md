@@ -187,7 +187,7 @@ basic.forever(function () {
 
 Modifie le bloc ``|| logic: si vrai alors ||``.
 
-Remplace la valeur ``|| logic: vrai ||`` du bloc ``|| logic: si vrai alors ||`` par le bloc ``|| logic: 0 <= 0 ||``.
+Remplace la valeur ``|| logic: vrai ||`` du bloc ``|| logic: si vrai alors ||`` par le bloc ``|| logic: 0 ≤ 0 ||``.
 
 ```blocks
 
@@ -204,7 +204,7 @@ basic.forever(function () {
 
 ## Étape 14
 
-Modifie le bloc ``|| logic: 0 <= 0 ||``.
+Modifie le bloc ``|| logic: 0 ≤ 0 ||``.
 
 Remplace la valeur ``|| logic: 0 ||`` de gauche par le bloc ``|| variables: Température ||``.
 
@@ -349,9 +349,9 @@ basic.forever(function () {
 
 Modifie le bloc ``|| logic: et ||``.
 
-Remplace la valeur ``|| logic: faux ||`` de gauche par le bloc ``|| logic: 0 >= 0 ||``.
+Remplace la ``|| logic: valeur ||`` de gauche par le bloc ``|| logic: 0 ≥ 0 ||``.
 
-Remplace la valeur ``|| logic: faux ||`` de droite par le bloc ``|| logic: 0 <= 0 ||``.
+Remplace la ``|| logic: valeur ||`` de droite par le bloc ``|| logic: 0 ≤ 0 ||``.
 
 ```blocks
 
@@ -372,7 +372,7 @@ basic.forever(function () {
 
 ## Étape 22
 
-Modifie le bloc ``|| logic: 0 >= 0 ||``.
+Modifie le bloc ``|| logic: 0 ≥ 0 ||``.
 
 Remplace la valeur ``|| logic: 0 ||`` de gauche par le bloc ``|| variables: Température ||``.
 
@@ -397,7 +397,7 @@ basic.forever(function () {
 
 ## Étape 23
 
-Modifie le bloc ``|| logic: 0 <= 0 ||``.
+Modifie le bloc ``|| logic: 0 ≤ 0 ||``.
 
 Remplace la valeur ``|| logic: 0 ||`` de gauche par le bloc ``|| variables: Température ||``.
 

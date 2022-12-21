@@ -81,7 +81,7 @@ input.onButtonPressed(Button.B, function () {
 
 Modifie le bloc ``||radio:envoyer la chaîne par radio||``.
 
-Ajoute le texte ``||radio:Ouvrir||`` dans le bloc ``||radio:envoyer la chaîne par radio||``.
+Ajoute le texte ``||radio:Fermer||`` dans le bloc ``||radio:envoyer la chaîne par radio||``.
 
 ```blocks
 

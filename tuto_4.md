@@ -4,7 +4,7 @@
 
 ## @showdialog
 
-Programme le micro:bit pour qu'il affiche une image lorsqu'un bouton du micro:bit.
+Programme le micro:bit pour qu'il affiche une image lorsqu'un bouton du micro:bit est pressé.
 
 Programme les boutons A, B et A+B.
 

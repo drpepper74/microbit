@@ -52,7 +52,8 @@
         "servo_5.md",
         "servo_6.md",
         "servo_7a.md",
-        "servo_7b.md"
+        "servo_7b.md",
+        "kitronik_1.md"
     ],
     "testFiles": [
         "test.ts"

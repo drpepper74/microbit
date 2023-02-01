@@ -12,7 +12,7 @@ Supprime le bloc ``||basic:au démarrage||``.
 
 ## Étape 2
 
-Ajoute le bloc ``||basic: montrer LEDs ||`` dans le bloc ``||basic:au démarrage||``.
+Ajoute le bloc ``||basic: montrer LEDs ||`` dans le bloc ``||basic:toujours||``.
 
 Dessine un bateau. Regarde l'indice.
 

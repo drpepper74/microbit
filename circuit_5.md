@@ -6,23 +6,35 @@ Transforme le micro:bit en thermomètre.
 
 ## Étape 1
 
+Supprime le bloc ``||basic: au démarrage||``.
+
+## Étape 2
+
 Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Température||``.
 
-Ajoute le bloc ``||variables: définir Température||`` dans le bloc ``||basic: au démarrage||``.
+Ajoute le bloc ``||variables: définir Température||`` dans le bloc ``||basic: toujours||``.
 
 ```blocks
 
 let Température = 0
+basic.forever(function () {
+    Température = 0
+})
+
 
 ```
 
-## Étape 2
+## Étape 3
 
 Remplace la valeur  ``||variables: 0||`` du bloc ``||variables: définir Température||`` par le bloc ``||input: température||``.
 
 ```blocks
 
-let Température = input.temperature()
+let Température = 0
+basic.forever(function () {
+    Température = input.temperature()
+})
+
 
 ```
 
@@ -32,7 +44,9 @@ Ajoute le bloc  ``||logic: si vrai alors sinon||`` dans le bloc ``||basic: toujo
 
 ```blocks
 
+let Température = 0
 basic.forever(function () {
+    Température = input.temperature()
     if (true) {
     	
     } else {
@@ -50,7 +64,9 @@ Remplace la valeur ``||logic: vrai||`` par le bloc ``||logic: 0 > 0||``.
 
 ```blocks
 
+let Température = 0
 basic.forever(function () {
+    Température = input.temperature()
     if (0 > 0) {
     	
     } else {
@@ -71,7 +87,9 @@ Remplace la valeur ``||logic: 0||`` de droite par la valeur ``||logic: 22||``.
 
 ```blocks
 
+let Température = 0
 basic.forever(function () {
+    Température = input.temperature()
     let Température = 0
     if (Température > 22) {
     	
@@ -94,7 +112,9 @@ Regarde l'indice au besoin.
 
 ```blocks
 
+let Température = 0
 basic.forever(function () {
+    Température = input.temperature()
     let Température = 0
     if (Température > 22) {
         pins.digitalWritePin(DigitalPin.P1, 1)
@@ -117,7 +137,9 @@ Regarde l'indice au besoin.
 
 ```blocks
 
+let Température = 0
 basic.forever(function () {
+    Température = input.temperature()
     let Température = 0
     if (Température > 22) {
         pins.digitalWritePin(DigitalPin.P1, 1)

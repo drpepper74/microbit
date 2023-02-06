@@ -140,7 +140,6 @@ Regarde l'indice au besoin.
 let Température = 0
 basic.forever(function () {
     Température = input.temperature()
-    let Température = 0
     if (Température > 22) {
         pins.digitalWritePin(DigitalPin.P1, 1)
     } else {
@@ -174,6 +173,7 @@ input.onButtonPressed(Button.A, function () {
     let Température = 0
     basic.showNumber(Température)
 })
+
 
 ```
 

@@ -38,7 +38,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 3
+## Étape 4
 
 Ajoute le bloc  ``||logic: si vrai alors sinon||`` dans le bloc ``||basic: toujours||``.
 
@@ -56,7 +56,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 4
+## Étape 5
 
 Modifie le bloc ``||logic: si vrai alors sinon||``.
 
@@ -76,7 +76,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 5
+## Étape 6
 
 Modifie le bloc ``||logic: 0 > 0||``.
 
@@ -100,7 +100,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 6
+## Étape 7
 
 Ajoute le bloc ``|| pins: écrire sur la broche   ||`` sous la condition ``|| logic: si alors ||``. 
 
@@ -125,7 +125,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 7
+## Étape 8
 
 Ajoute le bloc ``|| pins: écrire sur la broche   ||`` sous la condition ``|| logic: sinon ||``. 
 
@@ -149,7 +149,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 8
+## Étape 9
 
 Ajoute le bloc ``|| input: lorsque le bouton A est pressé   ||``. 
 
@@ -163,7 +163,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 9
+## Étape 10
 
 Remplace la valeur ``|| basic: 0 ||`` du bloc ``|| basic: montrer nombre ||`` par le bloc ``||variables: Température||``.
 

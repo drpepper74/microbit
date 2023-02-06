@@ -51,6 +51,8 @@ Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
 
 Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
 
+La valeur ``|| pins: 0 ||`` demeure la même.
+
 ```blocks
 
 input.onButtonPressed(Button.B, function () {

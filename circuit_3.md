@@ -58,6 +58,8 @@ Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
 
 Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
 
+La valeur ``|| pins: 0 ||`` demeure la même.
+
 
 ```blocks
 
@@ -97,7 +99,7 @@ Insère la séquence de programmation dans celui-ci.
 
 Modifie la valeur du bloc ``|| loops: répéter ||``.
 
-Remplace la valeur ``|| loops: 4 ||`` par ``|| loops: 10 ||``.
+Remplace la valeur ``|| loops: 4 ||`` par ``|| loops: 5 ||``.
 
 ```blocks
 

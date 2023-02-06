@@ -8,6 +8,14 @@ Transforme le micro:bit en thermomètre.
 
 Supprime le bloc ``||basic: au démarrage||``.
 
+```blocks
+
+basic.forever(function () {
+	
+})
+
+```
+
 ## Étape 2
 
 Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Température||``.
@@ -34,7 +42,6 @@ let Température = 0
 basic.forever(function () {
     Température = input.temperature()
 })
-
 
 ```
 
@@ -84,13 +91,11 @@ Remplace la valeur ``||logic: 0||`` de gauche par le bloc ``||variables: Tempér
 
 Remplace la valeur ``||logic: 0||`` de droite par la valeur ``||logic: 22||``.
 
-
 ```blocks
 
 let Température = 0
 basic.forever(function () {
     Température = input.temperature()
-    let Température = 0
     if (Température > 22) {
     	
     } else {
@@ -115,7 +120,6 @@ Regarde l'indice au besoin.
 let Température = 0
 basic.forever(function () {
     Température = input.temperature()
-    let Température = 0
     if (Température > 22) {
         pins.digitalWritePin(DigitalPin.P1, 1)
     } else {

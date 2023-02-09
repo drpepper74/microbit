@@ -89,14 +89,14 @@ Modifie le bloc ``||logic: 0 > 0||``.
 
 Remplace la valeur ``||logic: 0||`` de gauche par le bloc ``||variables: Température||``.
 
-Remplace la valeur ``||logic: 0||`` de droite par la valeur ``||logic: 22||``.
+Remplace la valeur ``||logic: 0||`` de droite par la valeur ``||logic: 25||``.
 
 ```blocks
 
 let Température = 0
 basic.forever(function () {
     Température = input.temperature()
-    if (Température > 22) {
+    if (Température > 25) {
     	
     } else {
     	
@@ -120,7 +120,7 @@ Regarde l'indice au besoin.
 let Température = 0
 basic.forever(function () {
     Température = input.temperature()
-    if (Température > 22) {
+    if (Température > 25) {
         pins.digitalWritePin(DigitalPin.P1, 1)
     } else {
     	
@@ -144,7 +144,7 @@ Regarde l'indice au besoin.
 let Température = 0
 basic.forever(function () {
     Température = input.temperature()
-    if (Température > 22) {
+    if (Température > 25) {
         pins.digitalWritePin(DigitalPin.P1, 1)
     } else {
         pins.digitalWritePin(DigitalPin.P1, 0)

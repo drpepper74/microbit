@@ -4,7 +4,9 @@
 
 Programme le défi ultime en utilisant les branchements du tutoriels précédent.
 
-# Étape 1
+## Étape 1
+
+Certaines valeurs sont incorrectes. Apporte les modifications nécessaires.
 
 Le circuit doit clignoter lorsque le bouton A est pressé.
 Le circuit doit s'allumer lorsque le bouton B est pressé.
@@ -14,13 +16,27 @@ Le circuit doit d'éteindre lorsque le bouton A+B est pressé.
 
 input.onButtonPressed(Button.A, function () {
     for (let index = 0; index < 4; index++) {
-        basic.pause(100)
         pins.digitalWritePin(DigitalPin.P0, 0)
+        pins.digitalWritePin(DigitalPin.P0, 0)
+        pins.digitalWritePin(DigitalPin.P0, 0)
+        basic.pause(200)
+        pins.digitalWritePin(DigitalPin.P0, 0)
+        pins.digitalWritePin(DigitalPin.P0, 0)
+        pins.digitalWritePin(DigitalPin.P0, 0)
+        basic.pause(200)
     }
 })
-basic.forever(function () {
-	
+input.onButtonPressed(Button.AB, function () {
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    pins.digitalWritePin(DigitalPin.P0, 0)
 })
+input.onButtonPressed(Button.B, function () {
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    pins.digitalWritePin(DigitalPin.P0, 0)
+})
+
 
 ```
 

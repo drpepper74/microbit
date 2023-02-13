@@ -22,13 +22,14 @@ Dessine une épée de Minecraft dans le bloc ``|| basic: montrer LEDs ||``.
 
 input.onButtonPressed(Button.A, function () {
     basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
+        . . . # #
+        # . # # #
+        # # # # .
+        . # # . .
+        # . # # .
         `)
 })
+
 
 ```
 
@@ -44,13 +45,14 @@ Dessine une armure de Minecraft dans le bloc ``|| basic: montrer LEDs ||``.
 
 input.onButtonPressed(Button.B, function () {
     basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
+        # # . # #
+        # # # # #
+        . # # # .
+        . # # # .
+        . . # . .
         `)
 })
+
 
 ```
 
@@ -66,13 +68,14 @@ Dessine objet de Minecraft dans le bloc ``|| basic: montrer LEDs ||``.
 
 input.onButtonPressed(Button.AB, function () {
     basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
+        # # # . #
+        . # . # .
+        . . # . #
+        # # . # #
+        . # . . #
         `)
 })
+
 
 ```
 

@@ -337,7 +337,7 @@ motdepasse = []
 
 ## Étape 15
 
-Remplace la valeur  ``|| variables: Hello!||`` du bloc ``|| basic: afficher texte ||`` par le bloc ``|| variables: valeur||``.
+Remplace la valeur ``|| basic: Hello!||`` du bloc ``|| basic: afficher texte ||`` par le bloc ``|| variables: valeur||``.
 
 Regarde dans l'onglet ``|| variables: Variables||``.
 

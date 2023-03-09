@@ -55,7 +55,8 @@
         "servo_7b.md",
         "kitronik_1.md",
         "tutorial-info-cache.json",
-        "circuit_7.md"
+        "circuit_7.md",
+        "tuto_20.md"
     ],
     "testFiles": [
         "test.ts"

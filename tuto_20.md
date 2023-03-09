@@ -12,64 +12,19 @@ Supprime le bloc ``||basic:toujours||``.
 
 ## Étape 2
 
-Ajoute le bloc ``|| variables: définir liste_de_textes ||`` dans le bloc ``||basic: au démarrage||``.
+Ajoute le bloc ``|| variables: définir liste||`` dans le bloc ``|| basic: toujours||``.
 
 Regarde dans l'onglet ``|| arrays: Tableaux||``.
 
 Regarde l'indice au besoin.
 
-
 ```blocks
 
-let liste_de_textes = ["a", "b", "c"]
+let liste = [0, 1]
 
 ```
 
 ## Étape 3
-
-Modifie les valeurs du ``|| arrays: Tableau||``.
-
-Ajoute les valeurs ``|| arrays: 1,2 et 3||`` au  tableau.
-
-Regarde l'indice au besoin.
-
-```blocks
-
-let liste_de_textes = [
-"a",
-"b",
-"c",
-"1",
-"2",
-"3"
-]
-
-```
-
-## Étape 4
-
-Ajoute le bloc ``|| variables: définir liste||`` sous le bloc ``|| variables: définir liste_de_textes||``.
-
-Regarde dans l'onglet ``|| arrays: Tableaux||``.
-
-Regarde l'indice au besoin.
-
-```blocks
-
-let liste_de_textes = [
-"a",
-"b",
-"c",
-"1",
-"2",
-"3"
-]
-let liste = [0, 1]
-
-
-```
-
-## Étape 5
 
 Renomme le bloc ``|| variables: définir liste||`` par ``|| variables: motdepasse||``.
 
@@ -79,19 +34,11 @@ Regarde l'indice au besoin.
 
 ```blocks
 
-let liste_de_textes = [
-"a",
-"b",
-"c",
-"1",
-"2",
-"3"
-]
 let motdepasse = [0, 1]
 
 ```
 
-## Étape 6
+## Étape 4
 
 Remplace le bloc ``|| arrays: tableau de 0 1||`` par le bloc ``|| arrays: tableau vide||``.
 
@@ -101,6 +48,38 @@ Regarde l'indice au besoin.
 
 ```blocks
 
+let motdepasse: number[] = []
+
+
+```
+
+## Étape 5
+
+Ajoute le bloc ``|| variables: définir liste_de_textes ||`` sous le bloc ``||variables: définit motdepasse||``.
+
+Regarde dans l'onglet ``|| arrays: Tableaux||``.
+
+Regarde l'indice au besoin.
+
+
+```blocks
+
+let motdepasse: number[] = []
+let liste_de_textes = ["a", "b", "c"]
+
+```
+
+## Étape 6
+
+Modifie les valeurs du ``|| arrays: Tableau||``.
+
+Ajoute les valeurs ``|| arrays: 1,2 et 3||`` au  tableau.
+
+Regarde l'indice au besoin.
+
+```blocks
+
+let motdepasse: number[] = []
 let liste_de_textes = [
 "a",
 "b",
@@ -109,7 +88,6 @@ let liste_de_textes = [
 "2",
 "3"
 ]
-let motdepasse: number[] = []
 
 ```
 

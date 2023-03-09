@@ -119,6 +119,8 @@ let motdepasse: number[] = []
 
 Remplace le bloc ``|| variables: liste||`` du bloc ``|| arrays: ajoute la valeur à la fin||`` par ``|| variables: motdepasse||``.
 
+Clique sur la petite flèche du bloc ``|| variables: liste||`` pour le renommer.
+
 Regarde l'indice au besoin.
 
 ```blocks

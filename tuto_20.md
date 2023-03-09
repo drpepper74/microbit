@@ -12,7 +12,7 @@ Supprime le bloc ``||basic:toujours||``.
 
 ## Étape 2
 
-Ajoute le bloc ``|| variables: définir liste||`` dans le bloc ``|| basic: toujours||``.
+Ajoute le bloc ``|| variables: définir liste||`` dans le bloc ``|| basic: au démarrage||``.
 
 Regarde dans l'onglet ``|| arrays: Tableaux||``.
 

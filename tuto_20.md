@@ -55,7 +55,7 @@ let motdepasse: number[] = []
 
 ## Étape 5
 
-Ajoute le bloc ``|| variables: définir liste_de_textes ||`` sous le bloc ``||variables: définit motdepasse||``.
+Ajoute le bloc ``|| variables: définir liste_de_textes ||`` sous le bloc ``||variables: définir motdepasse||``.
 
 Regarde dans l'onglet ``|| arrays: Tableaux||``.
 

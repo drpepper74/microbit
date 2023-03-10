@@ -77,7 +77,9 @@ let mdp = ""
 
 Ajoute le bloc ``||pins: régler position servo ||`` sous le bloc ``||variables: définir mdp ||``.
 
-Les valeurs ``||pins: P0 ||`` et ``||pins: 0 ||`` demeurent les mêmes.
+Le valeur ``||pins: P0 ||`` demeure la même.
+
+Remplace la valeur et ``||pins: 180 ||`` par ``||pins: 0 ||``.
 
 ```blocks
 

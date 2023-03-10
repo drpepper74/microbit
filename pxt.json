@@ -56,7 +56,8 @@
         "kitronik_1.md",
         "tutorial-info-cache.json",
         "circuit_7.md",
-        "tuto_20.md"
+        "tuto_20.md",
+        "tuto_21.md"
     ],
     "testFiles": [
         "test.ts"

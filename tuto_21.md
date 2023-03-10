@@ -1,71 +1,429 @@
-# Niveau 5
+# Serrure numérique
 
 # Tutoriel 21
 
 ## @showdialog
 
-Crée un circuit électrique et numérique à l'aide d'une lumière LED.
+Transforme le micro:bit en serrure numérique.
 
 ## Étape 1
 
-Ajoute le bloc ``|| pins: écrire sur la broche  ||`` dans le bloc ``||input:lorsque le bouton A est pressé||``. 
- 
-Remplace la valeur sur la broche ``|| pins: P0  ||`` par ``|| pins: 1  ||``.
- 
+Supprime le bloc ``||basic:toujours||``.
 
-```blocks 
+## Étape 2
 
+Crée une ``||variables: variable||`` et donne lui le nom ``||variables:motdepasse||``.
+
+Ajoute le bloc ``||variables: définir motdepasse ||`` dans le bloc ``||basic: au démarrage||``.
+
+```blocks
+
+let motdepasse = 0
+
+```
+
+## Étape 3
+
+Remplace la valeur ``||variables:0||`` du bloc ``||variables:définir motdepasse||`` par le bloc ``||text:"   "||``.
+
+Regarde dans l'onglet ``||text:Texte||``.
+
+
+```blocks
+
+let motdepasse = ""
+
+```
+
+## Étape 4
+
+Crée un mot de passe dans le bloc ``||text:"   "||``. 
+
+Voici le mot de passe ``||variables:ABBAB||``
+
+```blocks
+
+let motdepasse = "ABBAB"
+
+```
+
+## Étape 5
+
+Crée une ``||variables: variable||`` et donne lui le nom ``||variables:mdp||``.
+
+Ajoute le bloc ``||variables: définir mdp ||`` sous le bloc ``||variables:définir motdepasse||``.
+
+```blocks
+
+let motdepasse = "ABBAB"
+let mdp = 0
+
+```
+
+## Étape 6
+
+Remplace la valeur ``||variables:0||`` du bloc ``||variables:définir mdp||`` par le bloc ``||text:"   "||``.
+
+Regarde dans l'onglet ``||text:Texte||``.
+
+```blocks
+
+let motdepasse = "ABBAB"
+let mdp = ""
+
+```
+
+## Étape 7
+
+Ajoute le bloc ``||pins: régler position servo ||`` sous le bloc ``||variables: définir mdp ||``.
+
+Les valeurs ``||pins: P0 ||`` et ``||pins: 0 ||`` demeurent les mêmes.
+
+```blocks
+
+let motdepasse = "ABBAB"
+let mdp = ""
+pins.servoWritePin(AnalogPin.P0, 0)
+
+```
+
+## Étape 8
+
+Ajoute le bloc ``||variables:définir mdp||`` dans le bloc ``||input:lorsque le bouton A est pressé||``.
+
+```blocks
+
+let mdp = 0
 input.onButtonPressed(Button.A, function () {
-    pins.digitalWritePin(DigitalPin.P0, 1)
+    mdp = 0
 })
 
-``` 
+```
 
-## Étape 2 
- 
-Ajoute le bloc ``|| pins: écrire sur la broche  ||`` dans le bloc ``||input:lorsque le bouton B est pressé||``. 
- 
-Remplace la valeur sur la broche ``|| pins: P0  ||`` par ``|| pins: 0  ||``.
- 
-```blocks 
+## Étape 9
 
+Remplace la valeur ``||variables:0||`` du bloc ``||variables:définir mdp||`` par le bloc ``||text:concaténation||``.
+
+```blocks
+
+let mdp = ""
+input.onButtonPressed(Button.A, function () {
+    mdp = "Bonjour" + "Monde"
+})
+
+```
+
+## Étape 10
+
+Modifie les valeurs du bloc ``||text:concaténation||``.
+
+Remplace la valeur ``||text:Bonjour||`` par le bloc ``||variables:mdp||``.
+
+Remplace la valeur ``||text:Monde||`` par le bloc ``||text:"   "||``.
+
+```blocks
+
+let mdp = ""
+input.onButtonPressed(Button.A, function () {
+    mdp = "" + mdp + ""
+})
+
+```
+
+## Étape 11
+
+Remplace la valeur du bloc ``||text:"   "||`` par la valeur ``||text:A||``.
+
+```blocks
+
+let mdp = ""
+input.onButtonPressed(Button.A, function () {
+    mdp = "" + mdp + "A"
+})
+
+```
+
+## Étape 12
+
+Ajoute le bloc ``||variables:définir mdp||`` dans le bloc ``||input:lorsque le bouton B est pressé||``.
+
+
+```blocks
+
+let mdp = 0
 input.onButtonPressed(Button.B, function () {
-    pins.digitalWritePin(DigitalPin.P0, 0)
+    mdp = 0
 })
 
-``` 
-## @showdialog 
+```
 
-Branche une pince alligator au port "P0" du micro:bit.
+## Étape 13
 
-La couleur du fil n'a pas d'importance!
+Remplace la valeur ``||variables:0||`` du bloc ``||variables:définir mdp||`` par le bloc ``||text:concaténation||``.
 
-![CSSBF](https://github.com/sbergeroncp/mon-makecode/blob/master/atelier_a_1.jpg?raw=true) 
+```blocks
 
-## @showdialog 
+let mdp = ""
+input.onButtonPressed(Button.B, function () {
+    mdp = "Bonjour" + "Monde"
+})
 
-Relis la même pince alligator à une lumière LED à la broche positive. Il s'agit de la plus longue.
+```
 
-La couleur n'a pas d'importance!
+## Étape 14
 
-![CSSBF](https://github.com/sbergeroncp/mon-makecode/blob/master/atelier_a_2.jpg?raw=true) 
+Modifie les valeurs du bloc ``||text:concaténation||``.
 
-## @showdialog 
+Remplace la valeur ``||text:Bonjour||`` par le bloc ``||variables:mdp||``.
 
-Branche une autre pince alligator dans le port "GND" du micro:bit. 
+Remplace la valeur ``||text:Monde||`` par le bloc ``||text:"   "||``.
 
-![CSSBF](https://github.com/sbergeroncp/mon-makecode/blob/master/atelier_a_3.jpg?raw=true) 
+```blocks
 
-## @showdialog 
+let mdp = ""
+input.onButtonPressed(Button.B, function () {
+    mdp = "" + mdp + ""
+})
 
-Relis la même pince alligator de la lumière LED à la broche négative. Il s'agit de la plus petite.
+```
 
-Attention, les deux broches ne doivent pas se toucher!
+## Étape 15
 
-![CSSBF](https://github.com/sbergeroncp/mon-makecode/blob/master/atelier_a_4.jpg?raw=true) 
+Remplace la valeur du bloc ``||text:"   "||`` par la valeur ``||text:B||``.
 
-## @showdialog 
+```blocks
 
-Félicitations! Tu as terminé ton premier circuit électrique avec une lumière LED.
+let mdp = ""
+input.onButtonPressed(Button.B, function () {
+    mdp = "" + mdp + "B"
+})
 
-Pour tester ton circuit électrique, télécharge la programmation dans le micro:bit.
+```
+
+## Étape 16
+
+Ajoute le bloc ``||logic:si vrai alors sinon||`` dans le bloc ``||input:lorsque le bouton A+B est pressé||``.
+
+
+```blocks
+
+input.onButtonPressed(Button.AB, function () {
+    if (true) {
+    	
+    } else {
+    	
+    }
+})
+
+```
+
+## Étape 17
+
+Remplace la valeur ``||logic:vrai||`` par le bloc ``||logic:"   " = "   "||``.
+
+```blocks
+
+input.onButtonPressed(Button.AB, function () {
+    if ("" == "") {
+    	
+    } else {
+    	
+    }
+})
+
+```
+
+## Étape 18
+
+Modifie les valeurs du bloc ``||logic:"   " = "   "||``.
+
+Remplace la valeur de gauche par le bloc ``||variables:motdepasse||``.
+
+Remplace la valeur de droite par le bloc ``||variables:mdp||``.
+
+```blocks
+
+input.onButtonPressed(Button.AB, function () {
+    let mdp = 0
+    let motdepasse = 0
+    if (motdepasse == mdp) {
+    	
+    } else {
+    	
+    }
+})
+
+```
+
+## Étape 19
+
+Ajoute le bloc ``||basic:montrer l'icône||`` dans le bloc ``||logic:si||``.
+
+```blocks
+
+input.onButtonPressed(Button.AB, function () {
+    let mdp = 0
+    let motdepasse = 0
+    if (motdepasse == mdp) {
+        basic.showIcon(IconNames.Yes)
+    } else {
+    	
+    }
+})
+
+```
+
+## Étape 20
+
+Ajoute le bloc ``||pins:régler position du servo||`` sous le bloc ``||basic:montrer l'icône||``.
+
+```blocks
+
+input.onButtonPressed(Button.AB, function () {
+    let mdp = 0
+    let motdepasse = 0
+    if (motdepasse == mdp) {
+        basic.showIcon(IconNames.Yes)
+        pins.servoWritePin(AnalogPin.P0, 0)
+    } else {
+    	
+    }
+})
+
+```
+
+## Étape 21
+
+Modifie les valeurs du bloc ``||pins:régler position du servo||``.
+
+La valeur ``||pins:P0||`` demeure la même.
+
+Remplace la valeur ``||pins:0||`` par ``||pins:90||``.
+
+```blocks
+
+input.onButtonPressed(Button.AB, function () {
+    let mdp = 0
+    let motdepasse = 0
+    if (motdepasse == mdp) {
+        basic.showIcon(IconNames.Yes)
+        pins.servoWritePin(AnalogPin.P0, 90)
+    } else {
+    	
+    }
+})
+
+```
+
+## Étape 22
+
+Modifie les valeurs du bloc ``||pins:régler position du servo||``.
+
+La valeur ``||pins:P0||`` demeure la même.
+
+Remplace la valeur ``||pins:0||`` par ``||pins:90||``.
+
+```blocks
+
+input.onButtonPressed(Button.AB, function () {
+    let mdp = 0
+    let motdepasse = 0
+    if (motdepasse == mdp) {
+        basic.showIcon(IconNames.Yes)
+        pins.servoWritePin(AnalogPin.P0, 90)
+    } else {
+    	
+    }
+})
+
+```
+
+## Étape 23
+
+Ajoute le bloc ``||basic:montrer l'icône||`` dans le bloc ``||logic:sinon||``.
+
+```blocks
+
+input.onButtonPressed(Button.AB, function () {
+    let mdp = 0
+    let motdepasse = 0
+    if (motdepasse == mdp) {
+        basic.showIcon(IconNames.Yes)
+        pins.servoWritePin(AnalogPin.P0, 90)
+    } else {
+        basic.showIcon(IconNames.No)
+    }
+})
+
+```
+
+## Étape 23
+
+Ajoute le bloc ``||basic:pause (ms) 500||`` sous le bloc ``||logic:sinon||``.
+
+```blocks
+
+input.onButtonPressed(Button.AB, function () {
+    let mdp = 0
+    let motdepasse = 0
+    if (motdepasse == mdp) {
+        basic.showIcon(IconNames.Yes)
+        pins.servoWritePin(AnalogPin.P0, 90)
+    } else {
+        basic.showIcon(IconNames.No)
+    }
+    basic.pause(500)
+})
+
+
+```
+
+## Étape 24
+
+Ajoute le bloc ``||basic:effacer l'écran||`` sous le bloc ``||basic:pause (ms) 500||``.
+
+```blocks
+
+input.onButtonPressed(Button.AB, function () {
+    let mdp = 0
+    let motdepasse = 0
+    if (motdepasse == mdp) {
+        basic.showIcon(IconNames.Yes)
+        pins.servoWritePin(AnalogPin.P0, 90)
+    } else {
+        basic.showIcon(IconNames.No)
+    }
+    basic.pause(500)
+    basic.clearScreen()
+})
+
+```
+
+## Étape 25
+
+Ajoute le bloc ``||variables: définir mdp ||`` sous le bloc ``||basic:effacer l'écran||``.
+
+Remplace la valeur ``||variables:0||`` par le bloc ``||text:"   "||``.
+
+```blocks
+
+input.onButtonPressed(Button.AB, function () {
+    let mdp = 0
+    let motdepasse = 0
+    if (motdepasse == mdp) {
+        basic.showIcon(IconNames.Yes)
+        pins.servoWritePin(AnalogPin.P0, 90)
+    } else {
+        basic.showIcon(IconNames.No)
+    }
+    basic.pause(500)
+    basic.clearScreen()
+})
+
+```
+
+## @showdialog
+
+Félicitations! Tu as terminé de programmer la serrure.
+
+Pour le tester, télécharge la programmation dans le micro:bit. 

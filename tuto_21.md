@@ -121,20 +121,7 @@ Modifie les valeurs du bloc ``||text:concaténation||``.
 
 Remplace la valeur ``||text:Bonjour||`` par le bloc ``||variables:mdp||``.
 
-Remplace la valeur ``||text:Monde||`` par le bloc ``||text:"   "||``.
-
-```blocks
-
-let mdp = ""
-input.onButtonPressed(Button.A, function () {
-    mdp = "" + mdp + ""
-})
-
-```
-
-## Étape 11
-
-Remplace la valeur du bloc ``||text:"   "||`` par la valeur ``||text:A||``.
+Remplace la valeur ``||text:Monde||`` par la lettre ``||text:A||``.
 
 ```blocks
 
@@ -145,7 +132,8 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 12
+
+## Étape 11
 
 Ajoute le bloc ``||variables:définir mdp||`` dans le bloc ``||input:lorsque le bouton B est pressé||``.
 
@@ -159,7 +147,7 @@ input.onButtonPressed(Button.B, function () {
 
 ```
 
-## Étape 13
+## Étape 12
 
 Remplace la valeur ``||variables:0||`` du bloc ``||variables:définir mdp||`` par le bloc ``||text:concaténation||``.
 
@@ -172,26 +160,13 @@ input.onButtonPressed(Button.B, function () {
 
 ```
 
-## Étape 14
+## Étape 13
 
 Modifie les valeurs du bloc ``||text:concaténation||``.
 
 Remplace la valeur ``||text:Bonjour||`` par le bloc ``||variables:mdp||``.
 
-Remplace la valeur ``||text:Monde||`` par le bloc ``||text:"   "||``.
-
-```blocks
-
-let mdp = ""
-input.onButtonPressed(Button.B, function () {
-    mdp = "" + mdp + ""
-})
-
-```
-
-## Étape 15
-
-Remplace la valeur du bloc ``||text:"   "||`` par la valeur ``||text:B||``.
+Remplace la valeur ``||text:Monde||`` par la lettre ``||text:B||``.
 
 ```blocks
 
@@ -202,7 +177,7 @@ input.onButtonPressed(Button.B, function () {
 
 ```
 
-## Étape 16
+## Étape 14
 
 Ajoute le bloc ``||logic:si vrai alors sinon||`` dans le bloc ``||input:lorsque le bouton A+B est pressé||``.
 
@@ -219,7 +194,7 @@ input.onButtonPressed(Button.AB, function () {
 
 ```
 
-## Étape 17
+## Étape 15
 
 Remplace la valeur ``||logic:vrai||`` par le bloc ``||logic:"   " = "   "||``.
 
@@ -235,7 +210,7 @@ input.onButtonPressed(Button.AB, function () {
 
 ```
 
-## Étape 18
+## Étape 16
 
 Modifie les valeurs du bloc ``||logic:"   " = "   "||``.
 
@@ -257,7 +232,7 @@ input.onButtonPressed(Button.AB, function () {
 
 ```
 
-## Étape 19
+## Étape 17
 
 Ajoute le bloc ``||basic:montrer l'icône||`` dans le bloc ``||logic:si||``.
 
@@ -275,7 +250,7 @@ input.onButtonPressed(Button.AB, function () {
 
 ```
 
-## Étape 20
+## Étape 18
 
 Ajoute le bloc ``||pins:régler position du servo||`` sous le bloc ``||basic:montrer l'icône||``.
 
@@ -294,7 +269,7 @@ input.onButtonPressed(Button.AB, function () {
 
 ```
 
-## Étape 21
+## Étape 19
 
 Modifie les valeurs du bloc ``||pins:régler position du servo||``.
 
@@ -317,30 +292,7 @@ input.onButtonPressed(Button.AB, function () {
 
 ```
 
-## Étape 22
-
-Modifie les valeurs du bloc ``||pins:régler position du servo||``.
-
-La valeur ``||pins:P0||`` demeure la même.
-
-Remplace la valeur ``||pins:0||`` par ``||pins:90||``.
-
-```blocks
-
-input.onButtonPressed(Button.AB, function () {
-    let mdp = 0
-    let motdepasse = 0
-    if (motdepasse == mdp) {
-        basic.showIcon(IconNames.Yes)
-        pins.servoWritePin(AnalogPin.P0, 90)
-    } else {
-    	
-    }
-})
-
-```
-
-## Étape 23
+## Étape 20
 
 Ajoute le bloc ``||basic:montrer l'icône||`` dans le bloc ``||logic:sinon||``.
 
@@ -359,7 +311,7 @@ input.onButtonPressed(Button.AB, function () {
 
 ```
 
-## Étape 23
+## Étape 21
 
 Ajoute le bloc ``||basic:pause (ms) 500||`` sous le bloc ``||logic:sinon||``.
 
@@ -380,7 +332,7 @@ input.onButtonPressed(Button.AB, function () {
 
 ```
 
-## Étape 24
+## Étape 22
 
 Ajoute le bloc ``||basic:effacer l'écran||`` sous le bloc ``||basic:pause (ms) 500||``.
 
@@ -401,7 +353,7 @@ input.onButtonPressed(Button.AB, function () {
 
 ```
 
-## Étape 25
+## Étape 23
 
 Ajoute le bloc ``||variables: définir mdp ||`` sous le bloc ``||basic:effacer l'écran||``.
 

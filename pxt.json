@@ -57,7 +57,9 @@
         "tutorial-info-cache.json",
         "circuit_7.md",
         "tuto_20.md",
-        "tuto_21.md"
+        "tuto_21.md",
+        "box_1.md",
+        "box_2.md"
     ],
     "testFiles": [
         "test.ts"

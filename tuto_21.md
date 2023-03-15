@@ -315,7 +315,7 @@ input.onButtonPressed(Button.AB, function () {
 
 Ajoute le bloc ``||basic:pause (ms) 100||`` sous le bloc ``||logic:sinon||``.
 
-Modifie la valeur ``||basic:100||`` du bloc ``||basic:pause||`` par la valeur ``||basic:5000||``.
+Modifie la valeur ``||basic:100||`` du bloc ``||basic:pause||`` par la valeur ``||basic:500||``.
 
 ```blocks
 

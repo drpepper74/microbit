@@ -70,6 +70,10 @@ basic.forever(function () {
 
 Ajoute le bloc ``||basic:montrer LEDs||`` dans le bloc ``||logic: si alors ||``.
 
+Active toutes les LEDs.
+
+Regarde l'indice au besoin.
+
 ```blocks
 
 basic.forever(function () {

@@ -201,7 +201,9 @@ basic.forever(function () {
 
 Ajoute le bloc ``||music: jouer ton ||`` dans le bloc ``||loops: tant que||``.
 
-Choisis une note. Laisse la valeur ``||music: pendant ||`` à ``||music: 1 temps ||``.
+Choisis une note. 
+
+Laisse la valeur ``||music: pendant ||`` à ``||music: 1 temps ||``.
 
 ```blocks
 

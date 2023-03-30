@@ -2,7 +2,7 @@
 
 ## @showdialog
 
-Transforme le micro:bit panneau lumineux.
+Transforme le micro:bit en panneau lumineux.
 
 Lorsque la luminosité extérieure diminue (ex. : coucher de soleil), le panneau averti les automobilistes de faire attention aux animaux.
 

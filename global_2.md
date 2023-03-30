@@ -4,7 +4,7 @@
 
 Transforme le micro:bit en collier anti-braconnage.
 
-À chaque fois que l'animal se déplace, le compteur à son pied se réinitialise.
+Chaque fois que l'animal se déplace, le compteur à son pied se réinitialise.
 
 Après 9 secondes sans activité, il émet un signal d'alarme!
 

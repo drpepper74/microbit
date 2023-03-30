@@ -64,7 +64,8 @@
         "global_2.md",
         "global_3.md",
         "global_4.md",
-        "global_5.md"
+        "global_5.md",
+        "global_6.md"
     ],
     "testFiles": [
         "test.ts"

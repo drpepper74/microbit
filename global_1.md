@@ -26,7 +26,7 @@ let oiseau = 0
 
 Crée une ``||variables: variable||`` et donne lui le nom ``||variables:mammifere||``.
 
-Ajoute le bloc ``||variables: définir mammifere ||`` sous le bloc ``||variables:oiseau||``.
+Ajoute le bloc ``||variables: définir mammifere ||`` sous le bloc ``||variables:définir oiseau||``.
 
 ```blocks
 
@@ -39,7 +39,7 @@ let mammifere = 0
 
 Crée une ``||variables: variable||`` et donne lui le nom ``||variables:reptile||``.
 
-Ajoute le bloc ``||variables: définir reptile ||`` sous le bloc ``||variables:mammifere||``.
+Ajoute le bloc ``||variables: définir reptile ||`` sous le bloc ``||variables:définir mammifere||``.
 
 ```blocks
 

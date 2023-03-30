@@ -1,4 +1,4 @@
-# Global Goals
+# Global Goals 1
 
 ## @showdialog
 
@@ -144,10 +144,10 @@ input.onButtonPressed(Button.AB, function () {
 
 ```
 
-## Étape 11
+## @showdialog
 
 Télécharge le programme dans le micro:bit.
 
 Teste le programme!
 
-Manipule le micro:bit. Que remarques-tu?
+Combien as-tu observé d'oiseaux ? de mammifères ? de reptiles ?

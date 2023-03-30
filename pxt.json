@@ -60,7 +60,9 @@
         "tuto_21.md",
         "box_1.md",
         "box_2.md",
-        "global_1.md"
+        "global_1.md",
+        "global_2.md",
+        "global_3.md"
     ],
     "testFiles": [
         "test.ts"

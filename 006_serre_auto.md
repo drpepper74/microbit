@@ -85,7 +85,7 @@ input.onButtonPressed(Button.B, function () {
 
 Ajoute le bloc ``|| loops: chaque ms ||``.
 
-Remplace la valeur ``|| loops: 500 ||`` par le le bloc ``|| math: 0 x 0 ||`` dans le bloc ``|| loops: chaque ms ||``.
+Remplace la valeur ``|| loops: 500 ||`` du bloc ``|| loops: chaque ms ||`` par le bloc ``|| math: 0 x 0 ||``.
 
 ```blocks
 
@@ -101,6 +101,7 @@ loops.everyInterval(0 * 0, function () {
 Modifie le bloc ``|| math: 0 x 0 ||``.
 
 Remplace la valeur ``|| math:  0 ||`` de gauche par le bloc ``|| math: 0 x 0 ||``.
+
 Remplace la valeur ``|| math:  0 ||`` de droite par le bloc ``|| math: 0 x 0 ||``.
 
 ```blocks
@@ -184,6 +185,7 @@ loops.everyInterval(1000 * 60 * (60 * 12), function () {
 Modifie le bloc ``|| math: 0 x 0 ||``.
 
 Remplace la valeur ``|| math: 0 ||`` de gauche par la valeur ``|| math: 1000 ||``.
+
 Remplace la valeur ``|| math: 0 ||`` de droite par la valeur ``|| math: 20 ||``.
 
 Autrement dit, la popme submergée sera actionnée pendant 20 secondes.

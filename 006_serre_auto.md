@@ -1,7 +1,7 @@
 # Système d'arrosage automatisé
 
 ## @showdialog
-Programme le système d'arrosage automatisé de la classe de la classe.
+Programme le système d'arrosage automatisé de la classe.
 
 ## Étape 1
 
@@ -19,7 +19,7 @@ pins.digitalWritePin(DigitalPin.P0, 0)
 ```
 ## Étape 3
 
-Modifie la valeur ``|| pins: P0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: P1 ||``.
+Remplace la valeur ``|| pins: P0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: P1 ||``.
 
 La valeur  ``|| pins: 0 ||`` du bloc ``|| pins: écrire sur la broche ||`` demeure la même.
 
@@ -43,9 +43,9 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 5
 
-Modifie la valeur ``|| pins: P0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: P1 ||``.
+Remplace la valeur ``|| pins: P0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: P1 ||``.
 
-Modifie la valeur  ``|| pins: 0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: 1 ||``.
+Remplace la valeur  ``|| pins: 0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: 1 ||``.
 
 ```blocks
 
@@ -69,7 +69,7 @@ input.onButtonPressed(Button.B, function () {
 
 ## Étape 7
 
-Modifie la valeur ``|| pins: P0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: P1 ||``.
+Remplace la valeur ``|| pins: P0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: P1 ||``.
 
 La valeur  ``|| pins: 0 ||`` du bloc ``|| pins: écrire sur la broche ||`` demeure la même.
 
@@ -109,7 +109,7 @@ loops.everyInterval(0 * 0 * (0 * 0), function () {
 ```
 ## Étape 10
 
-Modifi les bloc ``|| math: 0 x 0 ||``.
+Modifie les bloc ``|| math: 0 x 0 ||``.
 
 Remplace les valeurs ``|| math:  0 ||`` par ``|| math:  1000 ||``, ``|| math:  60 ||``, ``|| math:  60 ||`` et ``|| math:  12 ||``.
 
@@ -137,9 +137,9 @@ loops.everyInterval(1000 * 60 * (60 * 12), function () {
 
 ## Étape 12
 
-Modifie la valeur ``|| pins: P0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: P1 ||``.
+Remplace la valeur ``|| pins: P0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: P1 ||``.
 
-Modifie la valeur  ``|| pins: 0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: 1 ||``.
+Remplace la valeur  ``|| pins: 0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: 1 ||``.
 
 ```blocks
 
@@ -211,7 +211,7 @@ loops.everyInterval(1000 * 60 * (60 * 12), function () {
 
 ## Étape 17
 
-Modifie la valeur ``|| pins: P0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: P1 ||``.
+Remplace la valeur ``|| pins: P0 ||`` du bloc ``|| pins: écrire sur la broche ||`` par ``|| pins: P1 ||``.
 
 La valeur  ``|| pins: 0 ||`` du bloc ``|| pins: écrire sur la broche ||`` demeure la même.
 

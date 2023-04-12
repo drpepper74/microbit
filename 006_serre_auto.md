@@ -225,7 +225,7 @@ La valeur  ``|| pins: 0 ||`` du bloc ``|| pins: écrire sur la broche ||`` demeu
 loops.everyInterval(1000 * 60 * (60 * 12), function () {
     pins.digitalWritePin(DigitalPin.P1, 1)
     basic.pause(1000 * 12)
-    pins.digitalWritePin(DigitalPin.P0, 0)
+    pins.digitalWritePin(DigitalPin.P1, 0)
 })
 
 ```

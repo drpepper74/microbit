@@ -65,7 +65,8 @@
         "global_3.md",
         "global_4.md",
         "global_5.md",
-        "global_6.md"
+        "global_6.md",
+        "006_serre_auto.md"
     ],
     "testFiles": [
         "test.ts"

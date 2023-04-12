@@ -83,6 +83,8 @@ input.onButtonPressed(Button.B, function () {
 
 ## Étape 8
 
+Ajoute le bloc ``|| loops: chaque ms ||``.
+
 Remplace la valeur ``|| loops: 500 ||`` par le le bloc ``|| math: 0 x 0 ||`` dans le bloc ``|| loops: chaque ms ||``.
 
 ```blocks
@@ -92,6 +94,7 @@ loops.everyInterval(0 * 0, function () {
 })
 
 ```
+
 
 ## Étape 9
 

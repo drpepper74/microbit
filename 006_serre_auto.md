@@ -83,7 +83,7 @@ input.onButtonPressed(Button.B, function () {
 
 ## Étape 8
 
-Ajoute le bloc ``|| math: 0 x 0 ||`` dans le bloc ``|| loops: chaque 500 ms ||``.
+Remplace la valeur ``|| loops: 500 ||`` par le le bloc ``|| math: 0 x 0 ||`` dans le bloc ``|| loops: chaque ms ||``.
 
 ```blocks
 
@@ -113,7 +113,7 @@ Modifie les bloc ``|| math: 0 x 0 ||``.
 
 Remplace les valeurs ``|| math:  0 ||`` par ``|| math:  1000 ||``, ``|| math:  60 ||``, ``|| math:  60 ||`` et ``|| math:  12 ||``.
 
-Autrement dit, l'action sera répétée toutes les 12 heures.
+Autrement dit, la pompe submergée sera activée toutes les 12 heures.
 
 ```blocks
 
@@ -125,7 +125,7 @@ loops.everyInterval(1000 * 60 * (60 * 12), function () {
 
 ## Étape 11
 
-Ajoute le bloc ``|| pins: écrire sur la broche ||`` dans le bloc ``||loop: chaque ms||``.
+Ajoute le bloc ``|| pins: écrire sur la broche ||`` dans le bloc ``||loops: chaque ms||``.
 
 ```blocks
 

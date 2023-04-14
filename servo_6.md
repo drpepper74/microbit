@@ -126,7 +126,7 @@ Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
 
 Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P14 ||``.
 
-Remplace la valeur ``|| pins: 0 ||`` par ``|| pins: 1 ||``.
+La valeur ``|| pins: 0 ||`` demeure la même.
 
 Regarde l'indice!
 
@@ -134,311 +134,28 @@ Regarde l'indice!
 
 input.onButtonPressed(Button.A, function () {
     pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 1)
+    pins.digitalWritePin(DigitalPin.P14, 0)
 })
 
 ```
 
 ## Étape 10
 
-Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
+Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
 
-Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par la valeur ``|| basic: 1000 ||``.
+P12 = Vert - P13 = Jaune - P14 = Rouge
 
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
     pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    basic.pause(1000)
+    pins.digitalWritePin(DigitalPin.P14, 0)
+    pins.digitalWritePin(DigitalPin.P0, 0)
 })
 
 ```
 
 ## Étape 11
-
-Ajoute le bloc ``|| basic: montrer l'icône  ||`` sous le bloc ``|| basic: pause (ms) ||``.
-
-Regarde l'indice.
-
-```blocks
-
-input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    basic.pause(1000)
-    basic.showIcon(IconNames.No)
-})
-
-```
-
-## Étape 12
-
-Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| basic: montrer l'icône ||``.
-
-```blocks
-
-input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    basic.pause(1000)
-    basic.showIcon(IconNames.No)
-    pins.digitalWritePin(DigitalPin.P0, 0)
-})
-
-```
-
-## Étape 13
-
-Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
-
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P14 ||``.
-
-La valeur ``|| pins: 0 ||`` demeure la même.
-
-
-```blocks
-
-input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    basic.pause(1000)
-    basic.showIcon(IconNames.No)
-    pins.digitalWritePin(DigitalPin.P14, 0)
-})
-
-
-```
-
-## Étape 14
-
-Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
-
-La valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` demeure la même.
-
-```blocks
-
-input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    basic.pause(1000)
-    basic.showIcon(IconNames.No)
-    pins.digitalWritePin(DigitalPin.P14, 0)
-    basic.pause(100)
-})
-
-
-```
-
-## Étape 15
-
-Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| basic: pause (ms) ||``.
-
-```blocks
-
-input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    basic.pause(1000)
-    basic.showIcon(IconNames.No)
-    pins.digitalWritePin(DigitalPin.P14, 0)
-    basic.pause(100)
-    pins.digitalWritePin(DigitalPin.P0, 0)
-})
-
-```
-
-## Étape 16
-
-Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
-
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P13 ||``.
-
-Remplace la valeur ``|| pins: 0 ||`` par ``|| pins: 1 ||``.
-
-```blocks
-
-input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    basic.pause(1000)
-    basic.showIcon(IconNames.No)
-    pins.digitalWritePin(DigitalPin.P14, 0)
-    basic.pause(100)
-    pins.digitalWritePin(DigitalPin.P13, 1)
-})
-
-```
-
-## Étape 17
-
-Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
-
-Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par la valeur ``|| basic: 1000 ||``.
-
-```blocks
-
-input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    basic.pause(1000)
-    basic.showIcon(IconNames.No)
-    pins.digitalWritePin(DigitalPin.P14, 0)
-    basic.pause(100)
-    pins.digitalWritePin(DigitalPin.P13, 1)
-    basic.pause(1000)
-})
-
-```
-
-## Étape 18
-
-Ajoute le bloc ``|| basic: montrer LEDs ||`` sous le bloc ``|| basic: pause (ms) ||``.
-
-Dessine un petit X.
-
-```blocks
-
-input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    basic.pause(1000)
-    basic.showIcon(IconNames.No)
-    pins.digitalWritePin(DigitalPin.P14, 0)
-    basic.pause(100)
-    pins.digitalWritePin(DigitalPin.P13, 1)
-    basic.pause(1000)
-    basic.showLeds(`
-        . . . . .
-        . # . # .
-        . . # . .
-        . # . # .
-        . . . . .
-        `)
-})
-
-```
-
-## Étape 19
-
-Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| basic: montrer LEDs ||``.
-
-```blocks
-
-input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    basic.pause(1000)
-    basic.showIcon(IconNames.No)
-    pins.digitalWritePin(DigitalPin.P14, 0)
-    basic.pause(100)
-    pins.digitalWritePin(DigitalPin.P13, 1)
-    basic.pause(1000)
-    basic.showLeds(`
-        . . . . .
-        . # . # .
-        . . # . .
-        . # . # .
-        . . . . .
-        `)
-    pins.digitalWritePin(DigitalPin.P0, 0)
-})
-
-```
-
-## Étape 20
-
-Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
-
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P13 ||``.
-
-Remplace la valeur ``|| pins: 0 ||`` par ``|| pins: 0 ||``.
-
-```blocks
-
-input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    basic.pause(1000)
-    basic.showIcon(IconNames.No)
-    pins.digitalWritePin(DigitalPin.P14, 0)
-    basic.pause(100)
-    pins.digitalWritePin(DigitalPin.P13, 1)
-    basic.pause(1000)
-    basic.showLeds(`
-        . . . . .
-        . # . # .
-        . . # . .
-        . # . # .
-        . . . . .
-        `)
-    pins.digitalWritePin(DigitalPin.P13, 0)
-})
-
-```
-
-## Étape 21
-
-Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
-
-La valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` demeure la même.
-
-```blocks
-
-input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    basic.pause(1000)
-    basic.showIcon(IconNames.No)
-    pins.digitalWritePin(DigitalPin.P14, 0)
-    basic.pause(100)
-    pins.digitalWritePin(DigitalPin.P13, 1)
-    basic.pause(1000)
-    basic.showLeds(`
-        . . . . .
-        . # . # .
-        . . # . .
-        . # . # .
-        . . . . .
-        `)
-    pins.digitalWritePin(DigitalPin.P13, 0)
-    basic.pause(100)
-})
-
-```
-
-## Étape 22
-
-Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| basic: pause (ms) ||``.
-
-
-```blocks
-
-input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    basic.pause(1000)
-    basic.showIcon(IconNames.No)
-    pins.digitalWritePin(DigitalPin.P14, 0)
-    basic.pause(100)
-    pins.digitalWritePin(DigitalPin.P13, 1)
-    basic.pause(1000)
-    basic.showLeds(`
-        . . . . .
-        . # . # .
-        . . # . .
-        . # . # .
-        . . . . .
-        `)
-    pins.digitalWritePin(DigitalPin.P13, 0)
-    basic.pause(100)
-    pins.digitalWritePin(DigitalPin.P0, 0)
-})
-
-
-```
-
-## Étape 23
 
 Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
 
@@ -452,97 +169,53 @@ Regarde l'indice!
 
 input.onButtonPressed(Button.A, function () {
     pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    basic.pause(1000)
-    basic.showIcon(IconNames.No)
     pins.digitalWritePin(DigitalPin.P14, 0)
-    basic.pause(100)
-    pins.digitalWritePin(DigitalPin.P13, 1)
-    basic.pause(1000)
-    basic.showLeds(`
-        . . . . .
-        . # . # .
-        . . # . .
-        . # . # .
-        . . . . .
-        `)
-    pins.digitalWritePin(DigitalPin.P13, 0)
-    basic.pause(100)
     pins.digitalWritePin(DigitalPin.P12, 1)
 })
 
-
 ```
 
-## Étape 24
+## Étape 12
 
-Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
+Ajoue le bloc ``|| basic: pause (ms) 100 ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
 
-Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par la valeur ``|| basic: 1000 ||``.
+Remplace la valeur ``|| basic: 100 ||`` par ``|| basic: 2000 ||``.
+
+Regarde l'indice!
 
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
     pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    basic.pause(1000)
-    basic.showIcon(IconNames.No)
     pins.digitalWritePin(DigitalPin.P14, 0)
-    basic.pause(100)
-    pins.digitalWritePin(DigitalPin.P13, 1)
-    basic.pause(1000)
-    basic.showLeds(`
-        . . . . .
-        . # . # .
-        . . # . .
-        . # . # .
-        . . . . .
-        `)
-    pins.digitalWritePin(DigitalPin.P13, 0)
-    basic.pause(100)
     pins.digitalWritePin(DigitalPin.P12, 1)
-    basic.pause(1000)
+    basic.pause(2000)
 })
-
 
 ```
 
-## Étape 25
+## Étape 12
 
-Ajoute le bloc ``|| basic: montrer l'icône  ||`` sous le bloc ``|| basic: pause (ms) ||``.
+Ajoue le bloc ``|| basic: montrer l'icône ||`` sous le bloc ``|| basic: pause (ms) ||``.
 
-Regarde l'indice.
+Remplace le ``|| basic: le grand coeur ||`` par un ``|| basic: croche ||``.
+
+Regarde l'indice!
 
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
     pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    basic.pause(1000)
-    basic.showIcon(IconNames.No)
     pins.digitalWritePin(DigitalPin.P14, 0)
-    basic.pause(100)
-    pins.digitalWritePin(DigitalPin.P13, 1)
-    basic.pause(1000)
-    basic.showLeds(`
-        . . . . .
-        . # . # .
-        . . # . .
-        . # . # .
-        . . . . .
-        `)
-    pins.digitalWritePin(DigitalPin.P13, 0)
-    basic.pause(100)
     pins.digitalWritePin(DigitalPin.P12, 1)
     basic.pause(1000)
     basic.showIcon(IconNames.Yes)
 })
 
-
 ```
 
 ## @showdialog 
 
-Félicitations! Tu as terminé de programmer une barrière.
+Félicitations! Tu as terminé de programmer une barrière et les lumières.
 
 Pour tester le circuit, réalise les branchements et télécharge la programmation dans le micro:bit.

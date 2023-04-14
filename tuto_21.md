@@ -77,7 +77,7 @@ let mdp = ""
 
 Ajoute le bloc ``||pins: régler position servo ||`` sous le bloc ``||variables: définir mdp ||``.
 
-Le valeur ``||pins: P0 ||`` demeure la même.
+Remplace la valeur et ``||pins: P0 ||`` par ``||pins: P1 ||``.
 
 Remplace la valeur et ``||pins: 180 ||`` par ``||pins: 0 ||``.
 
@@ -85,7 +85,7 @@ Remplace la valeur et ``||pins: 180 ||`` par ``||pins: 0 ||``.
 
 let motdepasse = "ABBAB"
 let mdp = ""
-pins.servoWritePin(AnalogPin.P0, 0)
+pins.servoWritePin(AnalogPin.P1, 0)
 
 ```
 
@@ -261,7 +261,7 @@ input.onButtonPressed(Button.AB, function () {
     let motdepasse = 0
     if (motdepasse == mdp) {
         basic.showIcon(IconNames.Yes)
-        pins.servoWritePin(AnalogPin.P0, 0)
+        pins.servoWritePin(AnalogPin.P1, 0)
     } else {
     	
     }
@@ -273,7 +273,7 @@ input.onButtonPressed(Button.AB, function () {
 
 Modifie les valeurs du bloc ``||pins:régler position du servo||``.
 
-La valeur ``||pins:P0||`` demeure la même.
+Remplace la valeur ``||pins:P0||`` par ``||pins:P1||``.
 
 Remplace la valeur ``||pins:0||`` par ``||pins:90||``.
 
@@ -284,7 +284,7 @@ input.onButtonPressed(Button.AB, function () {
     let motdepasse = 0
     if (motdepasse == mdp) {
         basic.showIcon(IconNames.Yes)
-        pins.servoWritePin(AnalogPin.P0, 90)
+        pins.servoWritePin(AnalogPin.P1, 90)
     } else {
     	
     }
@@ -303,7 +303,7 @@ input.onButtonPressed(Button.AB, function () {
     let motdepasse = 0
     if (motdepasse == mdp) {
         basic.showIcon(IconNames.Yes)
-        pins.servoWritePin(AnalogPin.P0, 90)
+        pins.servoWritePin(AnalogPin.P1, 90)
     } else {
         basic.showIcon(IconNames.No)
     }
@@ -324,7 +324,7 @@ input.onButtonPressed(Button.AB, function () {
     let motdepasse = 0
     if (motdepasse == mdp) {
         basic.showIcon(IconNames.Yes)
-        pins.servoWritePin(AnalogPin.P0, 90)
+        pins.servoWritePin(AnalogPin.P1, 90)
     } else {
         basic.showIcon(IconNames.No)
     }
@@ -345,30 +345,7 @@ input.onButtonPressed(Button.AB, function () {
     let motdepasse = 0
     if (motdepasse == mdp) {
         basic.showIcon(IconNames.Yes)
-        pins.servoWritePin(AnalogPin.P0, 90)
-    } else {
-        basic.showIcon(IconNames.No)
-    }
-    basic.pause(500)
-    basic.clearScreen()
-})
-
-```
-
-## Étape 23
-
-Ajoute le bloc ``||variables: définir mdp ||`` sous le bloc ``||basic:effacer l'écran||``.
-
-Remplace la valeur ``||variables:0||`` par le bloc ``||text:"   "||``.
-
-```blocks
-
-input.onButtonPressed(Button.AB, function () {
-    let mdp = 0
-    let motdepasse = 0
-    if (motdepasse == mdp) {
-        basic.showIcon(IconNames.Yes)
-        pins.servoWritePin(AnalogPin.P0, 90)
+        pins.servoWritePin(AnalogPin.P1, 90)
     } else {
         basic.showIcon(IconNames.No)
     }

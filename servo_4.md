@@ -283,6 +283,14 @@ input.onGesture(Gesture.Shake, function () {
 
 ## @showdialog 
 
-Félicitations! Tu as terminé de programmer un circuit électrique avec un servomoteur.
+*** Attention ***
+
+N'oublie pas de brancher le servomoteur dans P1 et de brancher les lumières dans P12 - P13 - P14.
+
+Branche les lumières dans les broches jaunes (pôle positif) et dans les broches noires (pôle négatif / GND).
+
+## @showdialog 
+
+Félicitations! Tu as terminé de programmer un circuit électrique avec un servomoteur et des lumières.
 
 Pour tester le circuit, réalise les branchements et télécharge la programmation dans le micro:bit.

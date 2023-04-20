@@ -14,40 +14,40 @@ Supprime le bloc ``||basic:au démarrage||``.
 
 Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Lumière||``.
 
-Ajoute le bloc ``||variables: définir Lumiere à "0"||`` dans le bloc ``||basic: toujours||``.
+Ajoute le bloc ``||variables: définir Lumière||`` dans le bloc ``||basic: toujours||``.
 
 ```blocks
 
-let Lumiere = 0
+let Lumière = 0
 basic.forever(function () {
-    Lumiere = 0
+    Lumière = 0
 })
 
 ```
 
 ## Étape 3
 
-Remplace la valeur ``||variables: 0||`` du bloc ``||variables: définir Lumiere ||`` par le bloc ``||input: niveau d'intensité lumineuse||``. 
+Remplace la valeur ``||variables: 0||`` du bloc ``||variables: définir Lumière ||`` par le bloc ``||input: niveau d'intensité lumineuse||``. 
 
 
 ```blocks
 
-let Lumiere = 0
+let Lumière = 0
 basic.forever(function () {
-    Lumiere = input.lightLevel()
+    Lumière = input.lightLevel()
 })
 
 ```
 
 ## Étape 4
 
-Ajoute le bloc ``|| logic: si vrai alors sinon ||`` sous le bloc ``|| variables: définir Lumiere ||``.
+Ajoute le bloc ``|| logic: si vrai alors sinon ||`` sous le bloc ``|| variables: définir Lumière ||``.
 
 ```blocks
 
-let Lumiere = 0
+let Lumière = 0
 basic.forever(function () {
-    Lumiere = input.lightLevel()
+    Lumière = input.lightLevel()
     if (true) {
     	
     } else {
@@ -63,9 +63,9 @@ Remplace la valeur ``|| logic: vrai ||`` du bloc ``|| logic: si vrai alors sinon
 
 ```blocks
 
-let Lumiere = 0
+let Lumière = 0
 basic.forever(function () {
-    Lumiere = input.lightLevel()
+    Lumière = input.lightLevel()
     if (0 < 0) {
     	
     } else {
@@ -77,7 +77,7 @@ basic.forever(function () {
 
 ## Étape 6
 
-Remplace la valeur ``|| logic: 0 ||`` à la gauche du bloc ``|| logic: 0 < 0||`` par le bloc ``|| variables: Lumiere||``. 
+Remplace la valeur ``|| logic: 0 ||`` à la gauche du bloc ``|| logic: 0 < 0||`` par le bloc ``|| variables: Lumière||``. 
 
 Remplace la valeur ``|| logic: 0 ||`` à la droite du bloc ``|| logic: 0 < 0||`` par la valeur ``|| logic: 40 ||``.
 
@@ -85,10 +85,10 @@ Lorsque le niveau d'intensité lumieuse est sous 40 dans une pièce, il fait gé
 
 ```blocks
 
-let Lumiere = 0
+let Lumière = 0
 basic.forever(function () {
-    Lumiere = input.lightLevel()
-    if (Lumiere < 40) {
+    Lumière = input.lightLevel()
+    if (Lumière < 40) {
     	
     } else {
     	
@@ -103,14 +103,12 @@ Ajoute le bloc ``|| basic: Montrer LEDs ||`` sous le bloc ``|| logic: si ||``.
 
 Remplis les 25 cases pour activer toutes les LEDs du micro:bit.
 
-Lorsque le niveau d'intensité lumineuse sera sous 40, l'image dessinée devrait s'afficher sur l'écran du micro:bit.
-
 ```blocks
 
-let Lumiere = 0
+let Lumière = 0
 basic.forever(function () {
-    Lumiere = input.lightLevel()
-    if (Lumiere < 40) {
+    Lumière = input.lightLevel()
+    if (Lumière < 40) {
         basic.showLeds(`
             # # # # #
             # # # # #
@@ -131,14 +129,12 @@ Ajoute le bloc ``|| basic: montrer LEDs ||`` sous le bloc ``|| logic: sinon ||``
 
 Active seulement la LED centrale du micro:bit.
 
-Lorsque le niveau d'intensité lumineuse sera au-dessus de 40, l'image dessinée devrait s'afficher sur l'écran du micro:bit.
-
 ```blocks
 
-let Lumiere = 0
+let Lumière = 0
 basic.forever(function () {
-    Lumiere = input.lightLevel()
-    if (Lumiere < 40) {
+    Lumière = input.lightLevel()
+    if (Lumière < 40) {
         basic.showLeds(`
             # # # # #
             # # # # #
@@ -161,10 +157,6 @@ basic.forever(function () {
 
 ## Étape 9
 
-Télécharge le programme dans le micro:bit.
+Télécharge le programme dans le micro:bit et teste le programme!
 
-Teste le programme!
-
-Manipule le micro:bit. Ferme les lumières.
-
-Que remarques-tu?
+Manipule le micro:bit. Ferme les lumières. Que remarques-tu?

@@ -14,7 +14,7 @@ Supprime les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``.
 
 Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Nombre||``.
 
-Ajoute le bloc ``||variables: définir Nombre à "0"||`` dans le bloc ``||input: lorsque secouer||``.
+Ajoute le bloc ``||variables: définir Nombre||`` dans le bloc ``||input: lorsque secouer||``.
 
 ```blocks
 
@@ -27,9 +27,9 @@ input.onGesture(Gesture.Shake, function () {
 
 ## Étape 3
 
-Remplace la valeur ``||variables: 0||`` dans le bloc ``||variables: définir nombre||`` par le bloc ``||math: choisir au hasard de "0" à "10"||``.
+Remplace la valeur ``||variables: 0||`` dans le bloc ``||variables: définir nombre||`` par le bloc ``||math: choisir au hasard de 0 à 10||``.
 
-Remplace les valeurs ``||math: 0||`` et ``||math: 10||`` dans le bloc ``||math: choisir au hasard de "0" à "10"||`` par les valeurs ``||math: 1||`` et ``||math: 6||``.
+Remplace les valeurs ``||math: 0||`` et ``||math: 10||`` dans le bloc ``||math: choisir au hasard||`` par les valeurs ``||math: 1||`` et ``||math: 6||``.
 
 ```blocks
 
@@ -127,10 +127,8 @@ Duplique les blocs de programmation en cliquant droit sur le bloc ``||logic: si 
 
 ## Étape 8
 
-Télécharge le programme dans le micro:bit.
+Télécharge le programme dans le micro:bit et teste le programme!
 
-Teste le programme!
-
-Manipule le micro:bit. Que remarques-tu?
+Secoue le micro:bit. Que remarques-tu?
 
 

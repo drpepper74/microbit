@@ -46,6 +46,8 @@ input.onGesture(Gesture.Shake, function () {
 
 Ajoute le bloc ``||basic: montrer l'icone||`` sous le bloc ``||logic: alors||``.
 
+Choisis le bloc ``||basic: oui||``.
+
 ```blocks
 
 input.onGesture(Gesture.Shake, function () {
@@ -62,6 +64,8 @@ input.onGesture(Gesture.Shake, function () {
 
 Ajoute le bloc ``||basic: montrer l'icone||`` sous le bloc ``||logic: sinon||``.
 
+Choisis le bloc ``||basic: non||``.
+
 ```blocks
 
 input.onGesture(Gesture.Shake, function () {
@@ -76,7 +80,9 @@ input.onGesture(Gesture.Shake, function () {
 
 ## Étape 6
 
-Ajoute le bloc ``||loops: répéter 2 fois||`` au-dessus du bloc ``||logic: si alors sinon||``.
+Ajoute le bloc ``||loops: répéter ||`` au-dessus du bloc ``||logic: si alors sinon||``.
+
+Modifie la valeur ``||loops: 4||`` du bloc ``||loops: répéter||`` par la valeur ``||loops: 2||``.
 
 ```blocks
 
@@ -95,7 +101,9 @@ input.onGesture(Gesture.Shake, function () {
 
 ## Étape 7
 
-Ajoute les blocs ``||basic: montrer l'icone||`` dans le bloc ``||loops: répéter deux fois||``.
+Ajoute trois blocs ``||basic: montrer l'icone||`` dans le bloc ``||loops: répéter deux fois||``.
+
+Choisis les blocs ``||basic: diamant||``, ``||basic: petit diamant||``, et ``||basic: échiquier||``.
 
 Regarde les icones dans l'indice.
 
@@ -118,10 +126,6 @@ input.onGesture(Gesture.Shake, function () {
 
 ## Étape 8
 
-Télécharge le programme dans le micro:bit.
+Télécharge le programme dans le micro:bit et teste le programme !
 
-Teste le programme !
-
-Dis une affirmation et secoue le micro:bit.
-
-Que remarques-tu ?
+Dis une affirmation et secoue le micro:bit. Que remarques-tu ?

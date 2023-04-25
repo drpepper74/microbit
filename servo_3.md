@@ -172,7 +172,7 @@ Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
 Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
 
-Remplace la valeur ``|| pins: 180 ||`` par ``|| pins: 100 ||``.
+La valeur ``|| pins: 180 ||`` demeure la même.
 
 ```blocks
 
@@ -180,7 +180,7 @@ basic.forever(function () {
     basic.showNumber(input.lightLevel())
     basic.pause(2000)
     if (input.lightLevel() <= 40) {
-        pins.servoWritePin(AnalogPin.P2, 100)
+        pins.servoWritePin(AnalogPin.P2, 180)
     }
 })
 
@@ -196,7 +196,7 @@ basic.forever(function () {
     basic.showNumber(input.lightLevel())
     basic.pause(2000)
     if (input.lightLevel() <= 40) {
-        pins.servoWritePin(AnalogPin.P2, 100)
+        pins.servoWritePin(AnalogPin.P2, 180)
     }
     if (true) {
     	
@@ -217,7 +217,7 @@ basic.forever(function () {
     basic.showNumber(input.lightLevel())
     basic.pause(2000)
     if (input.lightLevel() <= 40) {
-        pins.servoWritePin(AnalogPin.P2, 100)
+        pins.servoWritePin(AnalogPin.P2, 180)
     }
     if (0 >= 0) {
     	
@@ -240,7 +240,7 @@ basic.forever(function () {
     basic.showNumber(input.lightLevel())
     basic.pause(2000)
     if (input.lightLevel() <= 40) {
-        pins.servoWritePin(AnalogPin.P2, 100)
+        pins.servoWritePin(AnalogPin.P2, 180)
     }
     if (input.lightLevel() >= 41) {
     	
@@ -259,7 +259,7 @@ basic.forever(function () {
     basic.showNumber(input.lightLevel())
     basic.pause(2000)
     if (input.lightLevel() <= 40) {
-        pins.servoWritePin(AnalogPin.P2, 100)
+        pins.servoWritePin(AnalogPin.P2, 180)
     }
     if (input.lightLevel() >= 41) {
         pins.servoWritePin(AnalogPin.P0, 180)
@@ -275,7 +275,7 @@ Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
 Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
 
-Remplace la valeur ``|| pins: 180 ||`` par ``|| pins: 50 ||``.
+Remplace la valeur ``|| pins: 180 ||`` par ``|| pins: 0 ||``.
 
 ```blocks
 
@@ -283,10 +283,10 @@ basic.forever(function () {
     basic.showNumber(input.lightLevel())
     basic.pause(2000)
     if (input.lightLevel() <= 40) {
-        pins.servoWritePin(AnalogPin.P2, 100)
+        pins.servoWritePin(AnalogPin.P2, 180)
     }
     if (input.lightLevel() >= 41) {
-        pins.servoWritePin(AnalogPin.P2, 50)
+        pins.servoWritePin(AnalogPin.P2, 0)
     }
 })
 
@@ -302,10 +302,10 @@ basic.forever(function () {
     basic.showNumber(input.lightLevel())
     basic.pause(2000)
     if (input.lightLevel() <= 40) {
-        pins.servoWritePin(AnalogPin.P2, 100)
+        pins.servoWritePin(AnalogPin.P2, 180)
     }
     if (input.lightLevel() >= 41) {
-        pins.servoWritePin(AnalogPin.P2, 50)
+        pins.servoWritePin(AnalogPin.P2, 0)
     }
     basic.pause(100)
 })
@@ -324,10 +324,10 @@ basic.forever(function () {
     basic.showNumber(input.lightLevel())
     basic.pause(2000)
     if (input.lightLevel() <= 40) {
-        pins.servoWritePin(AnalogPin.P2, 100)
+        pins.servoWritePin(AnalogPin.P2, 180)
     }
     if (input.lightLevel() >= 41) {
-        pins.servoWritePin(AnalogPin.P2, 50)
+        pins.servoWritePin(AnalogPin.P2, 0)
     }
     basic.pause(2000)
 })

@@ -4,23 +4,39 @@
 
 ## @showdialog
 
-Programme le micro:bit pour qu'il active le servomoteur à un angle aléatoire lorsqu'un bouton est pressé.
+Programme le micro:bit pour qu'il active le servomoteur à un angle aléatoire et à un angle précis lorsqu'un bouton est pressé.
 
 De plus, affiche l'angle réalisé par le servomoteur.
 
 ## Étape 1
 
-Conserve les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``.
+Supprime le bloc ``||basic:toujours||``.
+
+## Étape 2
+
+Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``||basic:au démarrage||``.
 
 ```blocks
 
-basic.forever(function () {
-	
-})
+pins.servoWritePin(AnalogPin.P0, 180)
 
 ```
 
-## Étape 2
+## Étape 3
+
+Modifie le bloc ``|| pins: régler position servo ||``.
+
+Remplace la valeur ``|| pins: P0 ||`` par ``|| pins : P1 ||``.
+
+Remplace la valeur ``|| pins: 180 ||`` par ``|| pins : 0 ||``.
+
+```blocks
+
+pins.servoWritePin(AnalogPin.P1, 0)
+
+```
+
+## Étape 4
 
 Crée une ``||variables: variable||`` et donne lui le nom ``||variables: Angle||``.
 
@@ -35,7 +51,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 3
+## Étape 5
 
 Remplace la valeur ``||variables: 0||`` du bloc ``||variables: définir Angle ||`` par le bloc ``||math: choisir au hasard de 0 à 10||``. 
 
@@ -48,7 +64,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 4
+## Étape 6
 
 Remplace la valeur ``||math: 0||`` du bloc ``||math: choisir au hasard de 0 à 10 ||`` par la valeur ``||math: 1||``.
 
@@ -63,7 +79,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 5
+## Étape 7
 
 Ajoute le bloc ``|| pins: régler position servo ||`` sous le bloc ``||variables: définir Angle ||``.
 
@@ -78,7 +94,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 6
+## Étape 8
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
@@ -96,7 +112,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 7
+## Étape 9
 
 Ajoute le bloc ``|| basic: montre nombre ||`` sous le bloc ``|| pins: régler position servo ||``.
 
@@ -113,7 +129,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 8
+## Étape 10
 
 Ajoute le bloc ``|| basic: pause (ms) 100 ||`` sous le bloc ``|| basic: montrer nombre ||``.
 
@@ -132,7 +148,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 9
+## Étape 11
 
 Ajoute le bloc ``|| pins: régler position servo ||`` sous le bloc ``||basic: pause (ms) 2000 ||``.
 
@@ -150,7 +166,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 10
+## Étape 12
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 

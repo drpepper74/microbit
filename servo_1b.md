@@ -64,7 +64,7 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 6
 
-Moidifie les valeurs du bloc ``||math: choisir au hasard||`` par les valeurs d'un angle aigu.
+Moidifie les valeurs du bloc ``||math: choisir au hasard||``.
 
 Remplace la valeur ``|| math : 0 ||`` par ``|| math : 1 ||``.
 

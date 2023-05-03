@@ -122,7 +122,7 @@ Remplace la valeur ``|| pins: 180 ||`` par ``|| pins : 90 ||``.
 
 ```blocks
 
-input.onButtonPressed(Button.A, function () {
+input.onButtonPressed(Button.B, function () {
     pins.servoWritePin(AnalogPin.P1, 90)
 })
 
@@ -137,7 +137,7 @@ Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par 
 
 ```blocks
 
-input.onButtonPressed(Button.A, function () {
+input.onButtonPressed(Button.B, function () {
     pins.servoWritePin(AnalogPin.P1, 90)
     basic.pause(2000)
 })
@@ -156,7 +156,7 @@ Remplace la valeur ``|| pins: 180 ||`` par ``|| pins : 0 ||``.
 
 ```blocks
 
-input.onButtonPressed(Button.A, function () {
+input.onButtonPressed(Button.B, function () {
     pins.servoWritePin(AnalogPin.P1, 90)
     basic.pause(2000)
     pins.servoWritePin(AnalogPin.P1, 0)

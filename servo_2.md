@@ -6,7 +6,7 @@
 
 Programme le micro:bit pour qu'il active le servomoteur à un angle aléatoire et à un angle précis lorsqu'un bouton est pressé.
 
-De plus, affiche l'angle réalisé par le servomoteur.
+De plus, le micro:bit doit affiché l'angle réalisé par le servomoteur.
 
 ## Étape 1
 

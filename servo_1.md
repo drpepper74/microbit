@@ -4,7 +4,7 @@
 
 ## @showdialog
 
-Programme le micro:bit pour qu'il active le servomoteur lorsqu'un bouton est pressé.
+Programme le micro:bit pour qu'il active le servomoteur d'un angle précis lorsqu'un bouton est pressé.
 
 ## Étape 1
 

@@ -67,7 +67,8 @@
         "global_5.md",
         "global_6.md",
         "006_serre_auto.md",
-        "servo_1b.md"
+        "servo_1b.md",
+        "tuto_5a.md"
     ],
     "testFiles": [
         "test.ts"

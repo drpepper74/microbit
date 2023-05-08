@@ -32,7 +32,7 @@ Remplace la valeur ``|| pins: 180 ||`` par ``|| pins : 0 ||``.
 
 ```blocks
 
-pins.servoWritePin(AnalogPin.P1, 0)
+pins.servoWritePin(AnalogPin.P2, 0)
 
 ```
 
@@ -342,7 +342,7 @@ input.onGesture(Gesture.TiltLeft, function () {
     pins.servoWritePin(AnalogPin.P2, Angle)
     basic.showNumber(Angle)
     basic.pause(2000)
-    pins.servoWritePin(AnalogPin.P0, 0)
+    pins.servoWritePin(AnalogPin.P2, 0)
 })
 
 

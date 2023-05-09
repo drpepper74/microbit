@@ -136,14 +136,14 @@ Modifie le bloc ``|| logic: 0 <= 0 ||``.
 
 Remplace la valeur ``|| logic: 0 ||`` de gauche par le bloc ``|| input: niveau d'intensité lumineuse ||``.
 
-Remplace la valeur ``|| logic: 0 ||`` de droite par la valeur ``|| logic: 40 ||``.
+Remplace la valeur ``|| logic: 0 ||`` de droite par la valeur ``|| logic: 25 ||``.
 
 ```blocks
 
 basic.forever(function () {
     basic.showNumber(input.lightLevel())
     basic.pause(2000)
-    if (input.lightLevel() <= 40) {
+    if (input.lightLevel() <= 25) {
     	
     }
 })
@@ -159,7 +159,7 @@ Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``|| logic: s
 basic.forever(function () {
     basic.showNumber(input.lightLevel())
     basic.pause(2000)
-    if (input.lightLevel() <= 40) {
+    if (input.lightLevel() <= 25) {
         pins.servoWritePin(AnalogPin.P0, 180)
     }
 })
@@ -179,7 +179,7 @@ La valeur ``|| pins: 180 ||`` demeure la même.
 basic.forever(function () {
     basic.showNumber(input.lightLevel())
     basic.pause(2000)
-    if (input.lightLevel() <= 40) {
+    if (input.lightLevel() <= 25) {
         pins.servoWritePin(AnalogPin.P2, 180)
     }
 })
@@ -195,7 +195,7 @@ Ajoute le bloc ``|| logic: si vrai alors ||`` sous le bloc ``|| logic: si vrai a
 basic.forever(function () {
     basic.showNumber(input.lightLevel())
     basic.pause(2000)
-    if (input.lightLevel() <= 40) {
+    if (input.lightLevel() <= 25) {
         pins.servoWritePin(AnalogPin.P2, 180)
     }
     if (true) {
@@ -216,7 +216,7 @@ Remplace la valeur ``|| logic: vrai ||`` du bloc ``|| logic: si vrai alors ||`` 
 basic.forever(function () {
     basic.showNumber(input.lightLevel())
     basic.pause(2000)
-    if (input.lightLevel() <= 40) {
+    if (input.lightLevel() <= 25) {
         pins.servoWritePin(AnalogPin.P2, 180)
     }
     if (0 >= 0) {
@@ -232,17 +232,17 @@ Modifie le bloc ``|| logic: 0 >= 0 ||``.
 
 Remplace la valeur ``|| logic: 0 ||`` de gauche par le bloc ``|| input: niveau d'intensité lumineuse ||``.
 
-Remplace la valeur ``|| logic: 0 ||`` de droite par la valeur ``|| logic: 41 ||``.
+Remplace la valeur ``|| logic: 0 ||`` de droite par la valeur ``|| logic: 26 ||``.
 
 ```blocks
 
 basic.forever(function () {
     basic.showNumber(input.lightLevel())
     basic.pause(2000)
-    if (input.lightLevel() <= 40) {
+    if (input.lightLevel() <= 25) {
         pins.servoWritePin(AnalogPin.P2, 180)
     }
-    if (input.lightLevel() >= 41) {
+    if (input.lightLevel() >= 26) {
     	
     }
 })
@@ -258,10 +258,10 @@ Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``|| logic: s
 basic.forever(function () {
     basic.showNumber(input.lightLevel())
     basic.pause(2000)
-    if (input.lightLevel() <= 40) {
+    if (input.lightLevel() <= 25) {
         pins.servoWritePin(AnalogPin.P2, 180)
     }
-    if (input.lightLevel() >= 41) {
+    if (input.lightLevel() >= 26) {
         pins.servoWritePin(AnalogPin.P0, 180)
     }
 })
@@ -282,10 +282,10 @@ Remplace la valeur ``|| pins: 180 ||`` par ``|| pins: 0 ||``.
 basic.forever(function () {
     basic.showNumber(input.lightLevel())
     basic.pause(2000)
-    if (input.lightLevel() <= 40) {
+    if (input.lightLevel() <= 25) {
         pins.servoWritePin(AnalogPin.P2, 180)
     }
-    if (input.lightLevel() >= 41) {
+    if (input.lightLevel() >= 26) {
         pins.servoWritePin(AnalogPin.P2, 0)
     }
 })
@@ -301,10 +301,10 @@ Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| logic: si vrai alor
 basic.forever(function () {
     basic.showNumber(input.lightLevel())
     basic.pause(2000)
-    if (input.lightLevel() <= 40) {
+    if (input.lightLevel() <= 25) {
         pins.servoWritePin(AnalogPin.P2, 180)
     }
-    if (input.lightLevel() >= 41) {
+    if (input.lightLevel() >= 26) {
         pins.servoWritePin(AnalogPin.P2, 0)
     }
     basic.pause(100)
@@ -323,10 +323,10 @@ Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par 
 basic.forever(function () {
     basic.showNumber(input.lightLevel())
     basic.pause(2000)
-    if (input.lightLevel() <= 40) {
+    if (input.lightLevel() <= 25) {
         pins.servoWritePin(AnalogPin.P2, 180)
     }
-    if (input.lightLevel() >= 41) {
+    if (input.lightLevel() >= 26) {
         pins.servoWritePin(AnalogPin.P2, 0)
     }
     basic.pause(2000)

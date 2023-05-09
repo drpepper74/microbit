@@ -78,13 +78,11 @@ input.onGesture(Gesture.TiltRight, function () {
     Angle = randint(1, 89)
 })
 
-
 ```
 
 ## Étape 7
 
 Ajoute le bloc ``|| pins: régler position servo ||`` sous le bloc ``||variables: définir Angle ||``.
-
 
 ```blocks
 
@@ -214,8 +212,9 @@ Remplace la valeur ``||variables: 0||`` du bloc ``||variables: définir Angle ||
 
 let Angle = 0
 input.onGesture(Gesture.TiltLeft, function () {
-    Angle = 0
+    Angle = randint(0, 10)
 })
+
 
 ```
 

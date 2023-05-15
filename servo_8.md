@@ -4,7 +4,7 @@
 
 ## @showdialog
 
-Programme le micro:bit pour qu'il active le servomoteur à un angle aigü ou obtus.
+Programme le micro:bit pour qu'il active le servomoteur à un angle aigu ou obtus.
 
 De plus, le micro:bit doit activer une lumière et afficher l'angle en fonction du degré réalisé.
 
@@ -286,34 +286,12 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 17
 
-Dupplique le bloc ``||input: lorsque le bouton A est pressé||``.
+Dupplique le bloc ``||logic: si vrai alors||``.
 
-```blocks
-
-let Angle = 0
-input.onButtonPressed(Button.A, function () {
-    Angle = randint(1, 180)
-    basic.showNumber(Angle)
-    basic.pause(2000)
-    if (Angle < 90) {
-        pins.servoWritePin(AnalogPin.P1, Angle)
-        pins.digitalWritePin(DigitalPin.P12, 1)
-        pins.digitalWritePin(DigitalPin.P13, 0)
-        basic.showLeds(`
-            . . # . .
-            . # . # .
-            # . . . #
-            # # # # #
-            # . . . #
-            `)
-    }
-})
-
-```
 
 ## Étape 18
 
-Modifie les valeurs pour que le servomoteur réalise un angle obtus lorsque le bouton B est pressé.
+Modifie les valeurs pour que le servomoteur puisse également réaliser un angle obtus lorsque le bouton A est pressé.
 
 ## @showdialog 
 

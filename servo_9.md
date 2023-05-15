@@ -110,5 +110,40 @@ input.onButtonPressed(Button.A, function () {
     }
 })
 
+```
+
+## Étape 8
+
+Ajoute le bloc ``||basic: pause (ms) ||`` sous le bloc ``||pins:régler position servo||``.
+
+Remplace la valeur ``||basic: 100 ||`` par la valeur ``||basic: 500 ||``.
+
+```blocks
+
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    for (let index = 0; index < 36; index++) {
+        Angle += 5
+        pins.servoWritePin(AnalogPin.P2, Angle)
+        basic.pause(500)
+    }
+})
+
+```
+
+## Étape 9
+
+Ajoute le bloc ``||logic: si vrai alors ||`` sous le bloc ``||basic:pause (ms)||``.
+
+```blocks
+
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    for (let index = 0; index < 36; index++) {
+        Angle += 5
+        pins.servoWritePin(AnalogPin.P2, Angle)
+        basic.pause(500)
+    }
+})
 
 ```

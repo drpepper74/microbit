@@ -1,6 +1,6 @@
 # Circuits électriques et servomoteur
 
-# Tutoriel 7 A
+# Tutoriel - Défi supplémentaire
 
 ## @showdialog
 

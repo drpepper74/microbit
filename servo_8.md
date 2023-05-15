@@ -293,6 +293,10 @@ Dupplique le bloc ``||logic: si vrai alors||``.
 
 Modifie les valeurs pour que le servomoteur puisse également réaliser un angle obtus lorsque le bouton A est pressé.
 
+## Étape 19
+
+Ajoute le bloc ``||input: lorsque le bouton B est pressé||`` pour réinitialiser le servomoteur et les lumières.
+
 ## @showdialog 
 
 Bravo! Tu as terminé de programmer.

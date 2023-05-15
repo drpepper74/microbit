@@ -1,6 +1,6 @@
 # Circuits électriques et servomoteur
 
-# Tutoriel 8
+# Tutoriel 9
 
 ## @showdialog
 
@@ -143,6 +143,102 @@ input.onButtonPressed(Button.A, function () {
         Angle += 5
         pins.servoWritePin(AnalogPin.P2, Angle)
         basic.pause(500)
+        if (true) {
+        	
+        }
+    }
+})
+
+```
+
+## Étape 10
+
+Ajoute le bloc ``||logic: 0 < 0 ||`` dans le bloc ``||logic:si vrai alors||``.
+
+```blocks
+
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    for (let index = 0; index < 36; index++) {
+        Angle += 5
+        pins.servoWritePin(AnalogPin.P2, Angle)
+        basic.pause(500)
+        if (0 < 0) {
+        	
+        }
+    }
+})
+
+
+```
+
+## Étape 11
+
+Modifie le bloc ``||logic: 0 < 0 ||``.
+
+Remplace la valeur ``||logic: 0 ||`` de gauche par le bloc ``||variables: Angle ||``.
+
+Remplace la valeur ``||logic: 0 ||`` de droite par la valeur ``||logic: 60 ||``.
+
+```blocks
+
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    for (let index = 0; index < 36; index++) {
+        Angle += 5
+        pins.servoWritePin(AnalogPin.P2, Angle)
+        basic.pause(500)
+        if (Angle < 60) {
+        	
+        }
+    }
+})
+
+```
+
+## Étape 12
+
+Ajoute les blocs ``||pins: écrire sur la broche ||`` sous le bloc ``||logic: 0 < 0 ||``.
+
+Remplace les valeurs ``||pins: P0 ||`` par ``||pins: P12 ||``, ``||pins: P13 ||`` et ``||pins: P14 ||``.
+
+Remplace la valeur ``||pins: 0 ||`` de ``||pins: P12 ||`` par ``||pins: 1 ||``.
+
+Les valeurs de ``||pins: 0 ||`` de ``||pins: P13 ||`` et de ``||pins: P14 ||`` demeurent les mêmes.
+
+```blocks
+
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    for (let index = 0; index < 36; index++) {
+        Angle += 5
+        pins.servoWritePin(AnalogPin.P2, Angle)
+        basic.pause(500)
+        if (Angle < 60) {
+            pins.digitalWritePin(DigitalPin.P12, 1)
+            pins.digitalWritePin(DigitalPin.P13, 0)
+            pins.digitalWritePin(DigitalPin.P14, 0)
+        }
+    }
+})
+
+```
+
+## Étape 13
+
+Ajoute le bloc ``||logic: si vrai alors ||`` sous le bloc ``||logic: si vrai alors ||``.
+
+```blocks
+
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    for (let index = 0; index < 36; index++) {
+        Angle += 5
+        pins.servoWritePin(AnalogPin.P2, Angle)
+        basic.pause(500)
+        if (true) {
+        	
+        }
     }
 })
 

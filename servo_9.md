@@ -236,6 +236,11 @@ input.onButtonPressed(Button.A, function () {
         Angle += 5
         pins.servoWritePin(AnalogPin.P2, Angle)
         basic.pause(500)
+        if (Angle < 60) {
+            pins.digitalWritePin(DigitalPin.P12, 1)
+            pins.digitalWritePin(DigitalPin.P13, 0)
+            pins.digitalWritePin(DigitalPin.P14, 0)
+        }
         if (true) {
         	
         }
@@ -243,3 +248,294 @@ input.onButtonPressed(Button.A, function () {
 })
 
 ```
+
+## Étape 14
+
+Remplace la valeur ``||logic: vrai ||`` par le bloc ``||logic: et ||``.
+
+```blocks
+
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    for (let index = 0; index < 36; index++) {
+        Angle += 5
+        pins.servoWritePin(AnalogPin.P2, Angle)
+        basic.pause(500)
+        if (Angle < 60) {
+            pins.digitalWritePin(DigitalPin.P12, 1)
+            pins.digitalWritePin(DigitalPin.P13, 0)
+            pins.digitalWritePin(DigitalPin.P14, 0)
+        }
+        if (false && false) {
+        	
+        }
+    }
+})
+
+```
+
+## Étape 15
+
+Modifie le bloc ``||logic: et ||``.
+
+Remplace la valeur de gauche par le bloc ``||logic: 0 > 0 ||``.
+
+Remplace la valeur de droite par le bloc ``||logic: 0 < 0 ||``.
+
+```blocks
+
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    for (let index = 0; index < 36; index++) {
+        Angle += 5
+        pins.servoWritePin(AnalogPin.P2, Angle)
+        basic.pause(500)
+        if (Angle < 60) {
+            pins.digitalWritePin(DigitalPin.P12, 1)
+            pins.digitalWritePin(DigitalPin.P13, 0)
+            pins.digitalWritePin(DigitalPin.P14, 0)
+        }
+        if (0 > 0 && 0 < 0) {
+        	
+        }
+    }
+})
+
+```
+
+## Étape 16
+
+Modifie le bloc ``||logic: 0 > 0 ||`` de gauche.
+
+Remplace la valeur ``||logic: 0 ||`` de gauche par le bloc ``||variables: Angle ||``.
+
+Remplace la valeur ``||logic: 0 ||`` de droite par la valeur ``||logic: 61 ||``.
+
+```blocks
+
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    for (let index = 0; index < 36; index++) {
+        Angle += 5
+        pins.servoWritePin(AnalogPin.P2, Angle)
+        basic.pause(500)
+        if (Angle < 60) {
+            pins.digitalWritePin(DigitalPin.P12, 1)
+            pins.digitalWritePin(DigitalPin.P13, 0)
+            pins.digitalWritePin(DigitalPin.P14, 0)
+        }
+        if (Angle > 61 && 0 < 0) {
+        	
+        }
+    }
+})
+
+```
+
+## Étape 17
+
+Modifie le bloc ``||logic: 0 < 0 ||`` de droite.
+
+Remplace la valeur ``||logic: 0 ||`` de gauche par le bloc ``||variables: Angle ||``.
+
+Remplace la valeur ``||logic: 0 ||`` de droite par la valeur ``||logic: 119 ||``.
+
+```blocks
+
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    for (let index = 0; index < 36; index++) {
+        Angle += 5
+        pins.servoWritePin(AnalogPin.P2, Angle)
+        basic.pause(500)
+        if (Angle < 60) {
+            pins.digitalWritePin(DigitalPin.P12, 1)
+            pins.digitalWritePin(DigitalPin.P13, 0)
+            pins.digitalWritePin(DigitalPin.P14, 0)
+        }
+        if (Angle > 61 && Angle < 119) {
+        	
+        }
+    }
+})
+
+```
+
+## Étape 18
+
+Ajoute les blocs ``||pins: écrire sur la broche ||`` sous le bloc ``||logic: et ||``.
+
+Remplace les valeurs ``||pins: P0 ||`` par ``||pins: P12 ||``, ``||pins: P13 ||`` et ``||pins: P14 ||``.
+
+Remplace la valeur ``||pins: 0 ||`` de ``||pins: P13 ||`` par ``||pins: 1 ||``.
+
+Les valeurs de ``||pins: 0 ||`` de ``||pins: P12 ||`` et de ``||pins: P14 ||`` demeurent les mêmes.
+
+```blocks
+
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    for (let index = 0; index < 36; index++) {
+        Angle += 5
+        pins.servoWritePin(AnalogPin.P2, Angle)
+        basic.pause(500)
+        if (Angle < 60) {
+            pins.digitalWritePin(DigitalPin.P12, 1)
+            pins.digitalWritePin(DigitalPin.P13, 0)
+            pins.digitalWritePin(DigitalPin.P14, 0)
+        }
+        if (Angle > 61 && Angle < 119) {
+            pins.digitalWritePin(DigitalPin.P12, 0)
+            pins.digitalWritePin(DigitalPin.P13, 1)
+            pins.digitalWritePin(DigitalPin.P14, 0)
+        }
+    }
+})
+
+
+```
+
+## Étape 19
+
+Ajoute le bloc ``||logic: si vrai alors ||`` sous le bloc ``||logic: si vrai alors ||``.
+
+```blocks
+
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    for (let index = 0; index < 36; index++) {
+        Angle += 5
+        pins.servoWritePin(AnalogPin.P2, Angle)
+        basic.pause(500)
+        if (Angle < 60) {
+            pins.digitalWritePin(DigitalPin.P12, 1)
+            pins.digitalWritePin(DigitalPin.P13, 0)
+            pins.digitalWritePin(DigitalPin.P14, 0)
+        }
+        if (Angle > 61 && Angle < 119) {
+            pins.digitalWritePin(DigitalPin.P12, 0)
+            pins.digitalWritePin(DigitalPin.P13, 1)
+            pins.digitalWritePin(DigitalPin.P14, 0)
+        }
+        if (true) {
+        	
+        }
+    }
+})
+
+
+```
+
+## Étape 20
+
+Ajoute le bloc ``||logic: 0 > 0 ||`` dans le bloc ``||logic:si vrai alors||``.
+
+```blocks
+
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    for (let index = 0; index < 36; index++) {
+        Angle += 5
+        pins.servoWritePin(AnalogPin.P2, Angle)
+        basic.pause(500)
+        if (Angle < 60) {
+            pins.digitalWritePin(DigitalPin.P12, 1)
+            pins.digitalWritePin(DigitalPin.P13, 0)
+            pins.digitalWritePin(DigitalPin.P14, 0)
+        }
+        if (Angle > 61 && Angle < 119) {
+            pins.digitalWritePin(DigitalPin.P12, 0)
+            pins.digitalWritePin(DigitalPin.P13, 1)
+            pins.digitalWritePin(DigitalPin.P14, 0)
+        }
+        if (0 > 0) {
+        	
+        }
+    }
+})
+
+
+```
+
+## Étape 21
+
+Modifie le bloc ``||logic: 0 > 0 ||``.
+
+Remplace la valeur ``||logic: 0 ||`` de gauche par le bloc ``||variables: Angle ||``.
+
+Remplace la valeur ``||logic: 0 ||`` de droite par la valeur ``||logic: 120 ||``.
+
+```blocks
+
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    for (let index = 0; index < 36; index++) {
+        Angle += 5
+        pins.servoWritePin(AnalogPin.P2, Angle)
+        basic.pause(500)
+        if (Angle < 60) {
+            pins.digitalWritePin(DigitalPin.P12, 1)
+            pins.digitalWritePin(DigitalPin.P13, 0)
+            pins.digitalWritePin(DigitalPin.P14, 0)
+        }
+        if (Angle > 61 && Angle < 119) {
+            pins.digitalWritePin(DigitalPin.P12, 0)
+            pins.digitalWritePin(DigitalPin.P13, 1)
+            pins.digitalWritePin(DigitalPin.P14, 0)
+        }
+        if (Angle > 120) {
+        	
+        }
+    }
+})
+
+
+```
+
+## Étape 22
+
+Ajoute les blocs ``||pins: écrire sur la broche ||`` sous le bloc ``||logic: 0 > 0 ||``.
+
+Remplace les valeurs ``||pins: P0 ||`` par ``||pins: P12 ||``, ``||pins: P13 ||`` et ``||pins: P14 ||``.
+
+Remplace la valeur ``||pins: 0 ||`` de ``||pins: P14 ||`` par ``||pins: 1 ||``.
+
+Les valeurs de ``||pins: 0 ||`` de ``||pins: P12 ||`` et de ``||pins: P13 ||`` demeurent les mêmes.
+
+```blocks
+
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    for (let index = 0; index < 36; index++) {
+        Angle += 5
+        pins.servoWritePin(AnalogPin.P2, Angle)
+        basic.pause(500)
+        if (Angle < 60) {
+            pins.digitalWritePin(DigitalPin.P12, 1)
+            pins.digitalWritePin(DigitalPin.P13, 0)
+            pins.digitalWritePin(DigitalPin.P14, 0)
+        }
+        if (Angle > 61 && Angle < 119) {
+            pins.digitalWritePin(DigitalPin.P12, 0)
+            pins.digitalWritePin(DigitalPin.P13, 1)
+            pins.digitalWritePin(DigitalPin.P14, 0)
+        }
+        if (Angle > 120) {
+            pins.digitalWritePin(DigitalPin.P12, 0)
+            pins.digitalWritePin(DigitalPin.P13, 0)
+            pins.digitalWritePin(DigitalPin.P14, 1)
+        }
+    }
+})
+
+```
+
+## Étape 23
+
+Ajoute le bloc ``||input:lorsque le bouton B est pressé||`` pour réinitialiser les valeurs du servomoteur et des lumières.
+
+## @showdialog 
+
+Bravo! Tu as terminé de programmer.
+
+Pour tester le circuit, réalise les branchements et télécharge la programmation dans le micro:bit.

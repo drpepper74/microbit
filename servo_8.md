@@ -4,7 +4,7 @@
 
 ## @showdialog
 
-Programme le micro:bit pour qu'il active le servomoteur à un angle précis en fonction.
+Programme le micro:bit pour qu'il active le servomoteur à un angle aigü ou obtus.
 
 De plus, le micro:bit doit activer une lumière et afficher l'angle en fonction du degré réalisé.
 
@@ -286,239 +286,34 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 17
 
-Ajoute le bloc ``||variables: définir Angle ||`` dans le bloc ``||input: lorsque le bouton B est pressé||``.
+Dupplique le bloc ``||input: lorsque le bouton A est pressé||``.
 
 ```blocks
 
 let Angle = 0
-input.onButtonPressed(Button.B, function () {
-    Angle = 0
-})
-
-```
-
-## Étape 18
-
-Modifie le bloc ``||variables: définir Angle ||``.
-
-Remplace la valeur ``||variables: 0 ||`` par le bloc ``||math: choisir au hasard ||``.
-
-```blocks
-
-let Angle = 0
-input.onButtonPressed(Button.B, function () {
-    Angle = randint(0, 10)
-})
-
-```
-
-## Étape 19
-
-Modifie le bloc ``||math: choisir au hasard ||``.
-
-Remplace la valeur ``||math: 0 ||`` par ``||math: 1 ||``.
-
-Remplace la valeur ``||math: 10 ||`` par ``||math: 180 ||``.
-
-```blocks
-
-let Angle = 0
-input.onButtonPressed(Button.B, function () {
-    Angle = randint(1, 180)
-})
-
-```
-
-## Étape 20
-
-Ajoute le bloc ``||basic: montrer nombre ||`` sous le bloc ``||variables: définir Angle ||``.
-
-Remplace la valeur ``||basic: 0 ||`` par le bloc ``||variables: Angle ||``.
-
-```blocks
-
-let Angle = 0
-input.onButtonPressed(Button.B, function () {
-    Angle = randint(1, 180)
-    basic.showNumber(Angle)
-})
-
-```
-
-## Étape 21
-
-Ajoute le bloc ``||basic: pause (ms) ||`` sous le bloc ``||basic: montrer nombre ||``.
-
-Remplace la valeur ``||basic: 100 ||`` par la valeur ``||basic: 2000 ||``.
-
-```blocks
-
-let Angle = 0
-input.onButtonPressed(Button.B, function () {
+input.onButtonPressed(Button.A, function () {
     Angle = randint(1, 180)
     basic.showNumber(Angle)
     basic.pause(2000)
-})
-
-```
-
-## Étape 22
-
-Ajoute le bloc ``||logic: si vrai alors ||`` sous le bloc ``||basic: pause (ms) ||``.
-
-```blocks
-
-let Angle = 0
-input.onButtonPressed(Button.B, function () {
-    Angle = randint(1, 180)
-    basic.showNumber(Angle)
-    basic.pause(2000)
-    if (true) {
-    	
-    }
-})
-
-```
-
-## Étape 23
-
-Modifie le bloc ``||logic: si vrai alors ||``.
-
-Remplace la valeur ``||logic: vrai ||`` par le bloc ``||logic: 0 > 0 ||``.
-
-```blocks
-
-let Angle = 0
-input.onButtonPressed(Button.B, function () {
-    Angle = randint(1, 180)
-    basic.showNumber(Angle)
-    basic.pause(2000)
-    if (0 > 0) {
-    	
-    }
-})
-
-```
-
-## Étape 24
-
-Modifie le bloc ``||logic: 0 > 0 ||``.
-
-Remplace la ``||logic: 0 ||`` de gauche par le bloc ``||variables: Angle ||``.
-
-Remplace la ``||logic: 0 ||`` de droite par la valeur ``||logic: 90 ||``.
-
-```blocks
-
-let Angle = 0
-input.onButtonPressed(Button.B, function () {
-    Angle = randint(1, 180)
-    basic.showNumber(Angle)
-    basic.pause(2000)
-    if (Angle > 90) {
-    	
-    }
-})
-
-```
-
-## Étape 25
-
-Ajoute le bloc ``||pins: régler position servo ||`` dans le bloc ``||logic: si alors ||``.
-
-Remplace la valeur ``||pins: P0 ||`` par la valeur ``||pins: P1 ||``.
-
-Remplace la valeur ``||pins: 180 ||`` par le bloc ``||variables: Angle ||``.
-
-```blocks
-
-let Angle = 0
-input.onButtonPressed(Button.B, function () {
-    Angle = randint(1, 180)
-    basic.showNumber(Angle)
-    basic.pause(2000)
-    if (Angle > 90) {
-        pins.servoWritePin(AnalogPin.P1, Angle)
-    }
-})
-
-```
-
-## Étape 26
-
-Ajoute les blocs ``||pins: écrire sur la broche ||`` sous le bloc ``||pins: régler position servo ||``.
-
-Remplace les valeur ``||pins: P0 ||`` par les valeurs ``||pins: P12 ||`` et ``||pins: P13 ||``.
-
-Remplace la valeur ``||pins: 0 ||`` de ``||pins: P12 ||`` par la valeur ``||pins: 1 ||``.
-
-La valeur ``||pins: 0 ||`` de ``||pins: P13 ||`` demeure la même.
-
-```blocks
-
-let Angle = 0
-input.onButtonPressed(Button.B, function () {
-    Angle = randint(1, 180)
-    basic.showNumber(Angle)
-    basic.pause(2000)
-    if (Angle > 90) {
-        pins.servoWritePin(AnalogPin.P1, Angle)
-        pins.digitalWritePin(DigitalPin.P12, 1)
-        pins.digitalWritePin(DigitalPin.P13, 0)
-    }
-})
-
-```
-
-## Étape 27
-
-Ajoute le bloc ``||basic: montrer LEDs ||`` sous le bloc ``||pins: écrire sur la broche ||``.
-
-Dessine la lettre O.
-
-```blocks
-
-let Angle = 0
-input.onButtonPressed(Button.B, function () {
-    Angle = randint(1, 180)
-    basic.showNumber(Angle)
-    basic.pause(2000)
-    if (Angle > 90) {
+    if (Angle < 90) {
         pins.servoWritePin(AnalogPin.P1, Angle)
         pins.digitalWritePin(DigitalPin.P12, 1)
         pins.digitalWritePin(DigitalPin.P13, 0)
         basic.showLeds(`
-          . # # # .
+            . . # . .
+            . # . # .
             # . . . #
+            # # # # #
             # . . . #
-            # . . . #
-            . # # # .
             `)
     }
 })
 
 ```
 
-## Étape 28
+## Étape 18
 
-Ajoute le bloc ``||pins:régler position servo||`` dans le bloc ``||input:lorsque le bouton A+B est pressé||``.
-
-Ajoute les bloc ``||pins:écrire sur la broche||`` sous le bloc ``||pins:régler position servo||``.
-
-Ajoute le bloc ``||basic:effacer l'écran||`` sous le bloc ``||pins:écrire sur la broche||``.
-
-Regarde l'indice pour connaître les valeurs à changer! 
-
-```blocks
-
-input.onButtonPressed(Button.AB, function () {
-    pins.servoWritePin(AnalogPin.P1, 0)
-    pins.digitalWritePin(DigitalPin.P12, 0)
-    pins.digitalWritePin(DigitalPin.P13, 0)
-    basic.clearScreen()
-})
-
-```
+Modifie les valeurs pour que le servomoteur réalise un angle obtus lorsque le bouton B est pressé.
 
 ## @showdialog 
 

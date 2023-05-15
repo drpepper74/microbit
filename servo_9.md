@@ -30,14 +30,14 @@ let Angle = 0
 
 Ajoute le bloc ``||pins: régler position servo ||`` sous le bloc ``||variables:définir Angle||``.
 
-Remplace la valeur ``||pins: P0 ||`` par ``||pins: P1 ||``.
+Remplace la valeur ``||pins: P0 ||`` par ``||pins: P2 ||``.
 
 Remplace la valeur ``||pins: 180 ||`` par ``||pins: 0 ||``.
 
 ```blocks
 
 let Angle = 0
-pins.servoWritePin(AnalogPin.P1, 0)
+pins.servoWritePin(AnalogPin.P2, 0)
 
 ```
 
@@ -52,7 +52,7 @@ Les valeurs ``||pins: 0 ||`` demeurent les mêmes.
 ```blocks
 
 let Angle = 0
-pins.servoWritePin(AnalogPin.P1, 0)
+pins.servoWritePin(AnalogPin.P2, 0)
 pins.digitalWritePin(DigitalPin.P0, 0)
 pins.digitalWritePin(DigitalPin.P0, 0)
 pins.digitalWritePin(DigitalPin.P0, 0)
@@ -75,7 +75,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 5
+## Étape 6
 
 Ajoute le bloc ``||variables: modifier Angle ||`` dans le bloc ``||loops:répéter||``.
 
@@ -87,6 +87,26 @@ let Angle = 0
 input.onButtonPressed(Button.A, function () {
     for (let index = 0; index < 36; index++) {
         Angle += 5
+    }
+})
+
+```
+
+## Étape 7
+
+Ajoute le bloc ``||pins: régler position servo ||`` sous le bloc ``||variables:modifier Angle||``.
+
+Remplace la valeur ``||pins: P0 ||`` par la valeur ``||pins: P2 ||``.
+
+Remplace la valeur ``||pins: 180 ||`` par le bloc ``||variables: Angle ||``.
+
+```blocks
+
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    for (let index = 0; index < 36; index++) {
+        Angle += 5
+        pins.servoWritePin(AnalogPin.P2, Angle)
     }
 })
 

@@ -70,7 +70,8 @@
         "servo_1b.md",
         "tuto_5a.md",
         "servo_8.md",
-        "servo_9.md"
+        "servo_9.md",
+        "circuit_8.md"
     ],
     "testFiles": [
         "test.ts"

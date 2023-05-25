@@ -1,4 +1,4 @@
-# Circuits électriques - Tutoriel 6
+# Circuits électriques - Tutoriel 7
 
 ## @showdialog
 

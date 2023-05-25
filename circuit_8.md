@@ -2,7 +2,7 @@
 
 ## @showdialog
 
-Présente une séquence et un branchement qui utilise le maximum de blocs de programmation.
+Présente une séquence de programmation et un circuit électrique qui utilise le maximum de blocs.
 
 ## Étape 1
 
@@ -37,7 +37,7 @@ basic.forever(function () {
 
 ## @showdialog 
 
-Félicitations! Tu as terminé de programmer un circuit électrique.
+Félicitations! Tu as terminé de programmer le circuit électrique.
 
 Essaie de brancher l'ensemble des composantes du circuit sans indice.
 

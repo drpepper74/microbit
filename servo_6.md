@@ -45,14 +45,13 @@ pins.servoWritePin(AnalogPin.P2, 0)
 
 ## Étape 4
 
-Ajoute trois blocs ``|| pins: écrire sur la broche ||`` sous le bloc ``|| pins: régler position servo ||``.
+Ajoute deux blocs ``|| pins: écrire sur la broche ||`` sous le bloc ``|| pins: régler position servo ||``.
 
-P12 = Vert - P13 = Jaune - P14 = Rouge
+P12 = Vert - P13 = Rouge
 
 ```blocks
 
 pins.servoWritePin(AnalogPin.P2, 0)
-pins.digitalWritePin(DigitalPin.P0, 0)
 pins.digitalWritePin(DigitalPin.P0, 0)
 pins.digitalWritePin(DigitalPin.P0, 0)
 
@@ -62,18 +61,17 @@ pins.digitalWritePin(DigitalPin.P0, 0)
 
 Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
 
-Remplace les valeurs ``|| pins: P0 ||`` par ``|| pins: P12 ||``, ``|| pins: P13 ||`` et ``|| pins: P14 ||``.
+Remplace les valeurs ``|| pins: P0 ||`` par ``|| pins: P12 ||`` et ``|| pins: P13 ||``.
 
-Remplace les valeurs ``|| pins: 0 ||`` par ``|| pins: 0 ||``, ``|| pins: 0 ||`` et ``|| pins: 1 ||``.
+Remplace les valeurs ``|| pins: 0 ||`` par ``|| pins: 0 ||`` et ``|| pins: 1 ||``.
 
-P12 = Vert - P13 = Jaune - P14 = Rouge
+P12 = Vert - P13 = Rouge
 
 ```blocks
 
 pins.servoWritePin(AnalogPin.P2, 0)
 pins.digitalWritePin(DigitalPin.P12, 0)
-pins.digitalWritePin(DigitalPin.P13, 0)
-pins.digitalWritePin(DigitalPin.P14, 1)
+pins.digitalWritePin(DigitalPin.P13, 1)
 
 ```
 
@@ -179,7 +177,7 @@ input.onButtonPressed(Button.A, function () {
 
 Ajoue le bloc ``|| basic: pause (ms) 100 ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
 
-Remplace la valeur ``|| basic: 100 ||`` par ``|| basic: 2000 ||``.
+Remplace la valeur ``|| basic: 100 ||`` par ``|| basic: 1000 ||``.
 
 Regarde l'indice!
 
@@ -189,7 +187,7 @@ input.onButtonPressed(Button.A, function () {
     pins.servoWritePin(AnalogPin.P2, 90)
     pins.digitalWritePin(DigitalPin.P14, 0)
     pins.digitalWritePin(DigitalPin.P12, 1)
-    basic.pause(2000)
+    basic.pause(1000)
 })
 
 ```

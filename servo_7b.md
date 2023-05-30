@@ -44,7 +44,7 @@ pins.servoWritePin(AnalogPin.P0, 180)
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par ``|| pins: 0 ||``.
 
@@ -73,7 +73,7 @@ pins.digitalWritePin(DigitalPin.P0, 0)
 
 Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
 
-Remplace les valeurs ``|| pins: P0 ||`` par ``|| pins: P12 ||``, ``|| pins: P13 ||`` et ``|| pins: P14 ||``.
+Remplace les broches ``|| pins: P0 ||`` par ``|| pins: P12 ||``, ``|| pins: P13 ||`` et ``|| pins: P14 ||``.
 
 Remplace les valeurs ``|| pins: 0 ||`` par ``|| pins: 0 ||``, ``|| pins: 0 ||`` et ``|| pins: 1 ||``.
 
@@ -104,7 +104,7 @@ input.onButtonPressed(Button.A, function () {
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par ``|| pins: 90 ||``.
 
@@ -135,7 +135,7 @@ input.onButtonPressed(Button.A, function () {
 
 Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P14 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P14 ||``.
 
 Remplace la valeur ``|| pins: 0 ||`` par ``|| pins: 1 ||``.
 
@@ -203,7 +203,7 @@ input.onButtonPressed(Button.A, function () {
 
 Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P14 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P14 ||``.
 
 La valeur ``|| pins: 0 ||`` demeure la même.
 
@@ -263,7 +263,7 @@ input.onButtonPressed(Button.A, function () {
 
 Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P13 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P13 ||``.
 
 Remplace la valeur ``|| pins: 0 ||`` par ``|| pins: 1 ||``.
 
@@ -361,7 +361,7 @@ input.onButtonPressed(Button.A, function () {
 
 Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P13 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P13 ||``.
 
 Remplace la valeur ``|| pins: 0 ||`` par ``|| pins: 0 ||``.
 
@@ -453,7 +453,7 @@ input.onButtonPressed(Button.A, function () {
 
 Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P12 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P12 ||``.
 
 Remplace la valeur ``|| pins: 0 ||`` par ``|| pins: 1 ||``.
 
@@ -555,8 +555,8 @@ input.onButtonPressed(Button.A, function () {
 ## @showdialog 
 
 Réalise une programmation pour fermer la barrière lorsque le bouton B est pressé.
-Il s'agit de la même programmation que le tutoriel #6.
 
+Duplique le bloc ``||input:lorsque le bouton A est pressé||`` et modifie les valeurs.
 
 ## Étape 27
 
@@ -676,8 +676,6 @@ radio.onReceivedString(function (receivedString) {
 ```
 
 ## Étape 34
-
-Modifie le bloc ``||logic:"" = ""||``. (suite)
 
 Remplace le bloc ``||logic:""||`` de droite par le mot Fermer. 
 

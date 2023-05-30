@@ -28,7 +28,7 @@ pins.servoWritePin(AnalogPin.P0, 180)
 
 Modifie le bloc ``||pins:régler position servo||``.
 
-Remplace la valeur ``||pins:P0||`` par ``||pins:P1||``.
+Remplace la broche ``||pins:P0||`` par ``||pins:P1||``.
 
 Remplace la valeur ``||pins:180||`` par ``||pins:0||``.
 
@@ -54,7 +54,7 @@ pins.digitalWritePin(DigitalPin.P0, 0)
 
 Modifie les blocs ``||pins:écrire sur la broche||``.
 
-Remplace les valeurs ``||pins:P0||`` par ``||pins:P12||`` et ``||pins:P13||``.
+Remplace les broches ``||pins:P0||`` par ``||pins:P12||`` et ``||pins:P13||``.
 
 Les valeurs ``||pins:0||`` demeurent les mêmes.
 
@@ -211,7 +211,7 @@ input.onButtonPressed(Button.A, function () {
 
 Ajoute le bloc ``||pins: régler position servo ||`` dans le bloc ``||logic: si alors ||``.
 
-Remplace la valeur ``||pins: P0 ||`` par la valeur ``||pins: P1 ||``.
+Remplace la broche ``||pins: P0 ||`` par la valeur ``||pins: P1 ||``.
 
 Remplace la valeur ``||pins: 180 ||`` par le bloc ``||variables: Angle ||``.
 
@@ -233,7 +233,7 @@ input.onButtonPressed(Button.A, function () {
 
 Ajoute deux blocs ``||pins: écrire sur la broche ||`` sous le bloc ``||pins: régler position servo ||``.
 
-Remplace les valeurs ``||pins: P0 ||`` par  ``||pins: P12 ||`` et ``||pins: P13 ||``.
+Remplace les broches ``||pins: P0 ||`` par  ``||pins: P12 ||`` et ``||pins: P13 ||``.
 
 Remplace les valeurs ``||pins: 0 ||`` par ``||pins: 1 ||`` et ``||pins: 0 ||``.
 
@@ -325,9 +325,10 @@ input.onButtonPressed(Button.A, function () {
 ## Étape 18
 
 Modifie les valeurs pour que :
-- le servomoteur puisse réaliser un angle obtus lorsque le bouton A est pressé,
-- une lumière différente s'allume,
-- la lettre O (pour obtus) s'affiche.
+- le ``||pins: servomoteur ||`` puisse réaliser un angle obtus lorsque le ``||input: bouton A est pressé ||``,
+- la lumière en ``||pins: P12 ||`` s'éteigne,
+- la lumière en ``||pins: P13 ||`` s'allumer,
+- la ``||basic: lettre O ||`` (pour obtus) s'affiche.
 
 ```blocks
 

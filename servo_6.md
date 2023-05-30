@@ -33,7 +33,7 @@ pins.servoWritePin(AnalogPin.P0, 180)
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par ``|| pins: 0 ||``.
 
@@ -59,7 +59,7 @@ pins.digitalWritePin(DigitalPin.P0, 0)
 
 Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
 
-Remplace les valeurs ``|| pins: P0 ||`` par ``|| pins: P12 ||`` et ``|| pins: P13 ||``.
+Remplace les broches ``|| pins: P0 ||`` par ``|| pins: P12 ||`` et ``|| pins: P13 ||``.
 
 Remplace les valeurs ``|| pins: 0 ||`` par ``|| pins: 0 ||`` et ``|| pins: 1 ||``.
 
@@ -89,7 +89,7 @@ input.onButtonPressed(Button.A, function () {
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par ``|| pins: 90 ||``.
 
@@ -119,7 +119,7 @@ input.onButtonPressed(Button.A, function () {
 
 Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
 
-Remplace les valeurs ``|| pins: P0 ||`` par ``|| pins: P12 ||`` et ``|| pins: P13 ||``.
+Remplace les broches ``|| pins: P0 ||`` par ``|| pins: P12 ||`` et ``|| pins: P13 ||``.
 
 Remplace les valeurs ``|| pins: 0 ||`` par ``|| pins: 1 ||`` et ``|| pins: 0 ||``.
 
@@ -197,6 +197,8 @@ input.onButtonPressed(Button.B, function () {
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
+
 Remplace la valeur ``|| pins: 90 ||`` par ``|| pins: 0 ||``.
 
 ```blocks
@@ -216,7 +218,7 @@ input.onButtonPressed(Button.B, function () {
 
 Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
 
-Remplace les valeurs ``|| pins: 0 ||`` par ``|| pins: 0 ||`` et ``|| pins: 1 ||``.
+Remplace les broche ``|| pins: 0 ||`` par ``|| pins: 0 ||`` et ``|| pins: 1 ||``.
 
 
 ```blocks

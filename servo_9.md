@@ -30,7 +30,7 @@ let Angle = 0
 
 Ajoute le bloc ``||pins: régler position servo ||`` sous le bloc ``||variables:définir Angle||``.
 
-Remplace la valeur ``||pins: P0 ||`` par ``||pins: P2 ||``.
+Remplace la broche ``||pins: P0 ||`` par ``||pins: P2 ||``.
 
 Remplace la valeur ``||pins: 180 ||`` par ``||pins: 0 ||``.
 
@@ -45,7 +45,7 @@ pins.servoWritePin(AnalogPin.P2, 0)
 
 Ajoute les blocs ``||pins: écrire sur la broche ||`` sous le bloc ``||pins:régler position servo||``.
 
-Remplace les valeurs ``||pins: P0 ||`` par ``||pins: P12 ||``, ``||pins: P13 ||`` et ``||pins: P14 ||``.
+Remplace les broches ``||pins: P0 ||`` par ``||pins: P12 ||``, ``||pins: P13 ||`` et ``||pins: P14 ||``.
 
 Les valeurs ``||pins: 0 ||`` demeurent les mêmes.
 
@@ -53,9 +53,9 @@ Les valeurs ``||pins: 0 ||`` demeurent les mêmes.
 
 let Angle = 0
 pins.servoWritePin(AnalogPin.P2, 0)
-pins.digitalWritePin(DigitalPin.P0, 0)
-pins.digitalWritePin(DigitalPin.P0, 0)
-pins.digitalWritePin(DigitalPin.P0, 0)
+pins.digitalWritePin(DigitalPin.P12, 0)
+pins.digitalWritePin(DigitalPin.P13, 0)
+pins.digitalWritePin(DigitalPin.P14, 0)
 
 ```
 
@@ -114,7 +114,7 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 8
 
-Ajoute le bloc ``||basic: pause (ms) ||`` sous le bloc ``||pins:régler position servo||``.
+Ajoute le bloc ``||basic: pause ||`` sous le bloc ``||pins:régler position servo||``.
 
 Remplace la valeur ``||basic: 100 ||`` par la valeur ``||basic: 500 ||``.
 
@@ -133,7 +133,7 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 9
 
-Ajoute le bloc ``||logic: si vrai alors ||`` sous le bloc ``||basic:pause (ms)||``.
+Ajoute le bloc ``||logic: si vrai alors ||`` sous le bloc ``||basic:pause||``.
 
 ```blocks
 
@@ -200,11 +200,10 @@ input.onButtonPressed(Button.A, function () {
 
 Ajoute les blocs ``||pins: écrire sur la broche ||`` sous le bloc ``||logic: 0 < 0 ||``.
 
-Remplace les valeurs ``||pins: P0 ||`` par ``||pins: P12 ||``, ``||pins: P13 ||`` et ``||pins: P14 ||``.
+Remplace les broches ``||pins: P0 ||`` par ``||pins: P12 ||``, ``||pins: P13 ||`` et ``||pins: P14 ||``.
 
-Remplace la valeur ``||pins: 0 ||`` de ``||pins: P12 ||`` par ``||pins: 1 ||``.
+Remplace les valeur ``||pins: 0 ||`` par ``||pins: 1 ||``, ``||pins: 0 ||`` et ``||pins: 0 ||``.
 
-Les valeurs de ``||pins: 0 ||`` de ``||pins: P13 ||`` et de ``||pins: P14 ||`` demeurent les mêmes.
 
 ```blocks
 
@@ -365,11 +364,9 @@ input.onButtonPressed(Button.A, function () {
 
 Ajoute les blocs ``||pins: écrire sur la broche ||`` sous le bloc ``||logic: et ||``.
 
-Remplace les valeurs ``||pins: P0 ||`` par ``||pins: P12 ||``, ``||pins: P13 ||`` et ``||pins: P14 ||``.
+Remplace les broches ``||pins: P0 ||`` par ``||pins: P12 ||``, ``||pins: P13 ||`` et ``||pins: P14 ||``.
 
-Remplace la valeur ``||pins: 0 ||`` de ``||pins: P13 ||`` par ``||pins: 1 ||``.
-
-Les valeurs de ``||pins: 0 ||`` de ``||pins: P12 ||`` et de ``||pins: P14 ||`` demeurent les mêmes.
+Remplace les valeurs ``||pins: 0 ||`` par ``||pins: 0 ||``, ``||pins: 1 ||`` et ``||pins: 0 ||``.
 
 ```blocks
 
@@ -496,11 +493,9 @@ input.onButtonPressed(Button.A, function () {
 
 Ajoute les blocs ``||pins: écrire sur la broche ||`` sous le bloc ``||logic: 0 > 0 ||``.
 
-Remplace les valeurs ``||pins: P0 ||`` par ``||pins: P12 ||``, ``||pins: P13 ||`` et ``||pins: P14 ||``.
+Remplace les broches ``||pins: P0 ||`` par ``||pins: P12 ||``, ``||pins: P13 ||`` et ``||pins: P14 ||``.
 
-Remplace la valeur ``||pins: 0 ||`` de ``||pins: P14 ||`` par ``||pins: 1 ||``.
-
-Les valeurs de ``||pins: 0 ||`` de ``||pins: P12 ||`` et de ``||pins: P13 ||`` demeurent les mêmes.
+Remplace les valeurs ``||pins: 0 ||`` par ``||pins: 0 ||``, ``||pins: 0 ||`` et ``||pins: 1||``.
 
 ```blocks
 

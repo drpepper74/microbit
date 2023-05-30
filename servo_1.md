@@ -68,13 +68,13 @@ input.onButtonPressed(Button.A, function () {
 
 Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par la valeur ``|| basic: 2000 ||``.
+Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par la valeur ``|| basic: 5000 ||``.
 
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
     pins.servoWritePin(AnalogPin.P1, 45)
-    basic.pause(2000)
+    basic.pause(5000)
 })
 
 ```
@@ -93,7 +93,7 @@ Remplace la valeur ``|| pins: 180 ||`` par ``|| pins : 0 ||``.
 
 input.onButtonPressed(Button.A, function () {
     pins.servoWritePin(AnalogPin.P1, 45)
-    basic.pause(2000)
+    basic.pause(5000)
     pins.servoWritePin(AnalogPin.P1, 0)
 })
 
@@ -133,13 +133,13 @@ input.onButtonPressed(Button.B, function () {
 
 Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par la valeur ``|| basic: 2000 ||``.
+Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par la valeur ``|| basic: 5000 ||``.
 
 ```blocks
 
 input.onButtonPressed(Button.B, function () {
     pins.servoWritePin(AnalogPin.P1, 90)
-    basic.pause(2000)
+    basic.pause(5000)
 })
 
 ```
@@ -158,7 +158,7 @@ Remplace la valeur ``|| pins: 180 ||`` par ``|| pins : 0 ||``.
 
 input.onButtonPressed(Button.B, function () {
     pins.servoWritePin(AnalogPin.P1, 90)
-    basic.pause(2000)
+    basic.pause(5000)
     pins.servoWritePin(AnalogPin.P1, 0)
 })
 
@@ -198,13 +198,13 @@ input.onButtonPressed(Button.AB, function () {
 
 Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par la valeur ``|| basic: 2000 ||``.
+Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par la valeur ``|| basic: 5000 ||``.
 
 ```blocks
 
 input.onButtonPressed(Button.AB, function () {
     pins.servoWritePin(AnalogPin.P1, 180)
-    basic.pause(2000)
+    basic.pause(5000)
 })
 
 ```
@@ -223,35 +223,7 @@ Remplace la valeur ``|| pins: 180 ||`` par ``|| pins : 0 ||``.
 
 input.onButtonPressed(Button.AB, function () {
     pins.servoWritePin(AnalogPin.P1, 180)
-    basic.pause(2000)
-    pins.servoWritePin(AnalogPin.P1, 0)
-})
-
-```
-
-## Étape 12
-
-Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``||input:lorsque secouer||``.
-
-```blocks
-
-input.onGesture(Gesture.Shake, function () {
-    pins.servoWritePin(AnalogPin.P0, 180)
-})
-
-```
-
-## Étape 13
-
-Modifie le bloc ``|| pins: régler position servo ||``.
-
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins : P1 ||``.
-
-Remplace la valeur ``|| pins: 180 ||`` par ``|| pins : 0 ||``.
-
-```blocks
-
-input.onGesture(Gesture.Shake, function () {
+    basic.pause(5000)
     pins.servoWritePin(AnalogPin.P1, 0)
 })
 

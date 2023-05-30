@@ -70,7 +70,7 @@ basic.forever(function () {
 
 ## Étape 6
 
-Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| basic: montrer nombre ||``.
+Ajoute le bloc ``|| basic: pause ||`` sous le bloc ``|| basic: montrer nombre ||``.
 
 ```blocks
 
@@ -83,9 +83,9 @@ basic.forever(function () {
 
 ## Étape 7
 
-Modifie le bloc ``|| basic: pause (ms) 100 ||``.
+Modifie le bloc ``|| basic: pause ||``.
 
-Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par la valeur ``|| basic: 2000 ||``.
+Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause ||`` par la valeur ``|| basic: 2000 ||``.
 
 ```blocks
 
@@ -98,7 +98,7 @@ basic.forever(function () {
 
 ## Étape 8
 
-Ajoute le bloc ``|| logic: si vrai alors ||`` sous le bloc ``|| basic: pause (ms) ||``.
+Ajoute le bloc ``|| logic: si vrai alors ||`` sous le bloc ``|| basic: pause ||``.
 
 ```blocks
 
@@ -294,7 +294,7 @@ basic.forever(function () {
 
 ## Étape 18
 
-Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| logic: si vrai alors ||``.
+Ajoute le bloc ``|| basic: pause ||`` sous le bloc ``|| logic: si vrai alors ||``.
 
 ```blocks
 
@@ -314,9 +314,9 @@ basic.forever(function () {
 
 ## Étape 19
 
-Modifie le bloc ``|| basic: pause (ms) 100 ||``.
+Modifie le bloc ``|| basic: pause ||``.
 
-Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par la valeur ``|| basic: 2000 ||``.
+Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause ||`` par la valeur ``|| basic: 2000 ||``.
 
 ```blocks
 

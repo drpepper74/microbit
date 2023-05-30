@@ -231,7 +231,7 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 15
 
-Ajoute les blocs ``||pins: écrire sur la broche ||`` sous le bloc ``||pins: régler position servo ||``.
+Ajoute deux blocs ``||pins: écrire sur la broche ||`` sous le bloc ``||pins: régler position servo ||``.
 
 Remplace les valeurs ``||pins: P0 ||`` par  ``||pins: P12 ||`` et ``||pins: P13 ||``.
 
@@ -259,7 +259,7 @@ input.onButtonPressed(Button.A, function () {
 
 Ajoute le bloc ``||basic: montrer LEDs ||`` sous le bloc ``||pins: écrire sur la broche ||``.
 
-Dessine la lettre A.
+Dessine la lettre A dans le bloc ``||basic: montrer LEDs ||``.
 
 ```blocks
 
@@ -286,12 +286,86 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 17
 
-Duplique le bloc ``||logic: si vrai alors||`` et positionne-le sous le premier bloc ``||logic: si vrai alors||``.
+Duplique le bloc ``||logic: si vrai alors||`` et positionne celui-ci sous le bloc ``||logic: si vrai alors||``.
 
+```blocks
+
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    Angle = randint(1, 180)
+    basic.showNumber(Angle)
+    basic.pause(2000)
+    if (Angle < 90) {
+        pins.servoWritePin(AnalogPin.P1, Angle)
+        pins.digitalWritePin(DigitalPin.P12, 1)
+        pins.digitalWritePin(DigitalPin.P13, 0)
+        basic.showLeds(`
+            . # # # .
+            # # . # #
+            # . . . #
+            # # # # #
+            # . . . #
+            `)
+    }
+    if (Angle < 90) {
+        pins.servoWritePin(AnalogPin.P1, Angle)
+        pins.digitalWritePin(DigitalPin.P12, 1)
+        pins.digitalWritePin(DigitalPin.P13, 0)
+        basic.showLeds(`
+            . # # # .
+            # # . # #
+            # . . . #
+            # # # # #
+            # . . . #
+            `)
+    }
+})
+
+
+```
 
 ## Étape 18
 
-Modifie les valeurs pour que le servomoteur puisse réaliser un angle obtus lorsque le bouton A est pressé.
+Modifie les valeurs pour que :
+- le servomoteur puisse réaliser un angle obtus lorsque le bouton A est pressé,
+- une lumière différente s'allume,
+- la lettre O (pour Obtus) s'affiche.
+
+```blocks
+
+let Angle = 0
+input.onButtonPressed(Button.A, function () {
+    Angle = randint(1, 180)
+    basic.showNumber(Angle)
+    basic.pause(2000)
+    if (Angle < 90) {
+        pins.servoWritePin(AnalogPin.P1, Angle)
+        pins.digitalWritePin(DigitalPin.P12, 1)
+        pins.digitalWritePin(DigitalPin.P13, 0)
+        basic.showLeds(`
+            . # # # .
+            # # . # #
+            # . . . #
+            # # # # #
+            # . . . #
+            `)
+    }
+    if (Angle > 90) {
+        pins.servoWritePin(AnalogPin.P1, Angle)
+        pins.digitalWritePin(DigitalPin.P12, 0)
+        pins.digitalWritePin(DigitalPin.P13, 1)
+        basic.showLeds(`
+            . # # # .
+            # . . . #
+            # . # . #
+            # . . . #
+            . # # # .
+            `)
+    }
+})
+
+
+```
 
 ## Étape 19
 
@@ -307,7 +381,7 @@ input.onButtonPressed(Button.B, function () {
 
 # Étape 20
 
-Ajoute les blocs de programmation manquants pour réinitialiser le servomoteur à 0 e éteindre les lumières lorsque le bouton B est pressé.
+Ajoute les blocs de programmation manquants pour réinitialiser le servomoteur à 0 et éteindre les lumières lorsque le bouton B est pressé.
 
 Regarde l'indice et modifie les valeurs incorrectes.
 

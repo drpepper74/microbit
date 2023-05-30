@@ -1,6 +1,6 @@
 # Circuits électriques et servomoteur
 
-# Tutoriel 1
+# Tutoriel 1 - A
 
 ## @showdialog
 

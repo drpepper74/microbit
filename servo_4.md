@@ -216,14 +216,16 @@ input.onButtonPressed(Button.AB, function () {
 
 ## Étape 14
 
-Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``||input: lorsque secouer||``.
+Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``||basic: au démarrage||``.
 
+Ajoute trois blocs ``|| pins: écrire sur la broche ||`` sous le bloc ``|| pins: régler position servo ||``.
 
 ```blocks
 
-input.onGesture(Gesture.Shake, function () {
-    pins.servoWritePin(AnalogPin.P0, 180)
-})
+pins.servoWritePin(AnalogPin.P0, 180)
+pins.digitalWritePin(DigitalPin.P0, 0)
+pins.digitalWritePin(DigitalPin.P0, 0)
+pins.digitalWritePin(DigitalPin.P0, 0)
 
 ```
 
@@ -237,46 +239,30 @@ Remplace la valeur ``|| pins: 180 ||`` par ``|| pins: 0 ||``.
 
 ```blocks
 
-input.onGesture(Gesture.Shake, function () {
-    pins.servoWritePin(AnalogPin.P1, 0)
-})
+pins.servoWritePin(AnalogPin.P1, 0)
+pins.digitalWritePin(DigitalPin.P0, 0)
+pins.digitalWritePin(DigitalPin.P0, 0)
+pins.digitalWritePin(DigitalPin.P0, 0)
+
 
 ```
 
 ## Étape 16
 
-Ajoute trois blocs ``|| pins: écrire sur la broche ||`` sous le bloc ``|| pins: régler position servo ||``.
-
-```blocks
-
-input.onGesture(Gesture.Shake, function () {
-    pins.servoWritePin(AnalogPin.P1, 0)
-    pins.digitalWritePin(DigitalPin.P0, 0)
-    pins.digitalWritePin(DigitalPin.P0, 0)
-    pins.digitalWritePin(DigitalPin.P0, 0)
-})
-
-
-```
-
-## Étape 17
-
 Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
 
 Remplace les valeurs ``|| pins: P0 ||`` par ``|| pins: P12 ||``, ``|| pins: P13 ||`` et ``|| pins: P14 ||``.
 
-Les valeurs ``|| pins: 0 ||`` demeurent les mêmes.
+Les valeurs ``|| pins: 0 ||`` demeurent les mêmes
 
 Regarde l'indice!
 
 ```blocks
 
-input.onGesture(Gesture.Shake, function () {
-    pins.servoWritePin(AnalogPin.P1, 0)
-    pins.digitalWritePin(DigitalPin.P12, 0)
-    pins.digitalWritePin(DigitalPin.P13, 0)
-    pins.digitalWritePin(DigitalPin.P14, 0)
-})
+pins.servoWritePin(AnalogPin.P1, 0)
+pins.digitalWritePin(DigitalPin.P12, 0)
+pins.digitalWritePin(DigitalPin.P13, 0)
+pins.digitalWritePin(DigitalPin.P14, 0)
 
 
 ```

@@ -32,7 +32,7 @@ pins.servoWritePin(AnalogPin.P0, 180)
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par ``|| pins: 0 ||``.
 
@@ -170,7 +170,7 @@ basic.forever(function () {
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
 
 La valeur ``|| pins: 180 ||`` demeure la même.
 
@@ -273,7 +273,7 @@ basic.forever(function () {
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par ``|| pins: 0 ||``.
 

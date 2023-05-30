@@ -35,7 +35,7 @@ pins.servoWritePin(AnalogPin.P0, 180)
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par ``|| pins: 0 ||``.
 
@@ -62,7 +62,7 @@ pins.digitalWritePin(DigitalPin.P0, 0)
 
 Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
 
-Remplace les valeurs ``|| pins: P0 ||`` par ``|| pins: P12 ||``, ``|| pins: P13 ||`` et ``|| pins: P14 ||``.
+Remplace les broches ``|| pins: P0 ||`` par ``|| pins: P12 ||``, ``|| pins: P13 ||`` et ``|| pins: P14 ||``.
 
 Remplace les valeurs ``|| pins: 0 ||`` par ``|| pins: 0 ||``, ``|| pins: 0 ||`` et ``|| pins: 0 ||``.
 
@@ -244,7 +244,7 @@ basic.forever(function () {
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par ``|| pins: 45 ||``.
 
@@ -283,7 +283,7 @@ basic.forever(function () {
 
 Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P12 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P12 ||``.
 
 Remplace la valeur ``|| pins: 0 ||`` par ``|| pins: 1 ||``.
 
@@ -445,7 +445,7 @@ basic.forever(function () {
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par ``|| pins: 90 ||``.
 
@@ -492,7 +492,7 @@ basic.forever(function () {
 
 Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P13 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P13 ||``.
 
 Remplace la valeur ``|| pins: 0 ||`` par ``|| pins: 1 ||``.
 
@@ -626,7 +626,7 @@ basic.forever(function () {
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
 
 La valeur ``|| pins: 180 ||`` demeure la même.
 
@@ -683,7 +683,7 @@ basic.forever(function () {
 
 Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P14 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P14 ||``.
 
 Remplace la valeur ``|| pins: 0 ||`` par ``|| pins: 1 ||``.
 

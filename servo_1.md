@@ -24,7 +24,7 @@ pins.servoWritePin(AnalogPin.P0, 180)
 
 Modifie le bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins : P1 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins : P1 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par ``|| pins : 0 ||``.
 
@@ -51,7 +51,7 @@ input.onButtonPressed(Button.A, function () {
 
 Modifie le bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins : P1 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins : P1 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par ``|| pins : 45 ||``.
 
@@ -85,7 +85,7 @@ Ajoute le bloc ``|| pins: régler position du servo ||`` sous le bloc ``|| basic
 
 Modifie le bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins : P1 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins : P1 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par ``|| pins : 0 ||``.
 
@@ -116,7 +116,7 @@ input.onButtonPressed(Button.B, function () {
 
 Modifie le bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins : P1 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins : P1 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par ``|| pins : 90 ||``.
 
@@ -150,7 +150,7 @@ Ajoute le bloc ``|| pins: régler position du servo ||`` sous le bloc ``|| basic
 
 Modifie le bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins : P1 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins : P1 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par ``|| pins : 0 ||``.
 
@@ -181,7 +181,7 @@ input.onButtonPressed(Button.AB, function () {
 
 Modifie le bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins : P1 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins : P1 ||``.
 
 La valeur ``|| pins: 180 ||`` demeure la même.
 
@@ -215,7 +215,7 @@ Ajoute le bloc ``|| pins: régler position du servo ||`` sous le bloc ``|| basic
 
 Modifie le bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins : P1 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins : P1 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par ``|| pins : 0 ||``.
 

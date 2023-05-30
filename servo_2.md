@@ -26,7 +26,7 @@ pins.servoWritePin(AnalogPin.P0, 180)
 
 Modifie le bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins : P2 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins : P2 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par ``|| pins : 0 ||``.
 
@@ -99,7 +99,7 @@ input.onGesture(Gesture.TiltRight, function () {
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par le bloc ``||variables:  Angle ||``.
 
@@ -173,9 +173,9 @@ input.onGesture(Gesture.TiltRight, function () {
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par la valeur ``|| pins: P2 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
 
-Remplace la valeur ``|| pins: 180 ||`` par la valeur ``|| pins: 0 ||``.
+Remplace la valeur ``|| pins: 180 ||`` par  ``|| pins: 0 ||``.
 
 ```blocks
 
@@ -220,9 +220,9 @@ input.onGesture(Gesture.TiltLeft, function () {
 
 ## Étape 15
 
-Remplace la valeur ``||math: 0||`` du bloc ``||math: choisir au hasard de 0 à 10 ||`` par la valeur ``||math: 91||``.
+Remplace la valeur ``||math: 0||`` du bloc ``||math: choisir au hasard de 0 à 10 ||`` par ``||math: 91||``.
 
-Remplace la valeur ``||math: 10||`` du bloc ``||math: choisir au hasard de 0 à 10 ||`` par la valeur ``||math: 180||``. 
+Remplace la valeur ``||math: 10||`` du bloc ``||math: choisir au hasard de 0 à 10 ||`` par ``||math: 180||``. 
 
 ```blocks
 
@@ -253,7 +253,7 @@ input.onGesture(Gesture.TiltLeft, function () {
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par le bloc ``||variables:  Angle ||``.
 
@@ -290,7 +290,7 @@ input.onGesture(Gesture.TiltLeft, function () {
 
 Ajoute le bloc ``|| basic: pause ||`` sous le bloc ``|| basic: montrer nombre ||``.
 
-Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause ||`` par la valeur ``|| basic: 5000 ||``.
+Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause ||`` par ``|| basic: 5000 ||``.
 
 ```blocks
 
@@ -329,9 +329,9 @@ input.onGesture(Gesture.TiltLeft, function () {
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par la valeur ``|| pins: P2 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
 
-Remplace la valeur ``|| pins: 180 ||`` par la valeur ``|| pins: 0 ||``.
+Remplace la valeur ``|| pins: 180 ||`` par ``|| pins: 0 ||``.
 
 ```blocks
 

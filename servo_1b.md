@@ -24,7 +24,7 @@ pins.servoWritePin(AnalogPin.P0, 180)
 
 Modifie le bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins : P2 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins : P2 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par ``|| pins : 0 ||``.
 
@@ -97,7 +97,7 @@ input.onButtonPressed(Button.A, function () {
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par le bloc ``|| variables: Aigu ||``.
 
@@ -168,7 +168,7 @@ input.onButtonPressed(Button.A, function () {
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par le bloc ``|| pins: 0 ||``.
 
@@ -246,7 +246,7 @@ input.onButtonPressed(Button.B, function () {
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par le bloc ``|| variables: Obtus ||``.
 
@@ -317,7 +317,7 @@ input.onButtonPressed(Button.B, function () {
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par le bloc ``|| pins: 0 ||``.
 

@@ -175,7 +175,7 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 12
 
-Ajoue le bloc ``|| basic: pause (ms) 100 ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
+Ajoue le bloc ``|| basic: pause ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
 
 Remplace la valeur ``|| basic: 100 ||`` par ``|| basic: 1000 ||``.
 
@@ -194,7 +194,7 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 12
 
-Ajoue le bloc ``|| basic: montrer l'icône ||`` sous le bloc ``|| basic: pause (ms) ||``.
+Ajoue le bloc ``|| basic: montrer l'icône ||`` sous le bloc ``|| basic: pause ||``.
 
 Remplace le ``|| basic: le grand coeur ||`` par un ``|| basic: croche ||``.
 

@@ -138,7 +138,7 @@ basic.forever(function () {
 
 ## Étape 10
 
-Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| basic: montrer nombre ||``.
+Ajoute le bloc ``|| basic: pause ||`` sous le bloc ``|| basic: montrer nombre ||``.
 
 ```blocks
 
@@ -154,7 +154,7 @@ basic.forever(function () {
 
 Modifie le bloc ``|| basic: pause (ms) 100 ||``.
 
-Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par la valeur ``|| basic: 1000 ||``.
+Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause ||`` par la valeur ``|| basic: 1000 ||``.
 
 ```blocks
 
@@ -168,7 +168,7 @@ basic.forever(function () {
 
 ## Étape 12
 
-Ajoute le bloc ``|| logic: si vrai alors ||`` sous le bloc ``|| basic: pause (ms) ||``.
+Ajoute le bloc ``|| logic: si vrai alors ||`` sous le bloc ``|| basic: pause ||``.
 
 ```blocks
 

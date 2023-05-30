@@ -1,6 +1,6 @@
 # Circuits électriques et servomoteur
 
-# Tutoriel 1
+# Tutoriel 1 - B
 
 ## @showdialog
 
@@ -133,7 +133,7 @@ input.onButtonPressed(Button.A, function () {
 
 Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| basic: montrer nombre ||``.
 
-Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par la valeur ``|| basic: 3000 ||``.
+Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par la valeur ``|| basic: 5000 ||``.
 
 ```blocks
 
@@ -142,12 +142,50 @@ input.onButtonPressed(Button.A, function () {
     Aigu = randint(1, 89)
     pins.servoWritePin(AnalogPin.P1, Aigu)
     basic.showNumber(Aigu)
-    basic.pause(3000)
+    basic.pause(5000)
 })
 
 ```
 
 ## Étape 11
+
+Ajoute le bloc ``|| pins: régler position servo ||`` sous le bloc ``|| basic: pause ||``
+
+```blocks
+
+let Aigu = 0
+input.onButtonPressed(Button.A, function () {
+    Aigu = randint(1, 89)
+    pins.servoWritePin(AnalogPin.P1, Aigu)
+    basic.showNumber(Aigu)
+    basic.pause(5000)
+    pins.servoWritePin(AnalogPin.P0, 180)
+})
+
+```
+
+## Étape 12
+
+Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
+
+Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
+
+Remplace la valeur ``|| pins: 180 ||`` par le bloc ``|| pins: 0 ||``.
+
+```blocks
+
+let Aigu = 0
+input.onButtonPressed(Button.A, function () {
+    Aigu = randint(1, 89)
+    pins.servoWritePin(AnalogPin.P1, Aigu)
+    basic.showNumber(Aigu)
+    basic.pause(5000)
+    pins.servoWritePin(AnalogPin.P1, 0)
+})
+
+```
+
+## Étape 13
 
 Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Obtus||``.
 
@@ -162,7 +200,7 @@ input.onButtonPressed(Button.B, function () {
 
 ```
 
-## Étape 12
+## Étape 14
 
 Remplace la valeur ``|| variables : 0 ||`` du bloc ``|| variables : définir Obtus ||`` par le bloc ``||math: choisir au hasard||``.
 
@@ -174,7 +212,7 @@ input.onButtonPressed(Button.B, function () {
 
 ```
 
-## Étape 13
+## Étape 15
 
 Moidifie les valeurs du bloc ``||math: choisir au hasard||`` par les valeurs d'un angle aigu.
 
@@ -190,7 +228,7 @@ input.onButtonPressed(Button.B, function () {
 
 ```
 
-## Étape 14
+## Étape 16
 
 Ajoute le bloc ``|| pins: régler position servo ||`` sous le bloc ``|| variables: définir Obtus ||``
 
@@ -204,7 +242,7 @@ input.onButtonPressed(Button.B, function () {
 
 ```
 
-## Étape 15
+## Étape 17
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
@@ -222,7 +260,7 @@ input.onButtonPressed(Button.B, function () {
 
 ```
 
-## Étape 16
+## Étape 18
 
 Ajoute le bloc ``|| basic: montrer nombre ||`` sous le bloc ``|| pins: régler position servo ||``.
 
@@ -239,48 +277,58 @@ input.onButtonPressed(Button.B, function () {
 
 ```
 
-## Étape 17
+## Étape 19
 
 Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| basic: montrer nombre ||``.
 
-Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par la valeur ``|| basic: 3000 ||``.
+Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par la valeur ``|| basic: 5000 ||``.
 
 ```blocks
 
 let Obtus = 0
 input.onButtonPressed(Button.B, function () {
-    AiObtusgu = randint(91, 179)
+    Obtus = randint(91, 179)
     pins.servoWritePin(AnalogPin.P1, Obtus)
     basic.showNumber(Obtus)
-    basic.pause(3000)
+    basic.pause(5000)
 })
 
 ```
 
+## Étape 20
 
-## Étape 18
-
-Ajoute le bloc ``|| pins: régler position servo ||`` dans le bloc ``||input:lorsque secouer||``.
+Ajoute le bloc ``|| pins: régler position servo ||`` sous le bloc ``|| basic: pause ||``
 
 ```blocks
 
-input.onGesture(Gesture.Shake, function () {
+let Obtus = 0
+input.onButtonPressed(Button.B, function () {
+    Obtus = randint(91, 179)
+    pins.servoWritePin(AnalogPin.P1, Obtus)
+    basic.showNumber(Obtus)
+    basic.pause(5000)
     pins.servoWritePin(AnalogPin.P0, 180)
 })
 
+
 ```
 
-## Étape 19
+## Étape 21
 
-Modifie le bloc ``|| pins: régler position servo ||``.
+Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins : P1 ||``.
+Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
 
-Remplace la valeur ``|| pins: 180 ||`` par ``|| pins : 0 ||``.
+Remplace la valeur ``|| pins: 180 ||`` par le bloc ``|| pins: 0 ||``.
 
 ```blocks
 
-input.onGesture(Gesture.Shake, function () {
+let Obtus = 0
+input.onButtonPressed(Button.B, function () {
+    Obtus = randint(91, 179)
+    pins.servoWritePin(AnalogPin.P1, Obtus)
+    basic.showNumber(Obtus)
+    basic.pause(5000)
     pins.servoWritePin(AnalogPin.P1, 0)
 })
 

@@ -66,9 +66,9 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 6
 
-Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: régler position servo ||``.
+Ajoute le bloc ``|| basic: pause ||`` sous le bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par la valeur ``|| basic: 5000 ||``.
+Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause ||`` par la valeur ``|| basic: 5000 ||``.
 
 ```blocks
 
@@ -81,7 +81,7 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 7
 
-Ajoute le bloc ``|| pins: régler position du servo ||`` sous le bloc ``|| basic: pause (ms) ||``.
+Ajoute le bloc ``|| pins: régler position du servo ||`` sous le bloc ``|| basic: pause ||``.
 
 Modifie le bloc ``|| pins: régler position servo ||``.
 
@@ -131,9 +131,9 @@ input.onButtonPressed(Button.B, function () {
 
 ## Étape 10
 
-Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: régler position servo ||``.
+Ajoute le bloc ``|| basic: pause ||`` sous le bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par la valeur ``|| basic: 5000 ||``.
+Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause ||`` par la valeur ``|| basic: 5000 ||``.
 
 ```blocks
 
@@ -146,7 +146,7 @@ input.onButtonPressed(Button.B, function () {
 
 ## Étape 11
 
-Ajoute le bloc ``|| pins: régler position du servo ||`` sous le bloc ``|| basic: pause (ms) ||``.
+Ajoute le bloc ``|| pins: régler position du servo ||`` sous le bloc ``|| basic: pause ||``.
 
 Modifie le bloc ``|| pins: régler position servo ||``.
 
@@ -196,9 +196,9 @@ input.onButtonPressed(Button.AB, function () {
 
 ## Étape 10
 
-Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: régler position servo ||``.
+Ajoute le bloc ``|| basic: pause ||`` sous le bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause (ms) ||`` par la valeur ``|| basic: 5000 ||``.
+Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause ||`` par la valeur ``|| basic: 5000 ||``.
 
 ```blocks
 
@@ -211,7 +211,7 @@ input.onButtonPressed(Button.AB, function () {
 
 ## Étape 11
 
-Ajoute le bloc ``|| pins: régler position du servo ||`` sous le bloc ``|| basic: pause (ms) ||``.
+Ajoute le bloc ``|| pins: régler position du servo ||`` sous le bloc ``|| basic: pause ||``.
 
 Modifie le bloc ``|| pins: régler position servo ||``.
 

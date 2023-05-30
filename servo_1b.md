@@ -24,13 +24,13 @@ pins.servoWritePin(AnalogPin.P0, 180)
 
 Modifie le bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins : P1 ||``.
+Remplace la valeur ``|| pins: P0 ||`` par ``|| pins : P2 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par ``|| pins : 0 ||``.
 
 ```blocks
 
-pins.servoWritePin(AnalogPin.P1, 0)
+pins.servoWritePin(AnalogPin.P2, 0)
 
 ```
 
@@ -97,7 +97,7 @@ input.onButtonPressed(Button.A, function () {
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
+Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par le bloc ``|| variables: Aigu ||``.
 
@@ -106,7 +106,7 @@ Remplace la valeur ``|| pins: 180 ||`` par le bloc ``|| variables: Aigu ||``.
 let Aigu = 0
 input.onButtonPressed(Button.A, function () {
     Aigu = randint(1, 89)
-    pins.servoWritePin(AnalogPin.P1, Aigu)
+    pins.servoWritePin(AnalogPin.P2, Aigu)
 })
 
 ```
@@ -122,7 +122,7 @@ Remplace la valeur ``|| basic: 0 ||`` du bloc ``|| basic: montrer nombre ||`` pa
 let Aigu = 0
 input.onButtonPressed(Button.A, function () {
     Aigu = randint(1, 89)
-    pins.servoWritePin(AnalogPin.P1, Aigu)
+    pins.servoWritePin(AnalogPin.P2, Aigu)
     basic.showNumber(Aigu)
 })
 
@@ -140,7 +140,7 @@ Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause ||`` par la va
 let Aigu = 0
 input.onButtonPressed(Button.A, function () {
     Aigu = randint(1, 89)
-    pins.servoWritePin(AnalogPin.P1, Aigu)
+    pins.servoWritePin(AnalogPin.P2, Aigu)
     basic.showNumber(Aigu)
     basic.pause(5000)
 })
@@ -156,7 +156,7 @@ Ajoute le bloc ``|| pins: régler position servo ||`` sous le bloc ``|| basic: p
 let Aigu = 0
 input.onButtonPressed(Button.A, function () {
     Aigu = randint(1, 89)
-    pins.servoWritePin(AnalogPin.P1, Aigu)
+    pins.servoWritePin(AnalogPin.P2, Aigu)
     basic.showNumber(Aigu)
     basic.pause(5000)
     pins.servoWritePin(AnalogPin.P0, 180)
@@ -168,7 +168,7 @@ input.onButtonPressed(Button.A, function () {
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
+Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par le bloc ``|| pins: 0 ||``.
 
@@ -177,10 +177,10 @@ Remplace la valeur ``|| pins: 180 ||`` par le bloc ``|| pins: 0 ||``.
 let Aigu = 0
 input.onButtonPressed(Button.A, function () {
     Aigu = randint(1, 89)
-    pins.servoWritePin(AnalogPin.P1, Aigu)
+    pins.servoWritePin(AnalogPin.P2, Aigu)
     basic.showNumber(Aigu)
     basic.pause(5000)
-    pins.servoWritePin(AnalogPin.P1, 0)
+    pins.servoWritePin(AnalogPin.P2, 0)
 })
 
 ```
@@ -246,7 +246,7 @@ input.onButtonPressed(Button.B, function () {
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
+Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par le bloc ``|| variables: Obtus ||``.
 
@@ -255,7 +255,7 @@ Remplace la valeur ``|| pins: 180 ||`` par le bloc ``|| variables: Obtus ||``.
 let Obtus = 0
 input.onButtonPressed(Button.B, function () {
     Obtus = randint(91, 179)
-    pins.servoWritePin(AnalogPin.P1, Obtus)
+    pins.servoWritePin(AnalogPin.P2, Obtus)
 })
 
 ```
@@ -271,7 +271,7 @@ Remplace la valeur ``|| basic: 0 ||`` du bloc ``|| basic: montrer nombre ||`` pa
 let Obtus = 0
 input.onButtonPressed(Button.B, function () {
     Obtus = randint(91, 179)
-    pins.servoWritePin(AnalogPin.P1, Obtus)
+    pins.servoWritePin(AnalogPin.P2, Obtus)
     basic.showNumber(Obtus)
 })
 
@@ -288,7 +288,7 @@ Remplace la valeur ``|| basic: 100 ||`` du bloc ``|| basic: pause ||`` par la va
 let Obtus = 0
 input.onButtonPressed(Button.B, function () {
     Obtus = randint(91, 179)
-    pins.servoWritePin(AnalogPin.P1, Obtus)
+    pins.servoWritePin(AnalogPin.P2, Obtus)
     basic.showNumber(Obtus)
     basic.pause(5000)
 })
@@ -304,7 +304,7 @@ Ajoute le bloc ``|| pins: régler position servo ||`` sous le bloc ``|| basic: p
 let Obtus = 0
 input.onButtonPressed(Button.B, function () {
     Obtus = randint(91, 179)
-    pins.servoWritePin(AnalogPin.P1, Obtus)
+    pins.servoWritePin(AnalogPin.P2, Obtus)
     basic.showNumber(Obtus)
     basic.pause(5000)
     pins.servoWritePin(AnalogPin.P0, 180)
@@ -317,7 +317,7 @@ input.onButtonPressed(Button.B, function () {
 
 Modifie les valeurs du bloc ``|| pins: régler position servo ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
+Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
 
 Remplace la valeur ``|| pins: 180 ||`` par le bloc ``|| pins: 0 ||``.
 
@@ -326,10 +326,10 @@ Remplace la valeur ``|| pins: 180 ||`` par le bloc ``|| pins: 0 ||``.
 let Obtus = 0
 input.onButtonPressed(Button.B, function () {
     Obtus = randint(91, 179)
-    pins.servoWritePin(AnalogPin.P1, Obtus)
+    pins.servoWritePin(AnalogPin.P2, Obtus)
     basic.showNumber(Obtus)
     basic.pause(5000)
-    pins.servoWritePin(AnalogPin.P1, 0)
+    pins.servoWritePin(AnalogPin.P2, 0)
 })
 
 ```

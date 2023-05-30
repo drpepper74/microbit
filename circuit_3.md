@@ -21,7 +21,7 @@ input.onGesture(Gesture.Shake, function () {
 
 Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
 
 Remplace la valeur ``|| pins: 0 ||`` par ``|| pins: 1 ||``.
 
@@ -35,9 +35,9 @@ input.onGesture(Gesture.Shake, function () {
 
 ## Étape 3
 
-Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
+Ajoute le bloc ``|| basic: pause ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
 
-Modifie la valeur du bloc ``|| basic: pause (ms) ||``.
+Modifie la valeur du bloc ``|| basic: pause ||``.
 
 Remplace la valeur ``|| basic: 100 ||`` par ``|| basic: 500 ||``.
 
@@ -56,7 +56,7 @@ Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| basic: pa
 
 Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P2 ||``.
 
 La valeur ``|| pins: 0 ||`` demeure la même.
 
@@ -74,9 +74,9 @@ input.onGesture(Gesture.Shake, function () {
 
 ## Étape 5
 
-Ajoute le bloc ``|| basic: pause (ms) ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
+Ajoute le bloc ``|| basic: pause ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
 
-Modifie la valeur du bloc ``|| basic: pause (ms) ||``.
+Modifie la valeur du bloc ``|| basic: pause ||``.
 
 Remplace la valeur ``|| basic: 100 ||`` par ``|| basic: 500 ||``.
 

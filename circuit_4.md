@@ -104,7 +104,7 @@ Ajoute le bloc ``|| pins: écrire sur la broche   ||`` sous la condition ``|| lo
 
 La valeur ``|| pins: P0 ||`` demeure la même.
 
-Remplace la valeur ``|| pins: 0 ||`` par ``|| pins: 1 ||``.
+Remplace la broche ``|| pins: 0 ||`` par ``|| pins: 1 ||``.
 
 Regarde l'indice au besoin.
  
@@ -126,7 +126,7 @@ basic.forever(function () {
  
 Ajoute le bloc ``|| pins: écrire sur la broche P0  ||`` sous la condition ``|| logic: sinon ||``. 
 
-La valeur ``|| pins: P0 ||`` demeure la même.
+La broche ``|| pins: P0 ||`` demeure la même.
 
 La valeur ``|| pins: 0 ||`` demeure la même.
 

@@ -20,7 +20,7 @@ input.onButtonPressed(Button.A, function () {
 
 Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
 
 Remplace la valeur ``|| pins: 0 ||`` par ``|| pins: 1 ||``.
 
@@ -49,7 +49,7 @@ input.onButtonPressed(Button.B, function () {
 
 Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
 
 La valeur ``|| pins: 0 ||`` demeure la même.
 

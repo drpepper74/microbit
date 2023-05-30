@@ -109,7 +109,7 @@ basic.forever(function () {
 
 Ajoute le bloc ``|| pins: écrire sur la broche   ||`` sous la condition ``|| logic: si alors ||``. 
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
 
 Remplace la valeur ``|| pins: 0 ||`` par ``|| pins: 1 ||``.
 
@@ -133,7 +133,7 @@ basic.forever(function () {
 
 Ajoute le bloc ``|| pins: écrire sur la broche   ||`` sous la condition ``|| logic: sinon ||``. 
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins: P1 ||``.
 
 La valeur ``|| pins: 0 ||`` demeure la même.
 

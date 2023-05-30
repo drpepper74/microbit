@@ -47,8 +47,6 @@ pins.servoWritePin(AnalogPin.P2, 0)
 
 Ajoute deux blocs ``|| pins: écrire sur la broche ||`` sous le bloc ``|| pins: régler position servo ||``.
 
-P12 = Vert - P13 = Rouge
-
 ```blocks
 
 pins.servoWritePin(AnalogPin.P2, 0)
@@ -105,14 +103,13 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 8
 
-Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| pins: régler position servo ||``.
-
-P12 = Vert - P13 = Jaune - P14 = Rouge
+Ajoute deux blocs ``|| pins: écrire sur la broche ||`` sous le bloc ``|| pins: régler position servo ||``.
 
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
     pins.servoWritePin(AnalogPin.P2, 90)
+    pins.digitalWritePin(DigitalPin.P0, 0)
     pins.digitalWritePin(DigitalPin.P0, 0)
     })
 
@@ -122,9 +119,9 @@ input.onButtonPressed(Button.A, function () {
 
 Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
 
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P14 ||``.
+Remplace les valeurs ``|| pins: P0 ||`` par ``|| pins: P12 ||`` et ``|| pins: P13 ||``.
 
-La valeur ``|| pins: 0 ||`` demeure la même.
+Remplace les valeurs ``|| pins: 0 ||`` par ``|| pins: 1 ||`` et ``|| pins: 0 ||``.
 
 Regarde l'indice!
 
@@ -132,48 +129,14 @@ Regarde l'indice!
 
 input.onButtonPressed(Button.A, function () {
     pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 0)
+    pins.digitalWritePin(DigitalPin.P12, 1)
+    pins.digitalWritePin(DigitalPin.P13, 0)
 })
+
 
 ```
 
 ## Étape 10
-
-Ajoute le bloc ``|| pins: écrire sur la broche ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
-
-P12 = Vert - P13 = Jaune - P14 = Rouge
-
-```blocks
-
-input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 0)
-    pins.digitalWritePin(DigitalPin.P0, 0)
-})
-
-```
-
-## Étape 11
-
-Modifie les valeurs des blocs ``|| pins: écrire sur la broche ||``.
-
-Remplace la valeur ``|| pins: P0 ||`` par ``|| pins: P12 ||``.
-
-Remplace la valeur ``|| pins: 0 ||`` par ``|| pins: 1 ||``.
-
-Regarde l'indice!
-
-```blocks
-
-input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 0)
-    pins.digitalWritePin(DigitalPin.P12, 1)
-})
-
-```
-
-## Étape 12
 
 Ajoue le bloc ``|| basic: pause ||`` sous le bloc ``|| pins: écrire sur la broche ||``.
 
@@ -185,18 +148,18 @@ Regarde l'indice!
 
 input.onButtonPressed(Button.A, function () {
     pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 0)
-    pins.digitalWritePin(DigitalPin.P12, 1)
+    pins.digitalWritePin(DigitalPin.P12, 0)
+    pins.digitalWritePin(DigitalPin.P13, 1)
     basic.pause(1000)
 })
 
 ```
 
-## Étape 12
+## Étape 11
 
 Ajoue le bloc ``|| basic: montrer l'icône ||`` sous le bloc ``|| basic: pause ||``.
 
-Remplace le ``|| basic: le grand coeur ||`` par un ``|| basic: croche ||``.
+Remplace le ``|| basic: le grand coeur ||`` par un ``|| basic: crochet ||``.
 
 Regarde l'indice!
 
@@ -204,8 +167,8 @@ Regarde l'indice!
 
 input.onButtonPressed(Button.A, function () {
     pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P14, 0)
-    pins.digitalWritePin(DigitalPin.P12, 1)
+    pins.digitalWritePin(DigitalPin.P12, 0)
+    pins.digitalWritePin(DigitalPin.P13, 1)
     basic.pause(1000)
     basic.showIcon(IconNames.Yes)
 })

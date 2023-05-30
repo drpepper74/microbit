@@ -235,9 +235,7 @@ Ajoute deux blocs ``||pins: écrire sur la broche ||`` sous le bloc ``||pins: r�
 
 Remplace les valeurs ``||pins: P0 ||`` par  ``||pins: P12 ||`` et ``||pins: P13 ||``.
 
-Remplace la valeur ``||pins: 0 ||`` de ``||pins: P12 ||`` par ``||pins: 1 ||``.
-
-La valeur ``||pins: 0 ||`` de ``||pins: P13 ||`` demeure la même.
+Remplace les valeurs ``||pins: 0 ||`` par ``||pins: 1 ||`` et ``||pins: 0 ||``.
 
 ```blocks
 
@@ -329,7 +327,7 @@ input.onButtonPressed(Button.A, function () {
 Modifie les valeurs pour que :
 - le servomoteur puisse réaliser un angle obtus lorsque le bouton A est pressé,
 - une lumière différente s'allume,
-- la lettre O (pour Obtus) s'affiche.
+- la lettre O (pour obtus) s'affiche.
 
 ```blocks
 
@@ -356,9 +354,9 @@ input.onButtonPressed(Button.A, function () {
         pins.digitalWritePin(DigitalPin.P13, 1)
         basic.showLeds(`
             . # # # .
+            # # . # #
             # . . . #
-            # . # . #
-            # . . . #
+            # # . # #
             . # # # .
             `)
     }
@@ -379,7 +377,7 @@ input.onButtonPressed(Button.B, function () {
 
 ```
 
-# Étape 20
+## Étape 20
 
 Ajoute les blocs de programmation manquants pour réinitialiser le servomoteur à 0 et éteindre les lumières lorsque le bouton B est pressé.
 

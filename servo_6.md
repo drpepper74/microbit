@@ -148,8 +148,8 @@ Regarde l'indice!
 
 input.onButtonPressed(Button.A, function () {
     pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P12, 0)
-    pins.digitalWritePin(DigitalPin.P13, 1)
+    pins.digitalWritePin(DigitalPin.P12, 1)
+    pins.digitalWritePin(DigitalPin.P13, 0)
     basic.pause(1000)
 })
 
@@ -167,8 +167,8 @@ Regarde l'indice!
 
 input.onButtonPressed(Button.A, function () {
     pins.servoWritePin(AnalogPin.P2, 90)
-    pins.digitalWritePin(DigitalPin.P12, 0)
-    pins.digitalWritePin(DigitalPin.P13, 1)
+    pins.digitalWritePin(DigitalPin.P12, 1)
+    pins.digitalWritePin(DigitalPin.P13, 0)
     basic.pause(1000)
     basic.showIcon(IconNames.Yes)
 })
@@ -246,6 +246,8 @@ input.onButtonPressed(Button.B, function () {
     basic.pause(1000)
     basic.showIcon(IconNames.No)
 })
+
+```
 
 ## @showdialog 
 

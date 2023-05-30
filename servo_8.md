@@ -40,7 +40,7 @@ pins.servoWritePin(AnalogPin.P1, 0)
 
 ## Étape 4
 
-Ajoutes les blocs ``||pins:écrire sur la broche||`` sous le bloc ``||pins:régler position servo||``.
+Ajoute deux blocs ``||pins:écrire sur la broche||`` sous le bloc ``||pins:régler position servo||``.
 
 ```blocks
 
@@ -131,7 +131,7 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 10
 
-Ajoute le bloc ``||basic: pause (ms) ||`` sous le bloc ``||basic: montrer nombre ||``.
+Ajoute le bloc ``||basic: pause ||`` sous le bloc ``||basic: montrer nombre ||``.
 
 Remplace la valeur ``||basic: 100 ||`` par la valeur ``||basic: 2000 ||``.
 
@@ -148,7 +148,7 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 11
 
-Ajoute le bloc ``||logic: si vrai alors ||`` sous le bloc ``||basic: pause (ms) ||``.
+Ajoute le bloc ``||logic: si vrai alors ||`` sous le bloc ``||basic: pause ||``.
 
 ```blocks
 
@@ -233,9 +233,9 @@ input.onButtonPressed(Button.A, function () {
 
 Ajoute les blocs ``||pins: écrire sur la broche ||`` sous le bloc ``||pins: régler position servo ||``.
 
-Remplace les valeur ``||pins: P0 ||`` par les valeurs ``||pins: P12 ||`` et ``||pins: P13 ||``.
+Remplace les valeurs ``||pins: P0 ||`` par  ``||pins: P12 ||`` et ``||pins: P13 ||``.
 
-Remplace la valeur ``||pins: 0 ||`` de ``||pins: P12 ||`` par la valeur ``||pins: 1 ||``.
+Remplace la valeur ``||pins: 0 ||`` de ``||pins: P12 ||`` par ``||pins: 1 ||``.
 
 La valeur ``||pins: 0 ||`` de ``||pins: P13 ||`` demeure la même.
 
@@ -286,16 +286,41 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 17
 
-Dupplique le bloc ``||logic: si vrai alors||``.
+Duplique le bloc ``||logic: si vrai alors||`` et positionne-le sous le premier bloc ``||logic: si vrai alors||``.
 
 
 ## Étape 18
 
-Modifie les valeurs pour que le servomoteur puisse également réaliser un angle obtus lorsque le bouton A est pressé.
+Modifie les valeurs pour que le servomoteur puisse réaliser un angle obtus lorsque le bouton A est pressé.
 
 ## Étape 19
 
-Ajoute le bloc ``||input: lorsque le bouton B est pressé||`` pour réinitialiser le servomoteur et les lumières.
+Ajoute le bloc ``||basic: effacer l'écran||`` dans le bloc ``||input: lorsque le bouton B est pressé||``.
+
+```blocks
+
+input.onButtonPressed(Button.B, function () {
+    basic.clearScreen()
+})
+
+```
+
+# Étape 20
+
+Ajoute les blocs de programmation manquants pour réinitialiser le servomoteur à 0 e éteindre les lumières lorsque le bouton B est pressé.
+
+Regarde l'indice et modifie les valeurs incorrectes.
+
+```blocks
+
+input.onButtonPressed(Button.B, function () {
+    basic.clearScreen()
+    pins.servoWritePin(AnalogPin.P0, 180)
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    pins.digitalWritePin(DigitalPin.P0, 0)
+})
+
+```
 
 ## @showdialog 
 

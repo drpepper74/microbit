@@ -39,7 +39,7 @@ basic.forever(function () {
 
 ## Étape 4 
 
-Ajoute le bloc ``|| logic: si vrai alors sinon  ||`` dans le bloc ``|| variables:défimir LED ||``. 
+Ajoute le bloc ``|| logic: si vrai alors sinon  ||`` dans le bloc ``|| variables:définir LED ||``. 
  
 
 ```blocks 

@@ -27,7 +27,7 @@ basic.forever(function () {
 
 Modifie les valeurs du bloc ``|| pins: écrire sur la broche ||``.
 
-Remplace la broche ``|| pins: 0 ||`` par ``|| pins: 1 ||``.
+Remplace la valeur ``|| pins: 0 ||`` par ``|| pins: 1 ||``.
 
 
 ```blocks

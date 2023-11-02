@@ -4,7 +4,7 @@
 
 ## @showdialog
 
-Programme le micro:bit pour qu'il active le servomoteur à un angle précis en fonction de l'intensité lumineuse.
+Programme le micro:bit !
 
 ## Étape 1
 

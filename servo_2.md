@@ -4,9 +4,7 @@
 
 ## @showdialog
 
-Programme le micro:bit pour qu'il active le servomoteur à un angle précis lorsque le micro:bit est incliné.
-
-De plus, le micro:bit doit affiché l'angle réalisé par le servomoteur.
+Programme le micro:bit ! 
 
 ## Étape 1
 

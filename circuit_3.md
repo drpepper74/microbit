@@ -2,7 +2,7 @@
 
 ## @showdialog
 
-Programme le micro:bit pour qu'une lumière LED s'allume s'il est secoué.
+Programme le micro:bit et le circuit électrique.
 
 ## Étape 1
 

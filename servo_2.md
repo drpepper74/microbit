@@ -4,7 +4,7 @@
 
 ## @showdialog
 
-Programme le micro:bit ! 
+Programme le micro:bit, le servomoteur et le circuit électrique.
 
 ## Étape 1
 

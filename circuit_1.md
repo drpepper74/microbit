@@ -4,7 +4,7 @@
 
 ## @showdialog
 
-Programme le micro:bit pour qu'il allume une lumière LED.
+Programme le micro:bit et le circuit électrique.
 
 ## Étape 1
 

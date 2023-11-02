@@ -2,7 +2,7 @@
 
 ## @showdialog
 
-Présente une séquence de programmation et un circuit électrique qui utilise le maximum de blocs.
+Programme le micro:bit et le circuit électrique.
 
 ## Étape 1
 

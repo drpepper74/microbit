@@ -4,10 +4,7 @@
 
 ## @showdialog
 
-Programme le micro:bit pour qu'il active le servomoteur à un angle précis en fonction.
-
-De plus, le micro:bit doit activer une lumière en fonction du degré réalisé.
-
+Programme le micro:bit, le servomoteur et le circuit électrique.
 
 ## Étape 1
 

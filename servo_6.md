@@ -4,7 +4,7 @@
 
 ## @showdialog
 
-Transforme le circuit électrique afin de créer une barrière et des feux de circulation. 
+Programme le micro:bit, le servomoteur et le circuit électrique.
 
 
 ## Étape 1

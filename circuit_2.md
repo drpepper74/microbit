@@ -2,7 +2,7 @@
 
 ## @showdialog
 
-Transforme le micro:bit en interrupteur pour activer et/ou éteindre une lumière LED.
+Programme le micro:bit et le circuit électrique.
 
 ## Étape 1
 

@@ -2,7 +2,7 @@
 
 ## @showdialog
 
-Transforme le micro:bit en thermomètre.
+Programme le micro:bit et le circuit électrique.
 
 ## Étape 1
 

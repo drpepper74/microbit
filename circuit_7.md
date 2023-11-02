@@ -2,7 +2,7 @@
 
 ## @showdialog
 
-Programme le défi ultime en utilisant les branchements du tutoriels précédent.
+Programme le micro:bit et le circuit électrique.
 
 ## Étape 1
 

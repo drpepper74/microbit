@@ -2,7 +2,7 @@
 
 ## @showdialog
 
-Programme le micro:bit pour qu'une lumière LED s'allume lorsque l'intensité lumineuse de la pièce est base.
+Programme le micro:bit et le circuit électrique.
 
 ## Étape 1
 

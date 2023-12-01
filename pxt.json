@@ -71,13 +71,14 @@
         "tuto_5a.md",
         "servo_8.md",
         "servo_9.md",
-        "circuit_8.md"
+        "circuit_8.md",
+        "sonde_1.md"
     ],
     "testFiles": [
         "test.ts"
     ],
     "targetVersions": {
-        "target": "6.0.19",
+        "target": "6.0.22",
         "targetId": "microbit"
     },
     "supportedTargets": [

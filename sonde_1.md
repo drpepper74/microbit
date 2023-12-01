@@ -10,18 +10,30 @@ Supprime le bloc ``||basic:au démarrage||``.
 
 ## Étape 2
 
-Ajoute le bloc ``||smarthome:value of soil moisture||`` dans le bloc ``||basic:afficher nombre||``.
+Ajoute le bloc ``||basic:montrer nombre||`` dans le bloc ``||basic:toujours||``.
+
+```blocks
+
+basic.forever(function () {
+    basic.showNumber(0)
+})
+
+```
+
+## Étape 3
+
+Ajoute le bloc ``||dstemp2wire:temperature||`` dans le bloc ``||basic:montrer nombre||``.
 
 ```package
 
-dstemps=github:tinkertanker/pxt-smarthome
+dstemps=github:bsiever/microbit-dstemp-2wire
 
 ```
 
 ```blocks
 
 basic.forever(function () {
-    basic.showNumber(smarthome.ReadSoilHumidity(AnalogPin.P1))
+    basic.showNumber(dstemp.celsius(DigitalPin.P0))
 })
 
 ```

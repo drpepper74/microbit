@@ -4,13 +4,9 @@
 
 ## @showdialog
 
-Programme le micro:bit pour que la lumière s'allume en fonction du niveau d'intensité lumineuse.
+Programme le micro:bit pour que la lumière LED s'allume en fonction du niveau d'intensité lumineuse.
 
-## @showdialog
-
-Ajoute l'extension ``||loops:smarthome||``.
-
-Appuie sur le bouton Extensions et recherche ``||loops:smarthome||``.
+Utilise les capteurs, le bouclier d'extension et les câbles.
 
 ## Étape 1
 
@@ -88,7 +84,7 @@ basic.forever(function () {
 
 Ajoute le bloc ``||logic:si vrai alors||`` sous le bloc ``||variables: définir LED ||``.
 
-Ajoute le bloc ``||logic:0 < 0||`` dans le bloc ``||logic:si vrai alors||``.
+Remplace la valeur ``||logic:vrai||`` par le bloc ``||logic:0 < 0||``.
 
 ```package
 
@@ -138,9 +134,11 @@ basic.forever(function () {
 
 Ajoute le bloc ``||neopixel:définir strip||`` (trad. : bande lumineuse) dans le bloc ``||logic:si vrai alors||``.
 
-Renommer la variable ``||variables: définir strip||`` par ``||variables: définir Bande||``.
+Renommer la variable ``||variables: définir strip||`` par ``||variables: Bande||``.
 
 Remplace la valeur ``||neopixel:P0||`` par ``||neopixel:P1||``.
+
+Remplace la valeur ``||neopixel:24||`` par ``||neopixel:1||``.
 
 ```package
 
@@ -155,7 +153,7 @@ let Bande: neopixel.Strip = null
 basic.forever(function () {
     LED = smarthome.ReadLightIntensity(AnalogPin.P3)
     if (LED < 50) {
-        Bande = neopixel.create(DigitalPin.P1, 24, NeoPixelMode.RGB)
+        Bande = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
     }
 })
 
@@ -182,7 +180,7 @@ let Bande: neopixel.Strip = null
 basic.forever(function () {
     LED = smarthome.ReadLightIntensity(AnalogPin.P3)
     if (LED < 50) {
-        Bande = neopixel.create(DigitalPin.P1, 24, NeoPixelMode.RGB)
+        Bande = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
         Bande.showColor(neopixel.colors(NeoPixelColors.Red))
     }
 })
@@ -209,7 +207,7 @@ let Bande: neopixel.Strip = null
 basic.forever(function () {
     LED = smarthome.ReadLightIntensity(AnalogPin.P3)
     if (LED < 50) {
-        Bande = neopixel.create(DigitalPin.P1, 24, NeoPixelMode.RGB)
+        Bande = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
         Bande.showColor(neopixel.colors(NeoPixelColors.Red))
         basic.pause(500)
     }
@@ -237,7 +235,7 @@ let Bande: neopixel.Strip = null
 basic.forever(function () {
     LED = smarthome.ReadLightIntensity(AnalogPin.P3)
     if (LED < 50) {
-        Bande = neopixel.create(DigitalPin.P1, 24, NeoPixelMode.RGB)
+        Bande = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
         Bande.showColor(neopixel.colors(NeoPixelColors.Red))
         basic.pause(500)
         Bande.showColor(neopixel.colors(NeoPixelColors.Blue))

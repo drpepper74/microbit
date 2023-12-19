@@ -163,7 +163,7 @@ basic.forever(function () {
 
 Ajoute le bloc ``||neopixel:régler couleur||`` sous le bloc ``||variables: définir Bande||``.
 
-Remplace la valeur ``||variables: définir strip||`` par ``||variables: Bande||``.
+Remplace la valeur ``||variables:strip||`` par ``||variables: Bande||``.
 
 La valeur ``||neopixel: rouge||`` demeure inchangée.
 
@@ -218,6 +218,8 @@ basic.forever(function () {
 ## Étape 10
 
 Ajoute le bloc ``||neopixel:régler couleur||`` sous le bloc ``||basic: pause (ms)||``.
+
+Remplace la valeur ``||variables:strip||`` par ``||variables: Bande||``.
 
 Remplace la valeur ``||neopixel: rouge||`` par ``||neopixel: bleu||``.
 

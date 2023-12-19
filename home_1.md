@@ -221,7 +221,7 @@ basic.forever(function () {
 
 Ajoute le bloc ``||neopixel:régler couleur||`` sous le bloc ``||basic: pause (ms)||``.
 
-Remplace la valeur ``||neopixel: rouge||`` par ```||neopixel: bleu||``.
+Remplace la valeur ``||neopixel: rouge||`` par ``||neopixel: bleu||``.
 
 
 ```package

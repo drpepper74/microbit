@@ -4,8 +4,6 @@
 
 ## @showdialog
 
-Programme le micro:bit pour que la lumière LED s'allume en fonction du niveau d'intensité lumineuse.
-
 Utilise les capteurs, le bouclier d'extension et les câbles.
 
 ## Étape 1

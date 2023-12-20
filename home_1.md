@@ -63,7 +63,7 @@ basic.forever(function () {
 
 Modifie le bloc ``||smarthome:value of light intensity||``.
 
-Remplace la valeur ``||smarthome:P1||`` par ``||smarthome:P3||``.
+Remplace la valeur ``||smarthome:P1||`` du bloc ``||smarthome:value of light intensity||`` par ``||smarthome:P3||``.
 
 ```package
 

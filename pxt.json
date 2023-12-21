@@ -73,7 +73,8 @@
         "servo_9.md",
         "circuit_8.md",
         "sonde_1.md",
-        "home_2.md"
+        "home_2.md",
+        "home_3.md"
     ],
     "testFiles": [
         "test.ts"

@@ -136,7 +136,7 @@ basic.forever(function () {
 
 Ajoute le bloc ``||basic:pause (ms)||`` sous le bloc ``||OLED:||``.
 
-Remplace la valeur ``||basic:100||`` du bloc ``||basic:pause (ms)||`` par ``||basic:1000||``.
+Remplace la valeur ``||basic:100||`` du bloc ``||basic:pause (ms)||`` par ``||basic:5000||``.
 
 
 ```package
@@ -153,7 +153,7 @@ basic.forever(function () {
     OLED.clear()
     OLED.writeString("Temperature")
     OLED.writeNum(Temperature)
-    basic.pause(1000)
+    basic.pause(5000)
 })
 
 
@@ -179,7 +179,7 @@ basic.forever(function () {
     OLED.clear()
     OLED.writeString("Temperature")
     OLED.writeNum(Temperature)
-    basic.pause(1000)
+    basic.pause(5000)
 })
 
 ```

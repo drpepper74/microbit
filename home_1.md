@@ -134,7 +134,7 @@ basic.forever(function () {
 
 ## Étape 7
 
-Ajoute le bloc ``||basic:pause (ms)||`` sous le bloc ``||OLED:||``.
+Ajoute le bloc ``||basic:pause (ms)||`` sous le bloc ``||OLED:show number||``.
 
 Remplace la valeur ``||basic:100||`` du bloc ``||basic:pause (ms)||`` par ``||basic:5000||``.
 

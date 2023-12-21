@@ -1,6 +1,6 @@
 # ElecFreaks micro:bit Smart Home Kit
 
-# Tutoriel 1
+# Tutoriel 3
 
 ## @showdialog
 
@@ -11,6 +11,12 @@ Utilise les capteurs, le bouclier d'extension et les câbles.
 Ajoute le bloc ``||LED:activer LED||`` dans le bloc ``||basic:au démarrage||``.
 
 La valeur ``||logic:faux||`` du bloc ``||LED:activer LED||`` demeure la même.
+
+```package
+
+dstemps=github:tinkertanker/pxt-smarthome
+
+```
 
 ```blocks
 
@@ -23,24 +29,33 @@ basic.forever(function () {
 
 ## Étape 2
 
-Crée une ``||variables: variable||`` et donne lui le nom ``||variables:LED||``.
+Ajoute le bloc ``||OLED: initialize OLED ||`` (trad. : démarrer l'écran) sous le bloc ``||LED:activer LED||``
 
-Ajoute le bloc ``||variables: définir LED ||`` dans le bloc ``||basic: toujours||``. 
+Les valeurs du bloc ``||OLED: initialize OLED ||`` demeurent les mêmes.
+
+Les valeurs ``||OLED: 128 ||`` et ``||OLED: 64 ||`` sont les dimensions (en pixels) de l'écran.
+
+```package
+
+dstemps=github:tinkertanker/pxt-smarthome
+
+```
 
 ```blocks
 
-let LED = 0
+led.enable(false)
+OLED.init(128, 64)
 basic.forever(function () {
-    LED = 0
+	
 })
 
 ```
 
 ## Étape 3
 
-Modifie le bloc ``||variables: définir LED ||``.
+Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Pourcentage||``.
 
-Remplace la valeur ``||variables: 0 ||`` du bloc ``||variables: définir LED ||`` par le bloc ``||smarthome:value of light intensity||`` (trad: valeur de l'intensité lumineuse).
+Ajoute le bloc ``||variables: définir Pourcentage ||`` sous le bloc ``||OLED: initialize OLED ||``. 
 
 ```package
 
@@ -50,18 +65,20 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let LED = 0
+led.enable(false)
+OLED.init(128, 64)
+let Pourcentage = 0
 basic.forever(function () {
-    LED = smarthome.ReadLightIntensity(AnalogPin.P1)
+	
 })
 
 ```
 
 ## Étape 4
 
-Modifie le bloc ``||smarthome:value of light intensity||``.
+Ajoute le bloc ``||OLED: draw loading bar ||`` (trad. : afficher une barre de progression) dans le bloc ``||basic:toujours||``
 
-Remplace la valeur ``||smarthome:P1||`` du bloc ``||smarthome:value of light intensity||`` par ``||smarthome:P3||``.
+Remplace la valeur ``||OLED: 0 ||`` du bloc ``||OLED: draw loading bar ||`` par le bloc ``||variables:Pourcentage||``.
 
 ```package
 
@@ -71,18 +88,18 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let LED = 0
 basic.forever(function () {
-    LED = smarthome.ReadLightIntensity(AnalogPin.P3)
+    let Pourcentage = 0
+    OLED.drawLoading(Pourcentage)
 })
 
 ```
 
 ## Étape 5
 
-Ajoute le bloc ``||logic:si vrai alors||`` sous le bloc ``||variables: définir LED ||``.
+Ajoute le bloc ``||basic: pause (ms)||`` sous le bloc ``||OLED: draw loading bar ||``.
 
-Remplace la valeur ``||logic:vrai||`` par le bloc ``||logic:0 < 0||``.
+Remplace la valeur  ``||basic: 100||`` du bloc ``||basic: pause (ms)||`` par ``||basic: 1000||``.
 
 ```package
 
@@ -92,23 +109,21 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let LED = 0
 basic.forever(function () {
-    LED = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (0 < 0) {
-    	
-    }
+    let Pourcentage = 0
+    OLED.drawLoading(Pourcentage)
+    basic.pause(1000)
 })
 
 ```
 
 ## Étape 6
 
-Modifie le bloc ``||logic:0 < 0||``.
+Ajoute le bloc ``||variables: modifier Pourcentage ||`` dans le bloc ``||input:lorsque le bouton A est pressé||``.
 
-Remplace la valeur ``||logic:0||`` de gauche par le bloc ``||variables: LED ||``.
+Remplace la valeur ``||variables: 0 ||`` du bloc ``||variables: modifier Pourcentage ||`` par ``||variables: 5 ||``.
 
-Remplace la valeur ``||logic:0||`` de droite par ``||logic:50||``.
+Ajoute le bloc ``||OLED: clear OLED ||`` sous le bloc ``||variables: modifier Pourcentage ||``.
 
 ```package
 
@@ -118,25 +133,21 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let LED = 0
-basic.forever(function () {
-    LED = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (LED < 50) {
-    	
-    }
+let Pourcentage = 0
+input.onButtonPressed(Button.A, function () {
+    Pourcentage += 5
+    OLED.clear()
 })
 
 ```
 
 ## Étape 7
 
-Ajoute le bloc ``||neopixel:NeoPixel sur broche||`` (trad. : bande lumineuse) dans le bloc ``||logic:si vrai alors||``.
+Ajoute le bloc ``||variables: modifier Pourcentage ||`` dans le bloc ``||input:lorsque le bouton B est pressé||``.
 
-Renomme la variable ``||variables: définir strip||`` par ``||variables: Bande||``.
+Remplace la valeur ``||variables: 0 ||`` du bloc ``||variables: modifier Pourcentage ||`` par ``||variables: -5 ||``.
 
-Remplace la valeur ``||neopixel:P0||`` par ``||neopixel:P1||``.
-
-Remplace la valeur ``||neopixel:24||`` par ``||neopixel:1||``.
+Ajoute le bloc ``||OLED: clear OLED ||`` sous le bloc ``||variables: modifier Pourcentage ||``.
 
 ```package
 
@@ -146,104 +157,15 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let LED = 0
-let Bande: neopixel.Strip = null
-basic.forever(function () {
-    LED = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (LED < 50) {
-        Bande = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
-    }
+let Pourcentage = 0
+input.onButtonPressed(Button.B, function () {
+    Pourcentage += -5
+    OLED.clear()
 })
 
 ```
 
 ## Étape 8
-
-Ajoute le bloc ``||neopixel:régler couleur||`` sous le bloc ``||variables: définir Bande||``.
-
-Remplace la valeur ``||variables: strip||`` du bloc ``||variables: définir strip||`` par ``||variables: Bande||``.
-
-La valeur ``||neopixel: rouge||`` demeure la même.
-
-```package
-
-dstemps=github:tinkertanker/pxt-smarthome
-
-```
-
-```blocks
-
-let LED = 0
-let Bande: neopixel.Strip = null
-basic.forever(function () {
-    LED = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (LED < 50) {
-        Bande = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
-        Bande.showColor(neopixel.colors(NeoPixelColors.Red))
-    }
-})
-
-```
-
-## Étape 9
-
-Ajoute le bloc ``||basic:pause (ms)||`` sous le bloc ``||neopixel:régler couleur||``.
-
-Remplace la valeur ``||basic:100||`` du bloc ``||basic:pause (ms)||`` par ``||basic:500||``.
-
-
-```package
-
-dstemps=github:tinkertanker/pxt-smarthome
-
-```
-
-```blocks
-
-let LED = 0
-let Bande: neopixel.Strip = null
-basic.forever(function () {
-    LED = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (LED < 50) {
-        Bande = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
-        Bande.showColor(neopixel.colors(NeoPixelColors.Red))
-        basic.pause(500)
-    }
-})
-
-```
-
-## Étape 10
-
-Ajoute le bloc ``||neopixel:régler couleur||`` sous le bloc ``||basic: pause (ms)||``.
-
-Remplace la valeur ``||neopixel: rouge||`` par ``||neopixel: bleu||``.
-
-
-```package
-
-dstemps=github:tinkertanker/pxt-smarthome
-
-```
-
-```blocks
-
-let LED = 0
-let Bande: neopixel.Strip = null
-basic.forever(function () {
-    LED = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (LED < 50) {
-        Bande = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
-        Bande.showColor(neopixel.colors(NeoPixelColors.Red))
-        basic.pause(500)
-        Bande.showColor(neopixel.colors(NeoPixelColors.Blue))
-    }
-})
-
-
-```
-
-## Étape 11
 
 Voici la programmation complète du programme.
 
@@ -255,15 +177,21 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Temperature = 0
+input.onButtonPressed(Button.A, function () {
+    Pourcentage += 5
+    OLED.clear()
+})
+input.onButtonPressed(Button.B, function () {
+    Pourcentage += -5
+    OLED.clear()
+})
 led.enable(false)
 OLED.init(128, 64)
+let Pourcentage = 0
 basic.forever(function () {
-    Temperature = input.temperature()
-    OLED.clear()
-    OLED.writeString("Temperature")
-    OLED.writeNum(Temperature)
-    basic.pause(5000)
+    OLED.drawLoading(Pourcentage)
+    basic.pause(1000)
 })
+
 
 ```

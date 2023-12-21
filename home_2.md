@@ -53,7 +53,7 @@ basic.forever(function () {
 
 ## Étape 3
 
-Ajoute le bloc ``||OLED: clear OLED ||`` (trad. : effacer l'écran) sous le bloc ``||basic:toujours||``.
+Ajoute le bloc ``||OLED: clear OLED ||`` (trad. : effacer l'écran) dans le bloc ``||basic:toujours||``.
 
 Ajoute le bloc ``||OLED: draw line ||`` (trad. : dessiner une ligne) sous le bloc ``||OLED: clear OLED ||``.
 
@@ -79,9 +79,9 @@ basic.forever(function () {
 
 ## Étape 4
 
-Modifie le bloc ``||OLED: draw line from ||``.
+Modifie le bloc ``||OLED: draw line ||``.
 
-Remplace les ``||OLED: coordonnées ||`` par les suivantes :
+Remplace les ``||OLED: coordonnées ||`` par celles-ci :
 
 x : 0 
 y : 0

@@ -23,7 +23,7 @@ basic.forever(function () {
 
 ## Étape 2
 
-Crée une ``||variables: variable||`` et donne lui le nom ``||variables:LED||``.
+Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Temps||``.
 
 Ajoute le bloc ``||variables: définir LED ||`` dans le bloc ``||basic: toujours||``. 
 
@@ -242,5 +242,17 @@ basic.forever(function () {
     }
 })
 
+```
+
+## Étape 11
+
+Ajoute le bloc ``||basic:pause (ms)||`` sous le bloc ``||neopixel:régler couleur||``.
+
+Remplace la valeur ``||basic:100||`` du bloc ``||basic:pause (ms)||`` par ``||basic:500||``.
+
+
+```package
+
+dstemps=github:tinkertanker/pxt-smarthome
 
 ```

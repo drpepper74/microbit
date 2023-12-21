@@ -23,6 +23,27 @@ basic.forever(function () {
 
 ## Étape 2
 
+Ajoute le bloc ``||OLED: initialize OLED ||`` (trad. : démarrer l'écran) sous le bloc ``||LED:activer LED||``
+
+Les valeurs du bloc ``||OLED: initialize OLED ||`` demeurent les mêmes.
+
+```package
+
+dstemps=github:tinkertanker/pxt-smarthome
+
+```
+
+```blocks
+
+let LED = 0
+basic.forever(function () {
+    LED = smarthome.ReadLightIntensity(AnalogPin.P1)
+})
+
+```
+
+## Étape 3
+
 Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Temps||``.
 
 Ajoute le bloc ``||variables: définir LED ||`` dans le bloc ``||basic: toujours||``. 

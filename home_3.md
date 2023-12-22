@@ -53,9 +53,19 @@ basic.forever(function () {
 
 ## Étape 3
 
-Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Pourcentage||``.
+Ajoute le bloc ``||OLED:draw rectangle||`` (trad: dessiner un rectangle) dans le bloc ``||basic:toujours||``.
 
-Ajoute le bloc ``||variables: définir Pourcentage ||`` sous le bloc ``||OLED: initialize OLED ||``. 
+Modifie le bloc ``||OLED: draw rectangle ||``.
+
+Remplace les coordonnées :
+
+x : 20
+y : 20
+
+par 
+
+x : 122
+y : 62
 
 ```package
 
@@ -65,11 +75,13 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-led.enable(false)
-OLED.init(128, 64)
-let Pourcentage = 0
 basic.forever(function () {
-	
+    OLED.drawRectangle(
+    0,
+    0,
+    122,
+    62
+    )
 })
 
 ```

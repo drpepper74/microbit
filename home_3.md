@@ -79,7 +79,7 @@ basic.forever(function () {
     OLED.drawRectangle(
     0,
     0,
-    122,
+    126,
     62
     )
 })
@@ -88,9 +88,9 @@ basic.forever(function () {
 
 ## Étape 4
 
-Ajoute le bloc ``||OLED: draw loading bar ||`` (trad. : afficher une barre de progression) dans le bloc ``||basic:toujours||``.
+Ajoute le bloc ``||basic: pause (ms)||`` sous le bloc ``||OLED: draw rectangle ||``.
 
-Remplace la valeur ``||OLED: 0 ||`` du bloc ``||OLED: draw loading bar ||`` par le bloc ``||variables:Pourcentage||``.
+Remplace la valeur  ``||basic: 100||`` du bloc ``||basic: pause (ms)||`` par ``||basic: 5000||``.
 
 ```package
 
@@ -101,83 +101,18 @@ dstemps=github:tinkertanker/pxt-smarthome
 ```blocks
 
 basic.forever(function () {
-    let Pourcentage = 0
-    OLED.drawLoading(Pourcentage)
+    OLED.drawRectangle(
+    0,
+    0,
+    126,
+    62
+    )
+    basic.pause(5000)
 })
 
 ```
 
 ## Étape 5
-
-Ajoute le bloc ``||basic: pause (ms)||`` sous le bloc ``||OLED: draw loading bar ||``.
-
-Remplace la valeur  ``||basic: 100||`` du bloc ``||basic: pause (ms)||`` par ``||basic: 1000||``.
-
-```package
-
-dstemps=github:tinkertanker/pxt-smarthome
-
-```
-
-```blocks
-
-basic.forever(function () {
-    let Pourcentage = 0
-    OLED.drawLoading(Pourcentage)
-    basic.pause(1000)
-})
-
-```
-
-## Étape 6
-
-Ajoute le bloc ``||variables: modifier Pourcentage ||`` dans le bloc ``||input:lorsque le bouton A est pressé||``.
-
-Remplace la valeur ``||variables: 0 ||`` du bloc ``||variables: modifier Pourcentage ||`` par ``||variables: 5 ||``.
-
-Ajoute le bloc ``||OLED: clear OLED ||`` sous le bloc ``||variables: modifier Pourcentage ||``.
-
-```package
-
-dstemps=github:tinkertanker/pxt-smarthome
-
-```
-
-```blocks
-
-let Pourcentage = 0
-input.onButtonPressed(Button.A, function () {
-    Pourcentage += 5
-    OLED.clear()
-})
-
-```
-
-## Étape 7
-
-Ajoute le bloc ``||variables: modifier Pourcentage ||`` dans le bloc ``||input:lorsque le bouton B est pressé||``.
-
-Remplace la valeur ``||variables: 0 ||`` du bloc ``||variables: modifier Pourcentage ||`` par ``||variables: -5 ||``.
-
-Ajoute le bloc ``||OLED: clear OLED ||`` sous le bloc ``||variables: modifier Pourcentage ||``.
-
-```package
-
-dstemps=github:tinkertanker/pxt-smarthome
-
-```
-
-```blocks
-
-let Pourcentage = 0
-input.onButtonPressed(Button.B, function () {
-    Pourcentage += -5
-    OLED.clear()
-})
-
-```
-
-## Étape 8
 
 Voici la programmation complète du programme.
 
@@ -189,21 +124,16 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-input.onButtonPressed(Button.A, function () {
-    Pourcentage += 5
-    OLED.clear()
-})
-input.onButtonPressed(Button.B, function () {
-    Pourcentage += -5
-    OLED.clear()
-})
 led.enable(false)
 OLED.init(128, 64)
-let Pourcentage = 0
 basic.forever(function () {
-    OLED.drawLoading(Pourcentage)
-    basic.pause(1000)
+    OLED.drawRectangle(
+    0,
+    0,
+    126,
+    62
+    )
+    basic.pause(5000)
 })
-
 
 ```

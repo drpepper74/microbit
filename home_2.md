@@ -29,7 +29,7 @@ basic.forever(function () {
 
 ## Étape 2
 
-Ajoute le bloc ``||OLED: initialize OLED ||`` (trad. : démarrer l'écran) sous le bloc ``||LED:activer LED||``
+Ajoute le bloc ``||OLED: initialize OLED ||`` (trad. : démarrer l'écran) sous le bloc ``||LED:activer LED||``.
 
 Les valeurs du bloc ``||OLED: initialize OLED ||`` demeurent les mêmes.
 

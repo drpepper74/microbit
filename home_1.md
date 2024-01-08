@@ -136,3 +136,9 @@ basic.forever(function () {
 })
 
 ```
+
+## @showdialog 
+
+Réalise le branchement ci-dessous.
+
+![MicroSeb](https://github.com/sbergeroncp/micro-seb/blob/master/smart_home_oled.png?raw=true)

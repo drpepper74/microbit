@@ -142,3 +142,10 @@ basic.forever(function () {
 Réalise le branchement ci-dessous.
 
 ![MicroSeb](https://github.com/sbergeroncp/micro-seb/blob/master/smart_home_oled.png?raw=true)
+
+
+## @showdialog 
+
+Félicitations! Tu as terminé la programmation.
+
+Pour tester le circuit électrique, télécharge la programmation dans le micro:bit.

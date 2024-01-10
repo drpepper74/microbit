@@ -4,7 +4,7 @@
 
 ## @showdialog
 
-Utilise les capteurs, le bouclier d'extension et les câbles.
+Utilise l'écran OLED, les capteurs, le bouclier d'extension et les câbles.
 
 ## Étape 1
 
@@ -80,7 +80,7 @@ basic.forever(function () {
 
 Remplace la valeur ``||OLED: " " ||`` du bloc ``||OLED: show string ||`` par ton prénom (sans accent).
 
-Exemple : Sebastien au lieu de Sébastien.
+Exemple : Marc-Andre au lieu de Marc-André.
 
 ```package
 
@@ -92,7 +92,7 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 basic.forever(function () {
     OLED.clear()
-    OLED.writeStringNewLine("Sebastien")
+    OLED.writeStringNewLine("Marc-Andre")
 })
 
 ```
@@ -113,7 +113,7 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 basic.forever(function () {
     OLED.clear()
-    OLED.writeStringNewLine("Sebastien")
+    OLED.writeStringNewLine("Marc-Andre")
     basic.pause(5000)
 })
 
@@ -135,7 +135,7 @@ led.enable(false)
 OLED.init(128, 64)
 basic.forever(function () {
     OLED.clear()
-    OLED.writeStringNewLine("Sebastien")
+    OLED.writeStringNewLine("Marc-Andre")
     basic.pause(5000)
 })
 
@@ -143,9 +143,7 @@ basic.forever(function () {
 
 ## @showdialog 
 
-Réalise le branchement ci-dessous.
-
-![MicroSeb](https://github.com/sbergeroncp/micro-seb/blob/master/smart_home_oled.png?raw=true)
+Branche l'écran OLED dans bouclier d'extension.
 
 
 ## @showdialog 

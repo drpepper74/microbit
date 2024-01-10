@@ -316,7 +316,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 12
+## Étape 13
 
 Voici la programmation complète du programme.
 

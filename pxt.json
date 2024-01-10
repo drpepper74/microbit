@@ -80,7 +80,8 @@
         "home_6.md",
         "home_7.md",
         "home_8.md",
-        "_locales/fr/home_8.md"
+        "_locales/fr/home_8.md",
+        "home_a.md"
     ],
     "testFiles": [
         "test.ts"

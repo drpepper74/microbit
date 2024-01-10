@@ -119,9 +119,9 @@ basic.forever(function () {
 
 ## Étape 6
 
-Ajoute le bloc ``||neopixel:  supprimer||`` sous le bloc ``||basic:  pause (ms) ||``.
+Ajoute le bloc ``||neopixel:  régler couleur ||`` sous le bloc ``||basic:  pause (ms) ||``.
 
-Ajoute le bloc ``||neopixel:  montrer||`` sous le bloc ``||neopixel:  supprimer ||``.
+Remplace la valeur ``||neopixel: rouge||`` par la valeur ``||neopixel: noir||``
 
 ```package
 
@@ -136,15 +136,14 @@ basic.forever(function () {
     strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
     strip.showColor(neopixel.colors(NeoPixelColors.Red))
     basic.pause(1000)
-    strip.clear()
-    strip.show()
+    strip.showColor(neopixel.colors(NeoPixelColors.Black))
 })
 
 ```
 
 ## Étape 7
 
-Ajoute le bloc ``||basic:  pause (ms)||`` sous le bloc ``||neopixel:  montrer ||``.
+Ajoute le bloc ``||basic:  pause (ms)||`` sous le bloc ``||neopixel:  régler couleur ||``.
 
 Remplace la valeur ``||basic: 100||`` par ``||basic: 1000||``.
 
@@ -161,8 +160,7 @@ basic.forever(function () {
     strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
     strip.showColor(neopixel.colors(NeoPixelColors.Red))
     basic.pause(1000)
-    strip.clear()
-    strip.show()
+    strip.showColor(neopixel.colors(NeoPixelColors.Black))
     basic.pause(1000)
 })
 
@@ -186,8 +184,7 @@ basic.forever(function () {
     strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
     strip.showColor(neopixel.colors(NeoPixelColors.Red))
     basic.pause(1000)
-    strip.clear()
-    strip.show()
+    strip.showColor(neopixel.colors(NeoPixelColors.Black))
     basic.pause(1000)
 })
 

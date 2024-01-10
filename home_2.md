@@ -4,7 +4,7 @@
 
 ## @showdialog
 
-Utilise les capteurs, le bouclier d'extension et les câbles.
+Utilise l'écran OLED, les capteurs, le bouclier d'extension et les câbles.
 
 ## Étape 1
 
@@ -29,11 +29,7 @@ basic.forever(function () {
 
 ## Étape 2
 
-Ajoute le bloc ``||OLED: initialize OLED ||`` (trad. : démarrer l'écran) sous le bloc ``||LED:activer LED||``.
-
-Les valeurs du bloc ``||OLED: initialize OLED ||`` demeurent les mêmes.
-
-Les valeurs ``||OLED: 128 ||`` et ``||OLED: 64 ||`` sont les dimensions (en pixels) de l'écran.
+Ajoute le bloc ``||variables:  définir strip ||`` (trad. : bande lumineuse) de l'onglet ``||neopixel:  neopixel ||`` dans le bloc ``||basic:toujours||``.
 
 ```package
 
@@ -43,19 +39,22 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-led.enable(false)
-OLED.init(128, 64)
+let strip: neopixel.Strip = null
 basic.forever(function () {
-	
+    strip = neopixel.create(DigitalPin.P0, 24, NeoPixelMode.RGB)
 })
 
 ```
 
 ## Étape 3
 
-Ajoute le bloc ``||OLED: clear OLED ||`` (trad. : effacer l'écran) dans le bloc ``||basic:toujours||``.
+Modifie le bloc ``||variables:  définir strip ||``.
 
-Ajoute le bloc ``||OLED: draw line ||`` (trad. : dessiner une ligne) sous le bloc ``||OLED: clear OLED ||``.
+Remplace la valeur ``||neopixel:  P0 ||`` par ``||neopixel:  P1 ||``.
+
+Remplace la valeur ``||neopixel:  24 ||`` par  ``||neopixel:  1 ||``.
+
+La valeur ``||neopixel:  RGB ||`` demeure la même.
 
 ```package
 
@@ -65,32 +64,19 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
+let strip: neopixel.Strip = null
 basic.forever(function () {
-    OLED.clear()
-    OLED.drawLine(
-    0,
-    0,
-    0,
-    0,
-    )
+    strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
 })
+
 
 ```
 
 ## Étape 4
 
-Modifie le bloc ``||OLED: draw line ||``.
+Ajoute le bloc ``||neopixel:  régler couleur||`` sous le bloc ``||variables:  définir strip ||`.
 
-Remplace les ``||OLED: coordonnées ||`` par celles-ci :
-
-x : 0 
-y : 0
-
-to
-
-x : 128
-y : 64
-
+La valeur ``||neopixel:  rouge ||`` demeure la même.
 
 ```package
 
@@ -100,46 +86,16 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
+let strip: neopixel.Strip = null
 basic.forever(function () {
-    OLED.clear()
-    OLED.drawLine(
-    0,
-    0,
-    128,
-    64
-    )
+    strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
+    strip.showColor(neopixel.colors(NeoPixelColors.Red))
 })
+
 
 ```
 
 ## Étape 5
-
-Ajoute le bloc ``||basic: pause (ms)||`` sous le bloc ``||OLED: draw line ||``.
-
-Remplace la valeur  ``||basic: 100||`` du bloc ``||basic: pause (ms)||`` par ``||basic: 5000||``.
-
-```package
-
-dstemps=github:tinkertanker/pxt-smarthome
-
-```
-
-```blocks
-
-basic.forever(function () {
-    OLED.clear()
-    OLED.drawLine(
-    0,
-    0,
-    128,
-    64
-    )
-    basic.pause(5000)
-})
-
-```
-
-## Étape 6
 
 Voici la programmation complète du programme.
 
@@ -151,31 +107,19 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
+let strip: neopixel.Strip = null
 led.enable(false)
-OLED.init(128, 64)
 basic.forever(function () {
-    OLED.clear()
-    OLED.drawLine(
-    0,
-    0,
-    128,
-    64
-    )
-    basic.pause(5000)
+    strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
+    strip.showColor(neopixel.colors(NeoPixelColors.Red))
 })
-
 
 ```
 
 ## @showdialog 
 
-Réalise le branchement ci-dessous.
+Félicitations! Tu as terminé la programmation. Réalise maintenant les branchements.
 
-![MicroSeb](https://github.com/sbergeroncp/micro-seb/blob/master/smart_home_oled.png?raw=true)
-
-
-## @showdialog 
-
-Félicitations! Tu as terminé la programmation.
+Dans quel port du bouclier d'extension dois-tu brancher la lumière ?
 
 Pour tester le circuit électrique, télécharge la programmation dans le micro:bit.

@@ -1,10 +1,10 @@
 # ElecFreaks micro:bit Smart Home Kit
 
-# Tutoriel 4
+# Tutoriel 3
 
 ## @showdialog
 
-Utilise les capteurs, le bouclier d'extension et les câbles.
+Utilise l'écran OLED, les capteurs, le bouclier d'extension et les câbles.
 
 ## Étape 1
 
@@ -33,8 +33,6 @@ Ajoute le bloc ``||OLED: initialize OLED ||`` (trad. : démarrer l'écran) sous 
 
 Les valeurs du bloc ``||OLED: initialize OLED ||`` demeurent les mêmes.
 
-Les valeurs ``||OLED: 128 ||`` et ``||OLED: 64 ||`` sont les dimensions (en pixels) de l'écran.
-
 ```package
 
 dstemps=github:tinkertanker/pxt-smarthome
@@ -53,9 +51,11 @@ basic.forever(function () {
 
 ## Étape 3
 
-Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Pourcentage||``.
+Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Celcius||``.
 
-Ajoute le bloc ``||variables: définir Pourcentage ||`` sous le bloc ``||OLED: initialize OLED ||``. 
+Ajoute le bloc ``||variables: définir Celcius ||`` dans le bloc ``||input:lorsque le bouton B est pressé ||``.
+
+Remplace la valeur ``||variables:0||`` par le bloc ``||smarthome:value of temperature||`` (trad. : la valeur de la température).
 
 ```package
 
@@ -65,20 +65,20 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-led.enable(false)
-OLED.init(128, 64)
-let Pourcentage = 0
-basic.forever(function () {
-	
+let Celcius = 0
+input.onButtonPressed(Button.A, function () {
+    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P1)
 })
 
 ```
 
 ## Étape 4
 
-Ajoute le bloc ``||OLED: draw loading bar ||`` (trad. : afficher une barre de progression) dans le bloc ``||basic:toujours||``.
+Modifie le bloc ``||smarthome:value of temperature||`` (trad. : la valeur de la température).
 
-Remplace la valeur ``||OLED: 0 ||`` du bloc ``||OLED: draw loading bar ||`` par le bloc ``||variables:Pourcentage||``.
+La valeur ``||smarthome:C||`` demeure la même.
+
+Remplace la valeur ``||smarthome:P0||`` par ``||smarthome:P2||``.
 
 ```package
 
@@ -88,18 +88,16 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-basic.forever(function () {
-    let Pourcentage = 0
-    OLED.drawLoading(Pourcentage)
+let Celcius = 0
+input.onButtonPressed(Button.A, function () {
+    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
 })
 
 ```
 
 ## Étape 5
 
-Ajoute le bloc ``||basic: pause (ms)||`` sous le bloc ``||OLED: draw loading bar ||``.
-
-Remplace la valeur  ``||basic: 100||`` du bloc ``||basic: pause (ms)||`` par ``||basic: 1000||``.
+Ajoute le bloc ``||LED:clear OLED display||`` (trad. : effacer l'écran) sous le bloc ``||variables: définir Celcius ||``.
 
 ```package
 
@@ -109,21 +107,19 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-basic.forever(function () {
-    let Pourcentage = 0
-    OLED.drawLoading(Pourcentage)
-    basic.pause(1000)
+let Celcius = 0
+input.onButtonPressed(Button.A, function () {
+    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    OLED.clear()
 })
 
 ```
 
 ## Étape 6
 
-Ajoute le bloc ``||variables: modifier Pourcentage ||`` dans le bloc ``||input:lorsque le bouton A est pressé||``.
+Ajoute le bloc ``||LED:show number||`` (trad. : montrer le nombre) sous le bloc ``||LED: clear OLED display ||`` (trad. : effacer l'écran).
 
-Remplace la valeur ``||variables: 0 ||`` du bloc ``||variables: modifier Pourcentage ||`` par ``||variables: 5 ||``.
-
-Ajoute le bloc ``||OLED: clear OLED ||`` sous le bloc ``||variables: modifier Pourcentage ||``.
+Remplace la valeur ``||LED:0||`` par le bloc ``||variables: Celcius ||``.
 
 ```package
 
@@ -133,34 +129,11 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Pourcentage = 0
+let Celcius = 0
 input.onButtonPressed(Button.A, function () {
-    Pourcentage += 5
+    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     OLED.clear()
-})
-
-```
-
-## Étape 7
-
-Ajoute le bloc ``||variables: modifier Pourcentage ||`` dans le bloc ``||input:lorsque le bouton B est pressé||``.
-
-Remplace la valeur ``||variables: 0 ||`` du bloc ``||variables: modifier Pourcentage ||`` par ``||variables: -5 ||``.
-
-Ajoute le bloc ``||OLED: clear OLED ||`` sous le bloc ``||variables: modifier Pourcentage ||``.
-
-```package
-
-dstemps=github:tinkertanker/pxt-smarthome
-
-```
-
-```blocks
-
-let Pourcentage = 0
-input.onButtonPressed(Button.B, function () {
-    Pourcentage += -5
-    OLED.clear()
+    OLED.writeNumNewLine(Celcius)
 })
 
 ```
@@ -178,33 +151,19 @@ dstemps=github:tinkertanker/pxt-smarthome
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
-    Pourcentage += 5
+    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     OLED.clear()
+    OLED.writeNumNewLine(Celcius)
 })
-input.onButtonPressed(Button.B, function () {
-    Pourcentage += -5
-    OLED.clear()
-})
+let Celcius = 0
 led.enable(false)
 OLED.init(128, 64)
-let Pourcentage = 0
-basic.forever(function () {
-    OLED.drawLoading(Pourcentage)
-    basic.pause(1000)
-})
 
 
 ```
 
 ## @showdialog 
 
-Réalise le branchement ci-dessous.
-
-![MicroSeb](https://github.com/sbergeroncp/micro-seb/blob/master/smart_home_oled.png?raw=true)
-
-
-## @showdialog 
-
-Félicitations! Tu as terminé la programmation.
+Félicitations! Tu as terminé la programmation. Réalise maintenant les branchements.
 
 Pour tester le circuit électrique, télécharge la programmation dans le micro:bit.

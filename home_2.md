@@ -120,6 +120,6 @@ basic.forever(function () {
 
 Félicitations! Tu as terminé la programmation. Réalise maintenant les branchements.
 
-Dans quel port du bouclier d'extension dois-tu brancher la lumière ?
+Dans quel port du bouclier d'extension dois-tu brancher la lumière RGB ?
 
 Pour tester le circuit électrique, télécharge la programmation dans le micro:bit.

@@ -78,7 +78,7 @@ Modifie le bloc ``||smarthome:value of temperature||`` (trad. : la valeur de la 
 
 La valeur ``||smarthome:C||`` demeure la même.
 
-Remplace la valeur ``||smarthome:P0||`` par ``||smarthome:P1||``.
+Remplace la valeur ``||smarthome:P0||`` par ``||smarthome:P2||``.
 
 ```package
 
@@ -90,7 +90,7 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 let Celcius = 0
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P1)
+    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
 })
 
 ```
@@ -109,7 +109,7 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 let Celcius = 0
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P1)
+    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     OLED.clear()
 })
 
@@ -131,7 +131,7 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 let Celcius = 0
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P1)
+    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     OLED.clear()
     OLED.writeNumNewLine(Celcius)
 })
@@ -154,7 +154,7 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 let Celcius = 0
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P1)
+    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     OLED.clear()
     OLED.writeNumNewLine(Celcius)
     basic.pause(1000)
@@ -178,7 +178,7 @@ let Celcius = 0
 led.enable(false)
 OLED.init(128, 64)
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P1)
+    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     OLED.clear()
     OLED.writeNumNewLine(Celcius)
     basic.pause(1000)

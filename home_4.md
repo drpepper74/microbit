@@ -1,10 +1,10 @@
 # ElecFreaks micro:bit Smart Home Kit
 
-# Tutoriel 5
+# Tutoriel 4
 
 ## @showdialog
 
-Utilise les capteurs, le bouclier d'extension et les câbles.
+Utilise l'écran OLED, les capteurs, le bouclier d'extension et les câbles.
 
 ## Étape 1
 
@@ -33,8 +33,6 @@ Ajoute le bloc ``||OLED: initialize OLED ||`` (trad. : démarrer l'écran) sous 
 
 Les valeurs du bloc ``||OLED: initialize OLED ||`` demeurent les mêmes.
 
-Les valeurs ``||OLED: 128 ||`` et ``||OLED: 64 ||`` sont les dimensions (en pixels) de l'écran.
-
 ```package
 
 dstemps=github:tinkertanker/pxt-smarthome
@@ -53,9 +51,11 @@ basic.forever(function () {
 
 ## Étape 3
 
-Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Celcius||``.
+Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Lumen||``.
 
-Ajoute le bloc ``||variables: définir Celcius ||`` sous le bloc ``||OLED: initialize OLED ||``. 
+Ajoute le bloc ``||variables: définir Lumen ||`` dans le bloc ``||basic: toujours ||``.
+
+Remplace la valeur ``||variables:0||`` par le bloc ``||smarthome:value of intensity||`` (trad. : la valeur du niveau d'intensité lumineuse).
 
 ```package
 
@@ -65,20 +65,18 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celcius = 0
-led.enable(false)
-OLED.init(128, 64)
+let Lumen = 0
 basic.forever(function () {
-	
+    Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
 })
 
 ```
 
 ## Étape 4
 
-Modifie le bloc ``||variables: définir Celcius ||``.
+Modifie le bloc ``||smarthome:value of intensity||`` (trad. : la valeur du niveau d'intensité lumineuse).
 
-Remplace la valeur ``||variables: 0 ||`` du bloc  ``||variables: définir Celcius ||`` par le bloc ``||input: Température ||``.
+Remplace la valeur ``||smarthome:P1||`` par ``||smarthome:P3||``.
 
 ```package
 
@@ -88,20 +86,16 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celcius = input.temperature()
-led.enable(false)
-OLED.init(128, 64)
+let Lumen = 0
 basic.forever(function () {
-	
+    Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
 })
 
 ```
 
 ## Étape 5
 
-Ajoute le bloc ``||OLED: show string ||`` (trad. : montrer ligne) dans le bloc ``||basic: toujours ||``.
-
-Remplace la valeur ``||OLED: " " ||`` par le bloc ``||variables: Celcius ||``.
+Ajoute le bloc ``||LED:clear OLED display||`` (trad. : effacer l'écran) sous le bloc ``||variables: définir Lumen ||``.
 
 ```package
 
@@ -111,37 +105,62 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
+let Lumen = 0
 basic.forever(function () {
-    let Celcius = ""
-    OLED.writeStringNewLine(Celcius)
+    Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
+    OLED.clear()
 })
 
 ```
-
-## Étape 5
-
-Ajoute le bloc ``||basic: pause (ms) ||`` sous le bloc ``||OLED: " " ||``.
-
-Remplace la valeur ``||basic: 100 ||`` par ``||basic: 5000 ||``.
-
-```package
-
-dstemps=github:tinkertanker/pxt-smarthome
-
-```
-
-```blocks
-
-basic.forever(function () {
-    let Celcius = ""
-    OLED.writeStringNewLine(Celcius)
-    basic.pause(5000)
-})
-
-```
-
 
 ## Étape 6
+
+Ajoute le bloc ``||LED:show number||`` (trad. : montrer le nombre) sous le bloc ``||LED: clear OLED display ||`` (trad. : effacer l'écran).
+
+Remplace la valeur ``||LED:0||`` par le bloc ``||variables: Lumen ||``.
+
+```package
+
+dstemps=github:tinkertanker/pxt-smarthome
+
+```
+
+```blocks
+
+let Lumen = 0
+basic.forever(function () {
+    Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
+    OLED.clear()
+    OLED.writeNumNewLine(Lumen)
+})
+
+```
+
+## Étape 7
+
+Ajoute le bloc ``||basic:pause (ms)||`` sous le bloc ``||LED: show number ||`` (trad. : montrer nombre).
+
+Remplace la valeur ``||basic:100||`` par le bloc ``||basic:1000||``.
+
+```package
+
+dstemps=github:tinkertanker/pxt-smarthome
+
+```
+
+```blocks
+
+let Lumen = 0
+basic.forever(function () {
+    Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
+    OLED.clear()
+    OLED.writeNumNewLine(Lumen)
+    basic.pause(1000)
+})
+
+```
+
+## Étape 8
 
 Voici la programmation complète du programme.
 
@@ -153,27 +172,22 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
+let Lumen = 0
 led.enable(false)
 OLED.init(128, 64)
-let Celcius: string = input.temperature()
 basic.forever(function () {
-    OLED.writeStringNewLine(Celcius)
-    basic.pause(5000)
+    Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
+    OLED.clear()
+    OLED.writeNumNewLine(Lumen)
+    basic.pause(1000)
 })
-
 
 ```
 
 ## @showdialog 
 
-Réalise le branchement ci-dessous.
+Félicitations! Tu as terminé la programmation. Réalise maintenant les branchements.
 
-![MicroSeb](https://github.com/sbergeroncp/micro-seb/blob/master/smart_home_oled.png?raw=true)
-
-
-## @showdialog 
-
-Félicitations! Tu as terminé la programmation.
+Dans quel port du bouclier d'extension dois-tu le capteur de luminosité ?
 
 Pour tester le circuit électrique, télécharge la programmation dans le micro:bit.
-

@@ -199,13 +199,11 @@ basic.forever(function () {
 
 ## Étape 9
 
-Ajoute le bloc ``||variables:  définir strip ||`` (trad. : bande lumineuse) de l'onglet ``||neopixel:  neopixel ||`` dans le bloc ``||basic:toujours||``.
+Modifie le bloc ``||logic: 0 <= 0||``.
 
-Remplace la valeur ``||neopixel:  P0 ||`` par ``||neopixel:  P1 ||``.
+Remplace la valeur ``||logic: 0||`` de gauche par le bloc ``||variables: Celcius||``.
 
-Remplace la valeur ``||neopixel:  24 ||`` par  ``||neopixel:  1 ||``.
-
-La valeur ``||neopixel:  RGB ||`` demeure la même.
+Remplace la valeur ``||logic: 0||`` de droite par la valeur ``||logic: 25||``.
 
 ```package
 
@@ -215,132 +213,13 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let strip: neopixel.Strip = null
 basic.forever(function () {
     let Celcius = 0
     basic.pause(2000)
     if (Celcius <= 25) {
-        strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
+    	
     } else {
     	
-    }
-})
-
-```
-
-## Étape 10
-
-Ajoute le bloc ``||neopixel:  régler couleur||`` sous le bloc ``||variables:  définir strip ||``.
-
-Remplace la valeur ``||neopixel: couleur||`` par la valeur ``||neopixel: noir||``. 
-```package
-
-dstemps=github:tinkertanker/pxt-smarthome
-
-```
-
-```blocks
-
-let strip: neopixel.Strip = null
-basic.forever(function () {
-    let Celcius = 0
-    basic.pause(2000)
-    if (Celcius <= 25) {
-        strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
-        strip.showColor(neopixel.colors(NeoPixelColors.Black))
-    } else {
-    	
-    }
-})
-
-
-```
-
-## Étape 11
-
-Ajoute le bloc ``||variables:  définir strip ||`` (trad. : bande lumineuse) de l'onglet ``||neopixel:  neopixel ||`` sous le bloc ``||logic:sinon||``.
-
-Remplace la valeur ``||neopixel:  P0 ||`` par ``||neopixel:  P1 ||``.
-
-Remplace la valeur ``||neopixel:  24 ||`` par  ``||neopixel:  1 ||``.
-
-La valeur ``||neopixel:  RGB ||`` demeure la même.
-
-```package
-
-dstemps=github:tinkertanker/pxt-smarthome
-
-```
-
-```blocks
-
-let strip: neopixel.Strip = null
-basic.forever(function () {
-    let Celcius = 0
-    basic.pause(2000)
-    if (Celcius <= 25) {
-        strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
-        strip.showColor(neopixel.colors(NeoPixelColors.Black))
-    } else {
-        strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
-    }
-})
-
-```
-
-## Étape 12
-
-Ajoute le bloc ``||neopixel:  régler couleur||`` sous le bloc ``||variables:  définir strip ||``.
-
-Remplace la valeur ``||neopixel: couleur||`` par la valeur ``||neopixel: rouge||``. 
-```package
-
-dstemps=github:tinkertanker/pxt-smarthome
-
-```
-
-```blocks
-
-let strip: neopixel.Strip = null
-basic.forever(function () {
-    let Celcius = 0
-    basic.pause(2000)
-    if (Celcius <= 25) {
-        strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
-        strip.showColor(neopixel.colors(NeoPixelColors.Black))
-    } else {
-        strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
-        strip.showColor(neopixel.colors(NeoPixelColors.Red))
-    }
-})
-
-```
-
-## Étape 12
-
-Voici la programmation complète du programme.
-
-```package
-
-dstemps=github:tinkertanker/pxt-smarthome
-
-```
-
-```blocks
-
-let strip: neopixel.Strip = null
-led.enable(false)
-basic.pause(100)
-let Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
-basic.forever(function () {
-    OLED.writeNumNewLine(Celcius)
-    basic.pause(2000)
-    if (Celcius <= 25) {
-        strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
-        strip.showColor(neopixel.colors(NeoPixelColors.Black))
-    } else {
-        strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
-        strip.showColor(neopixel.colors(NeoPixelColors.Yellow))
     }
 })
 

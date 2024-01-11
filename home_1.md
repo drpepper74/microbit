@@ -78,7 +78,7 @@ basic.forever(function () {
 
 ## Étape 4
 
-Remplace la valeur ``||OLED: " " ||`` du bloc ``||OLED: show string ||`` par ton prénom (sans accent).
+Remplace la valeur ``||OLED: " " ||`` du bloc ``||OLED: show string ||`` (trad. : montrer la ligne) par ton prénom (sans accent).
 
 Exemple : Marc-Andre au lieu de Marc-André.
 
@@ -143,11 +143,6 @@ basic.forever(function () {
 
 ## @showdialog 
 
-Branche l'écran OLED dans bouclier d'extension.
-
-
-## @showdialog 
-
-Félicitations! Tu as terminé la programmation.
+Félicitations! Tu as terminé la programmation. Réalise maintenant les branchements.
 
 Pour tester le circuit électrique, télécharge la programmation dans le micro:bit.

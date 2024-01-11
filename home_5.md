@@ -97,7 +97,7 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 5
 
-Ajoute le bloc ``||LED:clear OLED display||`` (trad. : effacer l'écran) sous le bloc ``||variables: définir Celcius ||``.
+Ajoute le bloc ``||OLED:clear OLED display||`` (trad. : effacer l'écran) sous le bloc ``||variables: définir Celcius ||``.
 
 ```package
 
@@ -117,9 +117,9 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 6
 
-Ajoute le bloc ``||LED:show number||`` (trad. : montrer le nombre) sous le bloc ``||LED: clear OLED display ||`` (trad. : effacer l'écran).
+Ajoute le bloc ``||OLED:show number||`` (trad. : montrer le nombre) sous le bloc ``||OLED: clear OLED display ||`` (trad. : effacer l'écran).
 
-Remplace la valeur ``||LED:0||`` par le bloc ``||variables: Celcius ||``.
+Remplace la valeur ``||OLED:0||`` par le bloc ``||variables: Celcius ||``.
 
 ```package
 

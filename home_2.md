@@ -48,7 +48,7 @@ basic.forever(function () {
 
 ## Étape 3
 
-Modifie le bloc ``||variables:  définir strip ||``.
+Modifie le bloc ``||variables:  définir strip ||`` (trad. : bande lumineuse).
 
 Remplace la valeur ``||neopixel:  P0 ||`` par ``||neopixel:  P1 ||``.
 
@@ -74,7 +74,7 @@ basic.forever(function () {
 
 ## Étape 4
 
-Ajoute le bloc ``||neopixel:  régler couleur||`` sous le bloc ``||variables:  définir strip ||`.
+Ajoute le bloc ``||neopixel:  régler couleur||`` sous le bloc ``||variables:  définir strip ||`` (trad. : bande lumineuse).
 
 La valeur ``||neopixel:  rouge ||`` demeure la même.
 
@@ -97,6 +97,31 @@ basic.forever(function () {
 
 ## Étape 5
 
+Ajoute le bloc ``||basic: pause (ms) ||`` sous le bloc ``||neopixel:  régler couleur ||``.
+
+Remplace la valeur ``||basic: 100 ||`` par ``||basic: 1000 ||``.
+
+```package
+
+dstemps=github:tinkertanker/pxt-smarthome
+
+```
+
+```blocks
+
+let strip: neopixel.Strip = null
+basic.forever(function () {
+    strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
+    strip.showColor(neopixel.colors(NeoPixelColors.Red))
+    basic.pause(1000)
+})
+
+
+
+```
+
+## Étape 6
+
 Voici la programmation complète du programme.
 
 ```package
@@ -112,14 +137,14 @@ led.enable(false)
 basic.forever(function () {
     strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
     strip.showColor(neopixel.colors(NeoPixelColors.Red))
+    basic.pause(1000)
 })
+
 
 ```
 
 ## @showdialog 
 
 Félicitations! Tu as terminé la programmation. Réalise maintenant les branchements.
-
-Dans quel port du bouclier d'extension dois-tu brancher la lumière RGB ?
 
 Pour tester le circuit électrique, télécharge la programmation dans le micro:bit.

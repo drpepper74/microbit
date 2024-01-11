@@ -97,7 +97,7 @@ basic.forever(function () {
 
 ## Étape 5
 
-Ajoute le bloc ``||LED:clear OLED display||`` (trad. : effacer l'écran) sous le bloc ``||variables: définir Celcius ||``.
+Ajoute le bloc ``||OLED:clear OLED display||`` (trad. : effacer l'écran) sous le bloc ``||variables: définir Celcius ||``.
 
 ```package
 
@@ -117,9 +117,9 @@ basic.forever(function () {
 
 ## Étape 6
 
-Ajoute le bloc ``||LED:show number||`` (trad. : montrer le nombre) sous le bloc ``||LED: clear OLED display ||`` (trad. : effacer l'écran).
+Ajoute le bloc ``||OLED:show number||`` (trad. : montrer le nombre) sous le bloc ``||OLED: clear OLED display ||`` (trad. : effacer l'écran).
 
-Remplace la valeur ``||LED:0||`` par le bloc ``||variables: Celcius ||``.
+Remplace la valeur ``||OLED:0||`` par le bloc ``||variables: Celcius ||``.
 
 ```package
 
@@ -140,7 +140,7 @@ basic.forever(function () {
 
 ## Étape 7
 
-Ajoute le bloc ``||basic:pause (ms)||`` sous le bloc ``||LED: show number ||`` (trad. : montrer nombre).
+Ajoute le bloc ``||basic:pause (ms)||`` sous le bloc ``||OLED: show number ||`` (trad. : montrer nombre).
 
 Remplace la valeur ``||basic:100||`` par le bloc ``||basic:1000||``.
 
@@ -189,7 +189,5 @@ basic.forever(function () {
 ## @showdialog 
 
 Félicitations! Tu as terminé la programmation. Réalise maintenant les branchements.
-
-Dans quel port du bouclier d'extension dois-tu le capteur de température ?
 
 Pour tester le circuit électrique, télécharge la programmation dans le micro:bit.

@@ -1,6 +1,6 @@
 # ElecFreaks micro:bit Smart Home Kit
 
-# Tutoriel 6
+# Tutoriel 8
 
 ## @showdialog
 
@@ -105,7 +105,7 @@ basic.forever(function () {
 
 Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Lumen||``.
 
-Ajoute le bloc ``||variables: définir Lumen ||`` dans le bloc ``||basic: toujours ||``.
+Ajoute le bloc ``||variables: définir Lumen ||`` sous le bloc ``||variables: définir Celcius ||``.
 
 Remplace la valeur ``||variables:0||`` par le bloc ``||smarthome:value of light intensity||`` (trad. : la valeur du niveau d'intensité lumineuse).
 

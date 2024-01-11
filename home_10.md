@@ -1,6 +1,6 @@
 # ElecFreaks micro:bit Smart Home Kit
 
-# Tutoriel 9
+# Tutoriel 10
 
 ## @showdialog
 
@@ -59,7 +59,7 @@ basic.forever(function () {
 
 Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Celcius||``.
 
-Ajoute le bloc ``||variables: définir Celcius ||`` dans le bloc ``||basic: toujours ||``.
+Ajoute le bloc ``||variables: définir Celcius ||`` dans le bloc ``||loops: chaque 500 ms||``.
 
 Remplace la valeur ``||variables:0||`` par le bloc ``||smarthome:value of temperature||`` (trad. : la valeur de la température).
 
@@ -72,8 +72,8 @@ dstemps=github:tinkertanker/pxt-smarthome
 ```blocks
 
 let Celcius = 0
-basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P0)
+loops.everyInterval(500, function () {
+    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P1)
 })
 
 ```
@@ -95,7 +95,7 @@ dstemps=github:tinkertanker/pxt-smarthome
 ```blocks
 
 let Celcius = 0
-basic.forever(function () {
+loops.everyInterval(500, function () {
     Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
 })
 
@@ -119,7 +119,7 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 let Celcius = 0
 let Lumen = 0
-basic.forever(function () {
+loops.everyInterval(500, function () {
     Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P1)
 })
@@ -142,11 +142,10 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 let Celcius = 0
 let Lumen = 0
-basic.forever(function () {
+loops.everyInterval(500, function () {
     Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
 })
-
 
 ```
 
@@ -164,7 +163,7 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 let Celcius = 0
 let Lumen = 0
-basic.forever(function () {
+loops.everyInterval(500, function () {
     Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
     if (true) {
@@ -174,9 +173,10 @@ basic.forever(function () {
     }
 })
 
+
 ```
 
-## Étape 8
+## Étape 6
 
 Modifie le bloc ``||logic:si vrai alors sinon||``.
 
@@ -206,7 +206,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 9
+## Étape 7
 
 Modifie le bloc ``||logic: et||``.
 
@@ -238,7 +238,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 10
+## Étape 8
 
 Modifie le bloc ``||logic: et||``.
 
@@ -270,7 +270,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 11
+## Étape 9
 
 Ajoute le bloc ``||variables:  définir strip ||`` (trad. : bande lumineuse) de l'onglet ``||neopixel:  neopixel ||`` dans le bloc ``||logic:si alors||``.
 
@@ -305,7 +305,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 12
+## Étape 10
 
 Ajoute le bloc ``||neopixel:  régler couleur||`` sous le bloc ``||variables:  définir strip ||``.
 
@@ -336,7 +336,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 13
+## Étape 11
 
 Ajoute le bloc ``||music:  jouer tonalité||`` sous le bloc ``||neopixel:  régler couleur||``.
 
@@ -370,7 +370,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 14
+## Étape 12
 
 Ajoute le bloc ``||variables:  définir strip ||`` (trad. : bande lumineuse) de l'onglet ``||neopixel:  neopixel ||`` dans le bloc ``||logic:sinon||``.
 
@@ -408,7 +408,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 15
+## Étape 13
 
 Ajoute le bloc ``||neopixel:  régler couleur||`` sous le bloc ``||variables:  définir strip ||``.
 
@@ -440,7 +440,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 16
+## Étape 14
 
 Ajoute le bloc ``||OLED: clear OLED ||`` (trad. : effacer l'écran) dans le bloc ``||input:lorsque le bouton A est pressé||``.
 
@@ -458,7 +458,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 17
+## Étape 15
 
 Ajoute le bloc ``||OLED: show string ||`` (trad. : montrer la ligne) sous le bloc ``||OLED: clear OLED ||`` (trad. : effacer écran).
 
@@ -485,7 +485,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 18
+## Étape 16
 
 Ajoute le bloc ``||OLED: clear OLED ||`` (trad. : effacer l'écran) dans le bloc ``||input:lorsque le bouton B est pressé||``.
 
@@ -503,7 +503,7 @@ input.onButtonPressed(Button.B, function () {
 
 ```
 
-## Étape 19
+## Étape 17
 
 Ajoute le bloc ``||OLED: draw loading bar ||`` (trad. : dessiner une ligne de progression) sous le bloc ``||OLED: clear OLED ||`` (trad. : effacer écran).
 
@@ -525,7 +525,7 @@ input.onButtonPressed(Button.B, function () {
 
 ```
 
-## Étape 20
+## Étape 18
 
 Voici la programmation complète du programme.
 

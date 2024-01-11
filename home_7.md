@@ -1,6 +1,6 @@
 # ElecFreaks micro:bit Smart Home Kit
 
-# Tutoriel 6
+# Tutoriel 7
 
 ## @showdialog
 

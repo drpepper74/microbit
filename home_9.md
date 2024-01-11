@@ -208,7 +208,7 @@ basic.forever(function () {
 
 ## Étape 9
 
-Modifie le bloc ``||logic: et||``.
+Modifie le bloc ``||logic: ou||``.
 
 Remplace l'espace de gauche par le bloc ``||logic:0 > 0||``.
 

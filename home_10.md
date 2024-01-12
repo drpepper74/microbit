@@ -180,7 +180,9 @@ loops.everyInterval(500, function () {
 
 Modifie le bloc ``||logic:si vrai alors sinon||``.
 
-Remplace la valeur ``||logic:vrai||`` par le bloc ``||logic: et||``.
+Remplace la valeur ``||logic:vrai||`` par le bloc ``||logic: et||`` / le bloc ``||logic: ou||``. 
+
+Choisis.
 
 ```package
 
@@ -206,7 +208,7 @@ loops.everyInterval(500, function () {
 
 ## Étape 7
 
-Modifie le bloc ``||logic: et||``.
+Modifie le bloc ``||logic: et||`` / le bloc ``||logic: ou||``.
 
 Remplace l'espace de gauche par le bloc ``||logic:0 > 0||``.
 
@@ -238,7 +240,7 @@ loops.everyInterval(500, function () {
 
 ## Étape 8
 
-Modifie le bloc ``||logic: et||``.
+Modifie le bloc ``||logic: et||`` / le bloc ``||logic: ou||``.
 
 Remplace l'espace de droite par le bloc ``||logic:0 > 0||``.
 
@@ -307,7 +309,7 @@ loops.everyInterval(500, function () {
 
 Ajoute le bloc ``||neopixel:  régler couleur||`` sous le bloc ``||variables:  définir strip ||``.
 
-Remplace la valeur ``||neopixel:  rouge ||`` par une valeur ``||neopixel:  orange ||``.
+Remplace la valeur / la couleur ``||neopixel:  rouge ||`` par la valeur / couleur de ton choix.
 
 ```package
 
@@ -521,24 +523,6 @@ input.onButtonPressed(Button.B, function () {
 
 ## Étape 20
 
-Ajoute le bloc ``||OLED: clear OLED ||`` (trad. : effacer l'écran) dans le bloc ``||input:lorsque le bouton A+B est pressé||``.
-
-```package
-
-dstemps=github:tinkertanker/pxt-smarthome
-
-```
-
-```blocks
-
-input.onButtonPressed(Button.AB, function () {
-    OLED.clear()
-})
-
-```
-
-## Étape 21
-
 Voici la programmation complète du programme.
 
 ```package
@@ -551,14 +535,12 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 input.onButtonPressed(Button.A, function () {
     OLED.clear()
+    OLED.writeStringNewLine("Celcius")
     OLED.writeNumNewLine(Celcius)
-})
-input.onButtonPressed(Button.AB, function () {
-    OLED.clear()
 })
 input.onButtonPressed(Button.B, function () {
     OLED.clear()
-    OLED.writeNumNewLine(Lumen)
+    OLED.drawLoading(Lumen)
 })
 let strip: neopixel.Strip = null
 let Lumen = 0
@@ -576,6 +558,7 @@ loops.everyInterval(1000 * 5, function () {
         strip.showColor(neopixel.colors(NeoPixelColors.Black))
     }
 })
+
 
 
 ```

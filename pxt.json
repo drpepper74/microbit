@@ -83,7 +83,8 @@
         "_locales/fr/home_8.md",
         "home_a.md",
         "home_9.md",
-        "home_10.md"
+        "home_10.md",
+        "home_b.md"
     ],
     "testFiles": [
         "test.ts"

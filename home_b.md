@@ -1,6 +1,6 @@
 # ElecFreaks micro:bit Smart Home Kit
 
-# Tutoriel supplémentaire - A
+# Tutoriel supplémentaire - B
 
 ## @showdialog
 
@@ -21,28 +21,36 @@ dstemps=github:tinkertanker/pxt-smarthome
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
-    OLED.clear()
+    OLED.writeStringNewLine("Celcius")
     OLED.writeNumNewLine(Celcius)
 })
 input.onButtonPressed(Button.AB, function () {
-    strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
-    strip.showColor(neopixel.colors(NeoPixelColors.Red))
+    OLED.clear()
 })
 input.onButtonPressed(Button.B, function () {
-    Lumen = smarthome.ReadLightIntensity(AnalogPin.P1)
     OLED.clear()
-    OLED.writeNumNewLine(Lumen)
+    OLED.drawLoading(Lumen)
 })
-let Lumen = 0
 let strip: neopixel.Strip = null
+let Lumen = 0
 let Celcius = 0
 led.enable(false)
 OLED.init(128, 64)
 basic.forever(function () {
     basic.pause(100)
-    OLED.writeStringNewLine("microbit")
 })
+loops.everyInterval(1000 * 5, function () {
+    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
+    if (Celcius > 25 && Lumen > 50) {
+        strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
+        strip.showColor(neopixel.colors(NeoPixelColors.Orange))
+    } else {
+        strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
+        strip.showColor(neopixel.colors(NeoPixelColors.Black))
+    }
+})
+
 
 ```
 

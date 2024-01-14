@@ -84,7 +84,9 @@
         "home_a.md",
         "home_9.md",
         "home_10.md",
-        "home_b.md"
+        "home_b.md",
+        "home_11.md",
+        "home_12.md"
     ],
     "testFiles": [
         "test.ts"

@@ -24,7 +24,7 @@ input.onButtonPressed(Button.A, function () {
     OLED.clear()
     OLED.writeStringNewLine("Celcius")
     OLED.writeNumNewLine(Celcius)
-    if (Celcius < 25) {
+    if (Lumen > 50 || Lumen < 50) {
         music.play(music.tonePlayable(131, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
     }
 })
@@ -34,7 +34,7 @@ input.onButtonPressed(Button.AB, function () {
 input.onButtonPressed(Button.B, function () {
     OLED.clear()
     OLED.drawLoading(Lumen)
-    if (Lumen > 50) {
+    if (Lumen > 50 && Lumen < 50) {
         music.play(music.tonePlayable(988, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
     }
 })
@@ -52,6 +52,7 @@ loops.everyInterval(1000 * 5, function () {
     Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
 })
+
 
 ```
 

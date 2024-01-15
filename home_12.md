@@ -55,11 +55,11 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 5
 
-Modifie le bloc ``|| pins: régler position servo ||``.
+Modifie le bloc ``|| pins: écrire sur la broche ||``.
 
 Remplace la broche ``|| pins: P0 ||`` par ``|| pins : P12 ||``.
 
-Remplace la valeur ``|| pins: 180 ||`` par ``|| pins : 1 ||``.
+Remplace la valeur ``|| pins: 0 ||`` par ``|| pins : 1 ||``.
 
 ```blocks
 
@@ -91,7 +91,7 @@ input.onButtonPressed(Button.B, function () {
 
 ## Étape 7
 
-Modifie le bloc ``|| pins: régler position servo ||``.
+Modifie le bloc ``|| pins: écrire sur la broche ||``.
 
 Remplace la broche ``|| pins: P0 ||`` par ``|| pins : P12 ||``.
 

@@ -22,8 +22,8 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 input.onButtonPressed(Button.A, function () {
     OLED.clear()
-    OLED.writeStringNewLine("Celcius")
-    OLED.writeNumNewLine(Celcius)
+    OLED.writeStringNewLine("Celsius")
+    OLED.writeNumNewLine(Celsius)
     if (Lumen > 50 || Lumen < 50) {
         music.play(music.tonePlayable(131, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
     }
@@ -39,7 +39,7 @@ input.onButtonPressed(Button.B, function () {
     }
 })
 let Lumen = 0
-let Celcius = 0
+let Celsius = 0
 pins.servoWritePin(AnalogPin.P0, 180)
 pins.digitalWritePin(DigitalPin.P0, 0)
 led.enable(false)
@@ -51,7 +51,7 @@ basic.forever(function () {
     basic.pause(100)
 })
 loops.everyInterval(1000 * 5, function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
 })
 

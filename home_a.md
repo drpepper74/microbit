@@ -21,9 +21,9 @@ dstemps=github:tinkertanker/pxt-smarthome
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     OLED.clear()
-    OLED.writeNumNewLine(Celcius)
+    OLED.writeNumNewLine(Celsius)
 })
 input.onButtonPressed(Button.AB, function () {
     strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
@@ -36,7 +36,7 @@ input.onButtonPressed(Button.B, function () {
 })
 let Lumen = 0
 let strip: neopixel.Strip = null
-let Celcius = 0
+let Celsius = 0
 led.enable(false)
 OLED.init(128, 64)
 basic.forever(function () {

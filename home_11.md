@@ -92,8 +92,7 @@ Modifie le bloc ``|| pins: régler position servo ||``.
 
 Remplace la broche ``|| pins: P0 ||`` par ``|| pins : P8 ||``.
 
-Remplace la valeur ``|| pins: 180 ||`` par ``|| pins : 180 ||``.
-
+La valeur ``|| pins: 180 ||`` demeure la même.
 ```blocks
 
 input.onButtonPressed(Button.B, function () {

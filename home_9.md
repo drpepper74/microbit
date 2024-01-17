@@ -57,9 +57,9 @@ basic.forever(function () {
 
 ## Étape 3
 
-Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Celcius||``.
+Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Celsius||``.
 
-Ajoute le bloc ``||variables: définir Celcius ||`` dans le bloc ``||basic: toujours ||``.
+Ajoute le bloc ``||variables: définir Celsius ||`` dans le bloc ``||basic: toujours ||``.
 
 Remplace la valeur ``||variables:0||`` par le bloc ``||smarthome:value of temperature||`` (trad. : la valeur de la température).
 
@@ -71,9 +71,9 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celcius = 0
+let Celsius = 0
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P0)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P0)
 })
 
 ```
@@ -94,9 +94,9 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celcius = 0
+let Celsius = 0
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
 })
 
 ```
@@ -105,7 +105,7 @@ basic.forever(function () {
 
 Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Lumen||``.
 
-Ajoute le bloc ``||variables: définir Lumen ||`` sous le bloc ``||variables: définir Celcius ||``.
+Ajoute le bloc ``||variables: définir Lumen ||`` sous le bloc ``||variables: définir Celsius ||``.
 
 Remplace la valeur ``||variables:0||`` par le bloc ``||smarthome:value of light intensity||`` (trad. : la valeur du niveau d'intensité lumineuse).
 
@@ -117,10 +117,10 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celcius = 0
+let Celsius = 0
 let Lumen = 0
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P1)
 })
 
@@ -140,10 +140,10 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celcius = 0
+let Celsius = 0
 let Lumen = 0
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
 })
 
@@ -162,10 +162,10 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celcius = 0
+let Celsius = 0
 let Lumen = 0
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
     if (true) {
     	
@@ -190,10 +190,10 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celcius = 0
+let Celsius = 0
 let Lumen = 0
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
     if (false || false) {
     	
@@ -212,7 +212,7 @@ Modifie le bloc ``||logic: ou||``.
 
 Remplace l'espace de gauche par le bloc ``||logic:0 > 0||``.
 
-Remplace la valeur ``||logic:0||`` de gauche par le bloc ``||variables:Celcius||``.
+Remplace la valeur ``||logic:0||`` de gauche par le bloc ``||variables:Celsius||``.
 
 Remplace la valeur ``||logic:0||`` de droite par la valeur ``||logic:25||``.
 
@@ -224,12 +224,12 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celcius = 0
+let Celsius = 0
 let Lumen = 0
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (Celcius > 25 || false) {
+    if (Celsius > 25 || false) {
     	
     } else {
     	
@@ -256,12 +256,12 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celcius = 0
+let Celsius = 0
 let Lumen = 0
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (Celcius > 25 || Lumen < 50) {
+    if (Celsius > 25 || Lumen < 50) {
     	
     } else {
     	
@@ -290,13 +290,13 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celcius = 0
+let Celsius = 0
 let Lumen = 0
 let strip: neopixel.Strip = null
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (Celcius > 25 || Lumen < 50) {
+    if (Celsius > 25 || Lumen < 50) {
         strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
     } else {
     	
@@ -319,13 +319,13 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celcius = 0
+let Celsius = 0
 let Lumen = 0
 let strip: neopixel.Strip = null
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (Celcius > 25 || Lumen < 50) {
+    if (Celsius > 25 || Lumen < 50) {
         strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
         strip.showColor(neopixel.colors(NeoPixelColors.Black))
     } else {
@@ -353,13 +353,13 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celcius = 0
+let Celsius = 0
 let Lumen = 0
 let strip: neopixel.Strip = null
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (Celcius > 25 || Lumen < 50) {
+    if (Celsius > 25 || Lumen < 50) {
         strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
         strip.showColor(neopixel.colors(NeoPixelColors.Black))
         music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
@@ -390,13 +390,13 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celcius = 0
+let Celsius = 0
 let Lumen = 0
 let strip: neopixel.Strip = null
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (Celcius > 25 || Lumen < 50) {
+    if (Celsius > 25 || Lumen < 50) {
         strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
         strip.showColor(neopixel.colors(NeoPixelColors.Black))
         music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
@@ -422,13 +422,13 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celcius = 0
+let Celsius = 0
 let Lumen = 0
 let strip: neopixel.Strip = null
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (Celcius > 25 || Lumen < 50) {
+    if (Celsius > 25 || Lumen < 50) {
         strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
         strip.showColor(neopixel.colors(NeoPixelColors.Black))
         music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
@@ -462,11 +462,11 @@ input.onButtonPressed(Button.A, function () {
 
 Ajoute le bloc ``||OLED: show string ||`` (trad. : montrer la ligne) sous le bloc ``||OLED: clear OLED ||`` (trad. : effacer écran).
 
-Remplace la valeur ``||OLED: " " ||`` par le mot ``||OLED:Celcius||``. 
+Remplace la valeur ``||OLED: " " ||`` par le mot ``||OLED:Celsius||``. 
 
 Ajoute le bloc ``||OLED: show number ||`` (trad. : montrer le nombre) sous le bloc ``||OLED: show string ||``.
 
-Remplace la valeur ``||OLED: 0 ||`` par le bloc ``||variables:Celcius||``.
+Remplace la valeur ``||OLED: 0 ||`` par le bloc ``||variables:Celsius||``.
 
 ```package
 
@@ -477,10 +477,10 @@ dstemps=github:tinkertanker/pxt-smarthome
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
-    let Celcius = 0
+    let Celsius = 0
     OLED.clear()
-    OLED.writeStringNewLine("Celcius")
-    OLED.writeNumNewLine(Celcius)
+    OLED.writeStringNewLine("Celsius")
+    OLED.writeNumNewLine(Celsius)
 })
 
 ```
@@ -539,7 +539,7 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 input.onButtonPressed(Button.A, function () {
     OLED.clear()
-    OLED.writeNumNewLine(Celcius)
+    OLED.writeNumNewLine(Celsius)
 })
 input.onButtonPressed(Button.B, function () {
     OLED.clear()
@@ -547,13 +547,13 @@ input.onButtonPressed(Button.B, function () {
 })
 let strip: neopixel.Strip = null
 let Lumen = 0
-let Celcius = 0
+let Celsius = 0
 led.enable(false)
 OLED.init(128, 64)
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (Celcius < 25 || Lumen > 50) {
+    if (Celsius < 25 || Lumen > 50) {
         strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
         strip.showColor(neopixel.colors(NeoPixelColors.Black))
         music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)

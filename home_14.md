@@ -298,18 +298,24 @@ input.onButtonPressed(Button.A, function () {
     OLED.writeStringNewLine("Celsius")
     OLED.writeNumNewLine(Celsius)
 })
-let Celsius = 0
+let Celsius2 = 0
 led.enable(false)
 OLED.init(128, 64)
 pins.digitalWritePin(DigitalPin.P12, 0)
 basic.forever(function () {
-    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
-    if (Celsius < 25) {
+    Celsius2 = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    if (Celsius2 < 25) {
         pins.digitalWritePin(DigitalPin.P12, 1)
     } else {
         pins.digitalWritePin(DigitalPin.P12, 0)
     }
 })
+basic.forever(function () {
+    if (false && false) {
+    	
+    }
+})
+
 
 ```
 

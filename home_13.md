@@ -313,6 +313,12 @@ basic.forever(function () {
         pins.servoWritePin(AnalogPin.P8, 0)
     }
 })
+basic.forever(function () {
+    if (false && false) {
+    	
+    }
+})
+
 
 ```
 

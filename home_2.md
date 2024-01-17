@@ -145,6 +145,14 @@ basic.forever(function () {
 
 ## @showdialog 
 
+Attention au bloc ``||variables:  définir strip ||`` !
+
+Assure-toi d'utiliser ``||variables:  définir strip ||`` et non ``||variables:  définir strip ||`` suivi d'un chiffre .
+
+Exemple : ``||variables:  définir strip1 ||`` ou ``||variables:  définir strip2 ||``.
+
+## @showdialog 
+
 Félicitations! Tu as terminé la programmation. Réalise maintenant les branchements.
 
 Pour tester le circuit électrique, télécharge la programmation dans le micro:bit.

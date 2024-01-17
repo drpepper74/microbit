@@ -51,9 +51,9 @@ basic.forever(function () {
 
 ## Étape 3
 
-Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Celcius||``.
+Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Celsius||``.
 
-Ajoute le bloc ``||variables: définir Celcius ||`` dans le bloc ``||basic: toujours ||``.
+Ajoute le bloc ``||variables: définir Celsius ||`` dans le bloc ``||basic: toujours ||``.
 
 Remplace la valeur ``||variables:0||`` par le bloc ``||smarthome:value of temperature||`` (trad. : la valeur de la température).
 
@@ -65,9 +65,9 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celcius = 0
+let Celsius = 0
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P0)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P0)
 })
 
 ```
@@ -88,16 +88,16 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celcius = 0
+let Celsius = 0
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
 })
 
 ```
 
 ## Étape 5
 
-Ajoute le bloc ``||OLED:clear OLED display||`` (trad. : effacer l'écran) sous le bloc ``||variables: définir Celcius ||``.
+Ajoute le bloc ``||OLED:clear OLED display||`` (trad. : effacer l'écran) sous le bloc ``||variables: définir Celsius ||``.
 
 ```package
 
@@ -107,9 +107,9 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celcius = 0
+let Celsius = 0
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     OLED.clear()
 })
 
@@ -119,7 +119,7 @@ basic.forever(function () {
 
 Ajoute le bloc ``||OLED:show number||`` (trad. : montrer le nombre) sous le bloc ``||OLED: clear OLED display ||`` (trad. : effacer l'écran).
 
-Remplace la valeur ``||OLED:0||`` par le bloc ``||variables: Celcius ||``.
+Remplace la valeur ``||OLED:0||`` par le bloc ``||variables: Celsius ||``.
 
 ```package
 
@@ -129,11 +129,11 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celcius = 0
+let Celsius = 0
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     OLED.clear()
-    OLED.writeNumNewLine(Celcius)
+    OLED.writeNumNewLine(Celsius)
 })
 
 ```
@@ -152,11 +152,11 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celcius = 0
+let Celsius = 0
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     OLED.clear()
-    OLED.writeNumNewLine(Celcius)
+    OLED.writeNumNewLine(Celsius)
     basic.pause(1000)
 })
 
@@ -174,13 +174,13 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celcius = 0
+let Celsius = 0
 led.enable(false)
 OLED.init(128, 64)
 basic.forever(function () {
-    Celcius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     OLED.clear()
-    OLED.writeNumNewLine(Celcius)
+    OLED.writeNumNewLine(Celsius)
     basic.pause(1000)
 })
 

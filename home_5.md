@@ -51,7 +51,7 @@ basic.forever(function () {
 
 ## Étape 3
 
-Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Celsius||``.
+Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:Celsius||``.
 
 Ajoute le bloc ``||variables: définir Celsius ||`` dans le bloc ``||input:lorsque le bouton A est pressé ||``.
 
@@ -140,7 +140,9 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 8
 
-Voici la programmation complète du programme.
+Voici une partie de la programmation du programme. 
+
+Certains blocs te seront utiles pour réaliser le défi.
 
 ```package
 
@@ -156,17 +158,21 @@ input.onButtonPressed(Button.A, function () {
     OLED.writeNumNewLine(Celsius)
 })
 input.onButtonPressed(Button.AB, function () {
-    strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
-    strip.showColor(neopixel.colors(NeoPixelColors.Red))
+	
 })
 input.onButtonPressed(Button.B, function () {
-    Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
+	
 })
-let Lumen = 0
 let strip: neopixel.Strip = null
+let Lumen = 0
 let Celsius = 0
 led.enable(false)
 OLED.init(128, 64)
+basic.forever(function () {
+    Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
+    strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
+    strip.showColor(neopixel.colors(NeoPixelColors.Red))
+})
 
 ```
 

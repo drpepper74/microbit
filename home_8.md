@@ -57,7 +57,7 @@ basic.forever(function () {
 
 ## Étape 3
 
-Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Celsius||``.
+Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:Celsius||``.
 
 Ajoute le bloc ``||variables: définir Celsius ||`` dans le bloc ``||basic: toujours ||``.
 
@@ -103,7 +103,7 @@ basic.forever(function () {
 
 ## Étape 5
 
-Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Lumen||``.
+Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:Lumen||``.
 
 Ajoute le bloc ``||variables: définir Lumen ||`` sous le bloc ``||variables: définir Celsius ||``.
 

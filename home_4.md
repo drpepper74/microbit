@@ -51,7 +51,7 @@ basic.forever(function () {
 
 ## Étape 3
 
-Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Lumen||``.
+Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:Lumen||``.
 
 Ajoute le bloc ``||variables: définir Lumen ||`` dans le bloc ``||basic: toujours ||``.
 
@@ -67,7 +67,7 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 let Lumen = 0
 basic.forever(function () {
-    Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
+    Lumen = smarthome.ReadLightIntensity(AnalogPin.P1)
 })
 
 ```

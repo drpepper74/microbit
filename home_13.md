@@ -76,7 +76,7 @@ pins.servoWritePin(AnalogPin.P8, 0)
 
 ## Étape 4
 
-Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Lumen||``.
+Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:Lumen||``.
 
 Ajoute le bloc ``||variables: définir Lumen ||`` dans le bloc ``||basic: toujours ||``.
 

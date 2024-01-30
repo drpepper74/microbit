@@ -142,7 +142,7 @@ loops.everyInterval(500, function () {
 
 ## Étape 7
 
-Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Celsius||``.
+Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:Celsius||``.
 
 Ajoute le bloc ``||variables: définir Celsius ||`` dans le bloc ``||loops: chaque 500 ms||``.
 
@@ -188,7 +188,7 @@ loops.everyInterval(500, function () {
 
 ## Étape 9
 
-Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Lumen||``.
+Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:Lumen||``.
 
 Ajoute le bloc ``||variables: définir Lumen ||`` sous le bloc ``||variables: définir Celsius ||``.
 

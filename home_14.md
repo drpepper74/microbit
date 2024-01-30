@@ -75,7 +75,7 @@ pins.digitalWritePin(DigitalPin.P12, 0)
 
 ## Étape 4
 
-Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Celsius||``.
+Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:Celsius||``.
 
 Ajoute le bloc ``||variables: définir Celsius ||`` dans le bloc ``||basic: toujours ||``.
 

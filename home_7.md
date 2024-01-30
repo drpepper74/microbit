@@ -132,7 +132,7 @@ Remplace la valeur ``||logic:vrai||`` par le bloc ``||logic:0 < 0||``.
 
 Remplace la valeur ``||logic:0||`` de gauche par le bloc ``||variables:Lumen||``.
 
-Remplace la valeur ``||logic:0||`` de droite par la valeur ``||logic:50||``.
+Remplace la valeur ``||logic:0||`` de droite par la valeur ``||logic:40||``.
 
 ```package
 
@@ -145,7 +145,7 @@ dstemps=github:tinkertanker/pxt-smarthome
 let Lumen = 0
 basic.forever(function () {
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (Lumen < 50) {
+    if (Lumen < 40) {
     	
     } else {
     	
@@ -178,7 +178,7 @@ let Lumen = 0
 let strip: neopixel.Strip = null
 basic.forever(function () {
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (Lumen < 50) {
+    if (Lumen < 40) {
         strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
     } else {
     	
@@ -205,7 +205,7 @@ let Lumen = 0
 let strip: neopixel.Strip = null
 basic.forever(function () {
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (Lumen < 50) {
+    if (Lumen < 40) {
         strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
         strip.showColor(neopixel.colors(NeoPixelColors.Blue))
     } else {
@@ -240,7 +240,7 @@ let Lumen = 0
 let strip: neopixel.Strip = null
 basic.forever(function () {
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (Lumen < 50) {
+    if (Lumen < 40) {
         strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
         strip.showColor(neopixel.colors(NeoPixelColors.Blue))
     } else {
@@ -268,7 +268,7 @@ let Lumen = 0
 let strip: neopixel.Strip = null
 basic.forever(function () {
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (Lumen < 50) {
+    if (Lumen < 40) {
         strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
         strip.showColor(neopixel.colors(NeoPixelColors.Blue))
     } else {
@@ -343,7 +343,7 @@ led.enable(false)
 OLED.init(128, 64)
 basic.forever(function () {
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (Lumen < 50) {
+    if (Lumen < 40) {
         strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
         strip.showColor(neopixel.colors(NeoPixelColors.Blue))
     } else {

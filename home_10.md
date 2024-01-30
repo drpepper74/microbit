@@ -169,7 +169,7 @@ Modifie le bloc ``||smarthome:value of temperature||`` (trad. : la valeur de la 
 
 La valeur ``||smarthome:C||`` demeure la même.
 
-Remplace la valeur ``||smarthome:P0||`` par la valeur ``||smarthome:P2||``.
+Remplace la valeur ``||smarthome:P1||`` par la valeur ``||smarthome:P2||``.
 
 ```package
 

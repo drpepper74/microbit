@@ -29,7 +29,7 @@ basic.forever(function () {
 
 ## Étape 2
 
-Ajoute le bloc ``||variables:  définir strip ||`` (trad. : bande lumineuse) de l'onglet ``||neopixel:  neopixel ||`` dans le bloc ``||basic:toujours||``.
+Ajoute le bloc ``||variables:  définir strip ||`` (trad. : bande lumineuse) de l'onglet ``||neopixel:  neopixel ||`` sous le bloc ``||LED:activer LED||``.
 
 ```package
 
@@ -39,10 +39,9 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let strip: neopixel.Strip = null
-basic.forever(function () {
-    strip = neopixel.create(DigitalPin.P0, 24, NeoPixelMode.RGB)
-})
+led.enable(false)
+let strip = neopixel.create(DigitalPin.P0, 24, NeoPixelMode.RGB)
+
 
 ```
 
@@ -64,17 +63,16 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let strip: neopixel.Strip = null
-basic.forever(function () {
-    strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
-})
+led.enable(false)
+let strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
+
 
 
 ```
 
 ## Étape 4
 
-Ajoute le bloc ``||neopixel:  régler couleur||`` sous le bloc ``||variables:  définir strip ||`` (trad. : bande lumineuse).
+Ajoute le bloc ``||neopixel:  régler couleur||`` dans le bloc ``||basic:toujours ||``.
 
 La valeur ``||neopixel:  rouge ||`` demeure la même.
 
@@ -86,12 +84,11 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let strip: neopixel.Strip = null
+led.enable(false)
+let strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
 basic.forever(function () {
-    strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
     strip.showColor(neopixel.colors(NeoPixelColors.Red))
 })
-
 
 ```
 
@@ -109,12 +106,13 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let strip: neopixel.Strip = null
+led.enable(false)
+let strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
 basic.forever(function () {
-    strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
     strip.showColor(neopixel.colors(NeoPixelColors.Red))
     basic.pause(1000)
 })
+
 
 
 
@@ -132,24 +130,16 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let strip: neopixel.Strip = null
 led.enable(false)
+let strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
 basic.forever(function () {
-    strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
     strip.showColor(neopixel.colors(NeoPixelColors.Red))
     basic.pause(1000)
 })
 
 
+
 ```
-
-## @showdialog 
-
-Attention au bloc ``||variables:  définir strip ||`` !
-
-Assure-toi d'utiliser ``||variables:  définir strip ||`` et non ``||variables:  définir strip ||`` suivi d'un chiffre .
-
-Exemple : ``||variables:  définir strip1 ||`` ou ``||variables:  définir strip2 ||``.
 
 ## @showdialog 
 

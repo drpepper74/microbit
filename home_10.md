@@ -263,7 +263,7 @@ loops.everyInterval(1000 * 5, function () {
 
 ## Étape 12
 
-Ajoute le bloc ``||OLED: clear display ||`` (trad. : effacer l'écran) dans le bloc ``||input: lorsque le bouton A est appuyé ||``.
+Ajoute le bloc ``||OLED: clear display ||`` (trad. : effacer l'écran) dans le bloc ``||input: lorsque le bouton A est pressé ||``.
 
 Ajoute le bloc ``||OLED: show string ||`` (trad. : montrer la ligne) sous le bloc ``||OLED: clear display ||``.
 
@@ -393,7 +393,7 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 17
 
-Ajoute le bloc ``||OLED: clear display ||`` (trad. : effacer l'écran) dans le bloc ``||input: lorsque le bouton B est appuyé ||``.
+Ajoute le bloc ``||OLED: clear display ||`` (trad. : effacer l'écran) dans le bloc ``||input: lorsque le bouton B est pressé ||``.
 
 Ajoute le bloc ``||OLED: draw loading bar ||`` (trad. : dessiner une barre de progression) sous le bloc ``||OLED: clear display ||``.
 

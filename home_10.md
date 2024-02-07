@@ -55,7 +55,7 @@ OLED.init(128, 64)
 
 Ajoute le bloc ``||music: régler le volume||``  sous le bloc ``||OLED: initialize OLED ||`` (trad. : démarrer l'écran).
 
-La valeur du bloc ``||music: régler le volume ||`` demeure la même.
+Remplace la valeur ``||music: 127 ||`` par la valeur ``||music: 100 ||``.
 
 Le volume du haut-parleur du bouclier d'extension varie entre 0 et 255.
 
@@ -69,7 +69,7 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 led.enable(false)
 OLED.init(128, 64)
-music.setVolume(127)
+music.setVolume(100)
 
 ```
 
@@ -95,7 +95,7 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 led.enable(false)
 OLED.init(128, 64)
-music.setVolume(127)
+music.setVolume(100)
 let strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
 
 ```
@@ -116,7 +116,7 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 led.enable(false)
 OLED.init(128, 64)
-music.setVolume(127)
+music.setVolume(100)
 let strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
 strip.showColor(neopixel.colors(NeoPixelColors.Black))
 
@@ -527,7 +527,7 @@ let Lumen = 0
 let Celsius = 0
 led.enable(false)
 OLED.init(128, 64)
-music.setVolume(127)
+music.setVolume(100)
 let strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
 strip.showColor(neopixel.colors(NeoPixelColors.Black))
 loops.everyInterval(1000 * 5, function () {

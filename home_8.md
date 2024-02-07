@@ -57,7 +57,7 @@ basic.forever(function () {
 
 ## Étape 3
 
-Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:Celsius||``.
+Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Celsius||``.
 
 Ajoute le bloc ``||variables: définir Celsius ||`` dans le bloc ``||basic: toujours ||``.
 
@@ -73,7 +73,7 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 let Celsius = 0
 basic.forever(function () {
-    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P0)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P1)
 })
 
 ```
@@ -84,7 +84,7 @@ Modifie le bloc ``||smarthome:value of temperature||`` (trad. : la valeur de la 
 
 La valeur ``||smarthome:C||`` demeure la même.
 
-Remplace la valeur ``||smarthome:P0||`` par ``||smarthome:P2||``.
+Remplace la valeur ``||smarthome:P1||`` par ``||smarthome:P2||``.
 
 ```package
 
@@ -103,7 +103,7 @@ basic.forever(function () {
 
 ## Étape 5
 
-Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:Lumen||``.
+Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Lumen||``.
 
 Ajoute le bloc ``||variables: définir Lumen ||`` sous le bloc ``||variables: définir Celsius ||``.
 

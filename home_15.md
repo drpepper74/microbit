@@ -4,7 +4,7 @@
 
 ## @showdialog
 
-Invente une programmation en utilisant les conditions complexes "ET" / "OU".
+Invente une programmation qui utilise les conditions complexes "ET" / "OU".
 
 ## Étape 1
 
@@ -44,7 +44,7 @@ pins.servoWritePin(AnalogPin.P0, 180)
 pins.digitalWritePin(DigitalPin.P0, 0)
 led.enable(false)
 OLED.init(128, 64)
-music.setVolume(127)
+music.setVolume(100)
 let strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
 strip.showColor(neopixel.colors(NeoPixelColors.Black))
 basic.forever(function () {

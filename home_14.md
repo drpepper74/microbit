@@ -310,12 +310,6 @@ basic.forever(function () {
         pins.digitalWritePin(DigitalPin.P12, 0)
     }
 })
-basic.forever(function () {
-    if (false && false) {
-    	
-    }
-})
-
 
 ```
 

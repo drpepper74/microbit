@@ -137,12 +137,30 @@ input.onButtonPressed(Button.A, function () {
 })
 
 ```
+## Étape 7
+
+Voici la programmation complète du programme.
+
+```package
+
+dstemps=github:tinkertanker/pxt-smarthome
+
+```
+
+```blocks
+
+let Celsius = 0
+input.onButtonPressed(Button.A, function () {
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    OLED.clear()
+    OLED.writeNumNewLine(Celsius)
+})
+
+```
 
 ## Étape 8
 
-Voici une partie de la programmation du programme. 
-
-Certains blocs te seront utiles pour réaliser le défi.
+Certains blocs ont été ajoutés pour réaliser le défi. 
 
 ```package
 
@@ -172,6 +190,7 @@ basic.forever(function () {
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
     strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
     strip.showColor(neopixel.colors(NeoPixelColors.Red))
+    basic.pause(100)
 })
 
 ```

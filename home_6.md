@@ -153,7 +153,7 @@ led.enable(false)
 OLED.init(128, 64)
 let strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
 basic.forever(function () {
-    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P1)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     if (true) {
     	
     } else {
@@ -186,7 +186,7 @@ led.enable(false)
 OLED.init(128, 64)
 let strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
 basic.forever(function () {
-    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P1)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     if (Celsius > 25) {
     	
     } else {
@@ -216,7 +216,7 @@ led.enable(false)
 OLED.init(128, 64)
 let strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
 basic.forever(function () {
-    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P1)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     if (Celsius > 25) {
         strip.showColor(neopixel.colors(NeoPixelColors.Red))
     } else {
@@ -245,7 +245,7 @@ led.enable(false)
 OLED.init(128, 64)
 let strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
 basic.forever(function () {
-    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P1)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     if (Celsius > 25) {
         strip.showColor(neopixel.colors(NeoPixelColors.Red))
     } else {
@@ -320,7 +320,7 @@ OLED.init(128, 64)
 let strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
 basic.forever(function () {
     let Celsius = 0
-    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P1)
+    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     if (Celsius > 25) {
         strip.showColor(neopixel.colors(NeoPixelColors.Red))
     } else {

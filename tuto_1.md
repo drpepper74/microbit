@@ -32,7 +32,7 @@ Efface le mot ``|| basic: Hello! ||`` du bloc ``|| basic: afficher texte ||``.
 ```blocks
 
 basic.forever(function () {
-    basic.showString("Hello!")
+    basic.showString("Seb")
 })
 
 ```

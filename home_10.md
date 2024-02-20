@@ -447,7 +447,7 @@ Remplace la valeur ``||logic: vrai ||`` par le bloc ``||logic: 0 > 0 ||``.
 
 Remplace la valeur ``||logic: 0 > 0 ||`` de gauche par le bloc ``||variables: Lumen ||``.
 
-Remplace la valeur ``||logic: 0 > 0 ||`` de droite par la valeur ``||logic: 50 ||``
+Remplace la valeur ``||logic: 0 > 0 ||`` de droite par la valeur ``||logic: 40 ||``
 
 ```package
 
@@ -461,7 +461,7 @@ input.onButtonPressed(Button.B, function () {
     let Lumen = 0
     OLED.clear()
     OLED.drawLoading(Lumen)
-    if (Lumen > 50) {
+    if (Lumen > 40) {
     	
     }
 })
@@ -489,7 +489,7 @@ input.onButtonPressed(Button.B, function () {
     let Lumen = 0
     OLED.clear()
     OLED.drawLoading(Lumen)
-    if (Lumen > 50) {
+    if (Lumen > 40) {
         music.play(music.tonePlayable(988, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
     }
 })
@@ -519,7 +519,7 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.B, function () {
     OLED.clear()
     OLED.drawLoading(Lumen)
-    if (Lumen > 50) {
+    if (Lumen > 40) {
         music.play(music.tonePlayable(988, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
     }
 })

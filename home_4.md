@@ -140,7 +140,7 @@ basic.forever(function () {
 
 Ajoute le bloc ``||basic:pause (ms)||`` sous le bloc ``||OLED: show number ||`` (trad. : montrer nombre).
 
-Remplace la valeur ``||basic:100||`` par le bloc ``||basic:1000||``.
+Remplace la valeur ``||basic:100||`` par le bloc ``||basic:3000||``.
 
 ```package
 
@@ -155,7 +155,7 @@ basic.forever(function () {
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
     OLED.clear()
     OLED.writeNumNewLine(Lumen)
-    basic.pause(1000)
+    basic.pause(3000)
 })
 
 ```
@@ -179,7 +179,7 @@ basic.forever(function () {
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
     OLED.clear()
     OLED.writeNumNewLine(Lumen)
-    basic.pause(1000)
+    basic.pause(3000)
 })
 
 ```

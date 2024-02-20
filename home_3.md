@@ -142,7 +142,7 @@ basic.forever(function () {
 
 Ajoute le bloc ``||basic:pause (ms)||`` sous le bloc ``||OLED: show number ||`` (trad. : montrer nombre).
 
-Remplace la valeur ``||basic:100||`` par le bloc ``||basic:1000||``.
+Remplace la valeur ``||basic:100||`` par le bloc ``||basic:3000||``.
 
 ```package
 
@@ -157,7 +157,7 @@ basic.forever(function () {
     Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     OLED.clear()
     OLED.writeNumNewLine(Celsius)
-    basic.pause(1000)
+    basic.pause(3000)
 })
 
 ```
@@ -181,7 +181,7 @@ basic.forever(function () {
     Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     OLED.clear()
     OLED.writeNumNewLine(Celsius)
-    basic.pause(1000)
+    basic.pause(3000)
 })
 
 ```

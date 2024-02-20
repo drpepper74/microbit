@@ -158,9 +158,15 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
+## @showdialog 
+
+Félicitations! Tu as terminé la programmation. Réalise maintenant les branchements.
+
+Pour tester le circuit électrique, télécharge la programmation dans le micro:bit.
+
 ## Étape 8
 
-Certains blocs ont été ajoutés pour réaliser le défi. 
+Certains blocs ont été ajoutés pour réaliser le défi. Ils sont placés dans le désordre.
 
 ```package
 

@@ -510,10 +510,62 @@ basic.forever(function () {
 
 ## Étape 18
 
+Ajoute le bloc ``||OLED: clear display ||`` (trad. : effacer l'écran) dans le bloc ``||input: lorsque le bouton A est pressé ||``.
+
+Ajoute le bloc ``||OLED: show string ||`` (trad. : montrer la ligne) sous le bloc ``||OLED: clear display ||``.
+
+Ajoute le bloc ``||OLED: show number ||`` (trad. : montrer le nombre) sous le bloc ``||OLED: show string ||``.
+
+```package
+
+dstemps=github:tinkertanker/pxt-smarthome
+
+```
+
+```blocks
+
+input.onButtonPressed(Button.A, function () {
+    OLED.clear()
+    OLED.writeStringNewLine("")
+    OLED.writeNumNewLine(0)
+})
+
+```
+
+## Étape 19
+
+Remplace la valeur ``||OLED: " " ||`` du bloc ``||OLED: show string ||`` (trad. : montrer la ligne) par le mot ``||OLED: Celsius ||``.
+
+Remplace la valeur ``||OLED: 0 ||`` du bloc ``||OLED: show number ||`` (trad. : montrer nombre) par le bloc ``||variables: Celsius ||``.
+
+```package
+
+dstemps=github:tinkertanker/pxt-smarthome
+
+```
+
+```blocks
+
+input.onButtonPressed(Button.A, function () {
+    let Celsius = 0
+    OLED.clear()
+    OLED.writeStringNewLine("Celsius")
+    OLED.writeNumNewLine(Celsius)
+})
+
+```
+
+## Étape 20
+
 Voici la programmation complète du programme.
 
 ```blocks
 
+input.onButtonPressed(Button.A, function () {
+    OLED.clear()
+    OLED.writeStringNewLine("Celsius")
+    OLED.writeNumNewLine(Celsius)
+})
 let Celsius = 0
 led.enable(false)
 OLED.init(128, 64)
@@ -531,6 +583,7 @@ basic.forever(function () {
         strip.showColor(neopixel.colors(NeoPixelColors.Red))
     }
 })
+
 
 ```
 

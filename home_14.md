@@ -1,6 +1,6 @@
 # ElecFreaks micro:bit Smart Home Kit
 
-# Tutoriel 13
+# Tutoriel 14
 
 ## @showdialog
 
@@ -51,13 +51,14 @@ OLED.init(128, 64)
 
 ## Étape 3
 
-Ajoute le bloc ``|| pins: écrire sur la broche ||``  sous le bloc  ``||OLED: initialize OLED ||`` (trad. : démarrer l'écran).
 
-Modifie le bloc ``|| pins: écrire sur la broche ||``.
+Ajoute le bloc ``|| pins: régler position servo ||``  sous le bloc  ``||OLED: initialize OLED ||`` (trad. : démarrer l'écran).
 
-Remplace la broche ``|| pins: P0 ||`` par ``|| pins : P12 ||``.
+Modifie le bloc ``|| pins: régler position servo ||``.
 
-La valeur ``|| pins: 0 ||`` du bloc ``|| pins: écrire sur la broche ||`` demeure la même.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins : P8 ||``.
+
+Remplace la valeur ``|| pins: 180 ||`` par ``|| pins: 0 ||``.
 
 ```package
 
@@ -69,17 +70,17 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 led.enable(false)
 OLED.init(128, 64)
-pins.digitalWritePin(DigitalPin.P12, 0)
+pins.servoWritePin(AnalogPin.P8, 0)
 
 ```
 
 ## Étape 4
 
-Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:Celsius||``.
+Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:Lumen||``.
 
-Ajoute le bloc ``||variables: définir Celsius ||`` dans le bloc ``||basic: toujours ||``.
+Ajoute le bloc ``||variables: définir Lumen ||`` dans le bloc ``||basic: toujours ||``.
 
-Remplace la valeur ``||variables:0||`` par le bloc ``||smarthome:value of temperature||`` (trad. : la valeur de la température).
+Remplace la valeur ``||variables:0||`` par le bloc ``||smarthome:value of light intensity||`` (trad. : la valeur du niveau de l'intensité lumineuse).
 
 ```package
 
@@ -89,20 +90,19 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celsius = 0
+let Lumen = 0
 basic.forever(function () {
-    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P0)
+    Lumen = smarthome.ReadLightIntensity(AnalogPin.P1)
 })
 
 ```
 
 ## Étape 5
 
-Modifie le bloc ``||smarthome:value of temperature||`` (trad. : la valeur de la température).
+Modifie le bloc ``||smarthome:value of light intensity||`` (trad. : la valeur du niveau de l'intensité lumineuse)..
 
-La valeur ``||smarthome:C||`` demeure la même.
 
-Remplace la valeur ``||smarthome:P0||`` par ``||smarthome:P2||``.
+Remplace la valeur ``||smarthome:P1||`` par ``||smarthome:P3||``.
 
 ```package
 
@@ -112,16 +112,17 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celsius = 0
+let Lumen = 0
 basic.forever(function () {
-    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
 })
+
 
 ```
 
 ## Étape 6
 
-Ajoute le bloc ``||logic:si vrai alors sinon||`` sous le bloc ``||variables: définir Celsius ||``.
+Ajoute le bloc ``||logic:si vrai alors sinon||`` sous le bloc ``||variables: définir Lumen ||``.
 
 ```package
 
@@ -131,13 +132,13 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celsius = 0
+let Lumen = 0
 basic.forever(function () {
-    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
+    Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
     if (true) {
-        
+    	
     } else {
-        
+    	
     }
 })
 
@@ -149,9 +150,9 @@ Modifie le bloc ``||logic:si vrai alors sinon||``.
 
 Remplace la valeur ``||logic:vrai||`` par le bloc ``||logic:0 > 0||``.
 
-Remplace la valeur ``||logic:0||`` de gauche par le bloc ``||variables:Celsius||``.
+Remplace la valeur ``||logic:0||`` de gauche par le bloc ``||variables:Lumen||``.
 
-Remplace la valeur ``||logic:0||`` de droite par la valeur ``||logic:25||``.
+Remplace la valeur ``||logic:0||`` de droite par la valeur ``||logic:50||``.
 
 ```package
 
@@ -161,27 +162,28 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celsius = 0
+let Lumen = 0
 basic.forever(function () {
-    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
-    if (Celsius > 25) {
-        
+    Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
+    if (Lumen > 50) {
+    	
     } else {
-        
+    	
     }
 })
+
 
 ```
 
 ## Étape 8
 
-Ajoute le bloc ``|| pins: écrire sur la broche ||``  dans le bloc  ``|| logic: si alors ||``.
+Ajoute le bloc ``|| pins: régler position servo ||``  dans le bloc  ``|| logic: si alors ||``.
 
-Modifie le bloc ``|| pins: écrire sur la broche ||``.
+Modifie le bloc ``|| pins: régler position servo ||``.
 
-Remplace la broche ``|| pins: P0 ||`` par ``|| pins : P12 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins : P8 ||``.
 
-Remplace la valeur ``|| pins: 0 ||`` par ``|| pins : 1 ||``.
+La valeur ``|| pins: 180 ||`` du bloc ``|| pins: régler position servo ||`` demeure la même.
 
 ```package
 
@@ -191,13 +193,13 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celsius = 0
+let Lumen = 0
 basic.forever(function () {
-    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
-    if (Celsius > 25) {
-        pins.digitalWritePin(DigitalPin.P12, 1)
+    Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
+    if (Lumen > 50) {
+        pins.servoWritePin(AnalogPin.P8, 180)
     } else {
-        
+    	
     }
 })
 
@@ -209,9 +211,9 @@ Ajoute le bloc ``|| pins: écrire sur la broche ||``  dans le bloc  ``|| logic: 
 
 Modifie le bloc ``|| pins: écrire sur la broche ||``.
 
-Remplace la broche ``|| pins: P0 ||`` par ``|| pins : P12 ||``.
+Remplace la broche ``|| pins: P0 ||`` par ``|| pins : P8 ||``.
 
-Remplace la valeur ``|| pins: 0 ||`` par ``|| pins : 0 ||``.
+Remplace la valeur ``|| pins: 180 ||`` par ``|| pins : 0 ||``.
 
 ```package
 
@@ -221,15 +223,16 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-let Celsius = 0
+let Lumen = 0
 basic.forever(function () {
-    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
-    if (Celsius > 25) {
-        pins.digitalWritePin(DigitalPin.P12, 1)
+    Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
+    if (Lumen > 50) {
+        pins.servoWritePin(AnalogPin.P8, 180)
     } else {
-        pins.digitalWritePin(DigitalPin.P12, 0)
+        pins.servoWritePin(AnalogPin.P8, 0)
     }
 })
+
 
 ```
 
@@ -259,9 +262,9 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 11
 
-Remplace la valeur ``||OLED: " " ||`` du bloc ``||OLED: show string ||`` (trad. : montrer la ligne) par le mot ``||OLED: Celsius ||``.
+Remplace la valeur ``||OLED: " " ||`` du bloc ``||OLED: show string ||`` (trad. : montrer la ligne) par le mot ``||OLED: Lumen ||``.
 
-Remplace la valeur ``||OLED: 0 ||`` du bloc ``||OLED: show number ||`` (trad. : montrer nombre) par le bloc ``||variables: Celsius ||``.
+Remplace la valeur ``||OLED: 0 ||`` du bloc ``||OLED: show number ||`` (trad. : montrer nombre) par le bloc ``||variables: Lumen ||``.
 
 ```package
 
@@ -272,10 +275,10 @@ dstemps=github:tinkertanker/pxt-smarthome
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
-    let Celsius = 0
+    let Lumen = 0
     OLED.clear()
-    OLED.writeStringNewLine("Celsius")
-    OLED.writeNumNewLine(Celsius)
+    OLED.writeStringNewLine("Lumen")
+    OLED.writeNumNewLine(Lumen)
 })
 
 ```
@@ -284,6 +287,7 @@ input.onButtonPressed(Button.A, function () {
 
 Voici la programmation complète du programme.
 
+
 ```package
 
 dstemps=github:tinkertanker/pxt-smarthome
@@ -293,21 +297,20 @@ dstemps=github:tinkertanker/pxt-smarthome
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
-    let Celsius = 0
     OLED.clear()
-    OLED.writeStringNewLine("Celsius")
-    OLED.writeNumNewLine(Celsius)
+    OLED.writeStringNewLine("Lumen")
+    OLED.writeNumNewLine(Lumen)
 })
-let Celsius = 0
+let Lumen = 0
 led.enable(false)
 OLED.init(128, 64)
-pins.digitalWritePin(DigitalPin.P12, 0)
+pins.servoWritePin(AnalogPin.P8, 0)
 basic.forever(function () {
-    Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
-    if (Celsius < 25) {
-        pins.digitalWritePin(DigitalPin.P12, 1)
+    Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
+    if (Lumen > 50) {
+        pins.servoWritePin(AnalogPin.P8, 180)
     } else {
-        pins.digitalWritePin(DigitalPin.P12, 0)
+        pins.servoWritePin(AnalogPin.P8, 0)
     }
 })
 
@@ -318,4 +321,3 @@ basic.forever(function () {
 Félicitations! Tu as terminé la programmation. Réalise maintenant les branchements.
 
 Pour tester le circuit électrique, télécharge la programmation dans le micro:bit.
-
